@@ -181,3 +181,34 @@ describe('ruleOrder', () => {
     expect(ids.sort(ruleOrder)).toEqual(['4.0', '4.1', '4.11', '4.12', '4.2', '6.29', '6.29.A', '9.2', '10.1']);
   });
 });
+
+describe('Retriever.search', () => {
+  const r = new Retriever(chunks);
+
+  it('ranks the best match first', async () => {
+    const out = await r.search('air or naval units survive');
+    expect(out[0].sectionId).toBe('8.31');
+  });
+  it('honours the limit', async () => {
+    expect((await r.search('units', 1)).length).toBe(1);
+    expect((await r.search('units')).length).toBeGreaterThan(1);
+  });
+  it('returns one hit per section even when a section is split into parts', async () => {
+    const parts = [
+      mk('5.1', 'alpha beta gamma'),
+      mk('5.1', 'alpha beta delta', { id: '5.1#1', part: 1 }),
+      mk('6.1', 'unrelated words here'),
+    ];
+    const out = await new Retriever(parts).search('alpha beta');
+    expect(out.map((c) => c.sectionId)).toEqual(['5.1']);
+  });
+  it('returns nothing for a query without searchable words', async () => {
+    expect(await r.search('???')).toEqual([]);
+    expect(await r.search('the of')).toEqual([]);
+    expect(await r.search('   ')).toEqual([]);
+  });
+  it('keeps retrieve() unchanged', async () => {
+    const out = await r.retrieve('What happens if no air or naval units survive?');
+    expect(out.chunks[0].sectionId).toBe('8.31');
+  });
+});

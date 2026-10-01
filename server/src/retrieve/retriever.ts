@@ -97,8 +97,8 @@ export class Retriever implements RetrieverLike {
     }
   }
 
-  async retrieve(question: string, facts: string[] = []): Promise<Retrieved & { outline: string }> {
-    const query = [question, ...facts].join(' ');
+  /** BM25 and (when available) embedding hits fused with RRF, intent-boosted, best first. */
+  private async rank(query: string, intentSource: string) {
     const bm = this.bm25.search(tokenize(query), 20);
 
     let vec: { index: number; score: number }[] = [];
@@ -114,17 +114,40 @@ export class Retriever implements RetrieverLike {
     }
 
     const fused = rrf([bm.map((r) => r.index), vec.map((r) => r.index)]);
-    const majors = intentMajors(question);
-    const ranked = [...fused.entries()]
+    const majors = intentMajors(intentSource);
+    const order = [...fused.entries()]
       .map(([i, s]) => [i, majors.has(majorOf(this.chunks[i].sectionId)) ? s * this.cfg.intentBoost : s] as const)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, this.cfg.topK)
-      .map(([i]) => this.chunks[i]);
+      .map(([i]) => i);
+    return { order, bm, vec, mode };
+  }
+
+  async retrieve(question: string, facts: string[] = []): Promise<Retrieved & { outline: string }> {
+    const query = [question, ...facts].join(' ');
+    const { order, bm, vec, mode } = await this.rank(query, question);
+    const ranked = order.slice(0, this.cfg.topK).map((i) => this.chunks[i]);
 
     const lowConfidence =
       (bm[0]?.score ?? 0) < this.cfg.minBm25 && (vec[0]?.score ?? 0) < this.cfg.minCosine;
 
     return { ...this.expand(ranked), lowConfidence, mode };
+  }
+
+  /** Flat ranking for the Search screen: one hit per section, no sub-rule or cross-reference expansion. */
+  async search(query: string, limit = 20): Promise<Chunk[]> {
+    const q = query.trim();
+    if (tokenize(q).length === 0) return [];
+    const { order } = await this.rank(q, q);
+    const seen = new Set<string>();
+    const out: Chunk[] = [];
+    for (const i of order) {
+      const c = this.chunks[i];
+      if (seen.has(c.sectionId)) continue;
+      seen.add(c.sectionId);
+      out.push(c);
+      if (out.length === limit) break;
+    }
+    return out;
   }
 
   private expand(top: Chunk[]): { chunks: Chunk[]; outline: string } {
