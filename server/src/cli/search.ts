@@ -30,3 +30,5 @@ r.chunks.forEach((c, i) => {
   const body = c.text.replace(/\s+/g, ' ');
   console.log(`   ${full ? body : body.slice(0, 220) + (body.length > 220 ? ' … (use --full)' : '')}\n`);
 });
+
+if (r.outline) console.log(`Outline given to the model:\n${r.outline}`);

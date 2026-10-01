@@ -124,7 +124,7 @@ export class Orchestrator {
     try {
       raw = await this.llm.generateJson<RawAnswer>({
         system: ANSWER_SYSTEM,
-        user: answerUser(question, facts, unknown, s.recent, r.chunks),
+        user: answerUser(question, facts, unknown, s.recent, r.chunks, r.outline),
         schema: answerSchema,
       });
       if (!isObj(raw)) throw new LlmFormatError('answer was not an object');

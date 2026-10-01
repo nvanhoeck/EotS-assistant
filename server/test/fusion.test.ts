@@ -25,6 +25,11 @@ describe('intent', () => {
     expect(intentMajors('what is the sequence of play').has(4)).toBe(true);
     expect(intentMajors('banana').size).toBe(0);
   });
+  it('only treats "sequence of play" as the turn sequence, not any "sequence of X"', () => {
+    expect([...intentMajors('What is the sequence of combat?')]).toEqual([8]);
+    expect(intentMajors('What is the sequence of an offensive?').has(4)).toBe(false);
+    expect(intentMajors('what is the sequence of play').has(3)).toBe(true);
+  });
   it('extracts the major from a section id', () => {
     expect(majorOf('4.11')).toBe(4);
     expect(majorOf('10.0')).toBe(10);

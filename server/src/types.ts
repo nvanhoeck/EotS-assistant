@@ -18,6 +18,7 @@ export interface Chunk {
   crossRefs: string[]; // known section ids referenced in the text
   conditionals: string[]; // sentences with if/unless/except/only/...
   part: number; // 0 unless the block was split
+  summary?: string; // one-line extract for outlines; "" for heading-only blocks (older chunks.json: absent)
 }
 
 export interface Citation {

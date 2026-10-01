@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildChunks, parentId, splitText } from '../src/ingest/chunk.js';
+import { buildChunks, parentId, splitText, summarize } from '../src/ingest/chunk.js';
 import type { RuleBlock } from '../src/types.js';
 
 const b = (id: string, text: string, heading = false, title: string | null = null, page = 5): RuleBlock => ({
@@ -74,5 +74,27 @@ describe('buildChunks', () => {
   it('gives duplicate section ids unique chunk ids', () => {
     const dup = buildChunks([b('6.2', '6.2 Intelligence'), b('6.2', '6.2 Something else here entirely.')]);
     expect(dup.map((c) => c.id)).toEqual(['6.2', '6.2~2']);
+  });
+});
+
+describe('summarize', () => {
+  it('is empty for a heading with no body', () => {
+    const [c] = buildChunks([b('4.1', '4.1 The Strategic Phase', true, 'The Strategic Phase')]);
+    expect(c.summary).toBe('');
+  });
+  it('drops the heading line and the id, keeping the first sentence of the body', () => {
+    const [c] = buildChunks([
+      b('4.0', '4.0 Sequence of Play\nThe following sequence is repeated each turn. It ends when the game ends.', true, 'Sequence of Play'),
+    ]);
+    expect(c.summary).toBe('The following sequence is repeated each turn.');
+  });
+  it('drops only the id when the block has no standalone heading', () => {
+    const [c] = buildChunks([b('4.12', '4.12 Replacement Segment Both players may receive replacements. More text here.')]);
+    expect(c.summary).toBe('Replacement Segment Both players may receive replacements.');
+  });
+  it('truncates long first sentences on a word boundary', () => {
+    const s = summarize({ sectionId: '1.1', label: '1.1 x', text: '1.1 ' + 'word '.repeat(100).trim() });
+    expect(s.length).toBeLessThanOrEqual(181);
+    expect(s.endsWith('…')).toBe(true);
   });
 });

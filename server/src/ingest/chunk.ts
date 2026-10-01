@@ -61,6 +61,18 @@ function firstWords(text: string, n: number): string {
   return text.split(/\s+/).slice(0, n).join(' ');
 }
 
+const SUMMARY_MAX = 180;
+
+/** Extractive one-liner: the first sentence of the body, without the rule number or a standalone heading line. */
+export function summarize(c: Pick<Chunk, 'sectionId' | 'label' | 'text'>): string {
+  const lines = c.text.split('\n');
+  let body = (lines[0].trim() === c.label ? lines.slice(1) : lines).join(' ').replace(/\s+/g, ' ').trim();
+  if (body.startsWith(c.sectionId + ' ')) body = body.slice(c.sectionId.length + 1);
+  const first = body.split(SENTENCE_SPLIT)[0];
+  if (first.length <= SUMMARY_MAX) return first;
+  return first.slice(0, SUMMARY_MAX).replace(/\s+\S*$/, '') + '…';
+}
+
 export function buildChunks(blocks: RuleBlock[]): Chunk[] {
   const titles = new Map<string, string>();
   for (const b of blocks) if (b.heading && b.title) titles.set(b.id, b.title);
@@ -92,6 +104,7 @@ export function buildChunks(blocks: RuleBlock[]): Chunk[] {
         crossRefs: extractCrossRefs(piece, b.id, known),
         conditionals: extractConditionals(piece),
         part,
+        summary: summarize({ sectionId: b.id, label, text: piece }),
       });
     });
   }
