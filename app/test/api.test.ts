@@ -36,4 +36,29 @@ describe('createApi', () => {
     expect(err).toBeInstanceOf(ApiError);
     expect(err.message).toMatch(/same Wi-Fi/);
   });
+  it('GETs /search with the query URL-encoded and unwraps results', async () => {
+    let seen: any;
+    const fake = (async (url: string, init: any) => {
+      seen = { url, method: init.method };
+      return { ok: true, json: async () => ({ results: [{ sectionId: '4.0' }] }) };
+    }) as any;
+    const res = await createApi('http://x/', fake).search('air & naval');
+    expect(seen).toEqual({ url: 'http://x/search?q=air%20%26%20naval', method: 'GET' });
+    expect(res).toEqual([{ sectionId: '4.0' }]);
+  });
+  it('GETs /section/:id and /outline', async () => {
+    const urls: string[] = [];
+    const fake = (async (url: string) => {
+      urls.push(url);
+      return { ok: true, json: async () => (url.endsWith('/outline') ? { sections: [{ sectionId: '1.0' }] } : { sectionId: 'ERRATA' }) };
+    }) as any;
+    const api = createApi('http://x', fake);
+    expect((await api.section('ERRATA')).sectionId).toBe('ERRATA');
+    expect(await api.outline()).toEqual([{ sectionId: '1.0' }]);
+    expect(urls).toEqual(['http://x/section/ERRATA', 'http://x/outline']);
+  });
+  it('surfaces a 404 message from /section', async () => {
+    const fake = (async () => ({ ok: false, status: 404, json: async () => ({ error: 'No section 99.9' }) })) as any;
+    await expect(createApi('http://x', fake).section('99.9')).rejects.toThrow('No section 99.9');
+  });
 });

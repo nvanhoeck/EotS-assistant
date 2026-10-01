@@ -31,3 +31,27 @@ export interface NotFoundResult {
   nearest: Citation[];
 }
 export type AskResult = ClarifyResult | AnswerResult | NotFoundResult;
+export interface SectionRef {
+  sectionId: string;
+  label: string;
+}
+export interface SectionChild extends SectionRef {
+  summary: string;
+}
+export interface SearchResult extends SectionRef {
+  headingPath: string[];
+  pageStart: number;
+  pageEnd: number;
+  snippet: string;
+}
+export interface SectionView extends SectionRef {
+  headingPath: string[];
+  pageStart: number;
+  pageEnd: number;
+  title: string | null;
+  text: string;
+  prev: SectionRef | null;
+  next: SectionRef | null;
+  children: SectionChild[];
+  crossRefs: SectionRef[];
+}
