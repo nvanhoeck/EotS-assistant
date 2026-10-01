@@ -61,3 +61,31 @@ export interface NotFoundResult {
 export type AskResult = ClarifyResult | AnswerResult | NotFoundResult;
 
 export const NOT_SURE = 'Not sure';
+
+export interface SectionRef {
+  sectionId: string;
+  label: string;
+}
+
+export interface SectionChild extends SectionRef {
+  summary: string;
+}
+
+export interface SearchResult extends SectionRef {
+  headingPath: string[];
+  pageStart: number;
+  pageEnd: number;
+  snippet: string;
+}
+
+export interface SectionView extends SectionRef {
+  headingPath: string[];
+  pageStart: number;
+  pageEnd: number;
+  title: string | null; // heading text without its rule number; null for body rules
+  text: string; // body text; for headings the leading label line is removed
+  prev: SectionRef | null;
+  next: SectionRef | null;
+  children: SectionChild[];
+  crossRefs: SectionRef[];
+}
