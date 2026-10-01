@@ -5,6 +5,7 @@ const STOPWORDS = new Set([
 ]);
 
 export function stem(w: string): string {
+  if (w === 'dealt') return 'deal'; // irregular past tense (rulebook: 'Deal Strategy Cards')
   if (/\d/.test(w) || w.length < 4) return w;
   let s = w;
   if (s.endsWith('ies') && s.length > 4) s = s.slice(0, -3) + 'y';
