@@ -6,6 +6,7 @@
     "ingest": "tsx src/cli/ingest.ts",
     "embed": "tsx src/cli/embed.ts",
     "eval": "tsx src/cli/eval.ts",
+    "search": "tsx src/cli/search.ts",
     "start": "tsx src/index.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
