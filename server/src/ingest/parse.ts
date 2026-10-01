@@ -32,7 +32,7 @@ export function parseRules(pages: string[]): RuleBlock[] {
         blocks.push(cur);
       } else if (cur) {
         cur.text += '\n' + line;
-        cur.pageEnd = page;
+        if (line.trim()) cur.pageEnd = page; // blank/empty pages must not extend a block
       }
     }
   });
