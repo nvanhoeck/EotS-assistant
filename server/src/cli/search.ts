@@ -5,7 +5,8 @@ import { intentMajors } from '../retrieve/intent.js';
 import { tokenize } from '../retrieve/bm25.js';
 
 const args = process.argv.slice(2);
-const full = args.includes('--full');
+// PowerShell can swallow the "--" separator, so npm consumes --full itself and passes it on as npm_config_full.
+const full = args.includes('--full') || process.env.npm_config_full === 'true';
 const question = args.filter((a) => a !== '--full').join(' ').trim();
 if (!question) {
   console.error('Usage: npm run search -- "your rules question" [--full]');
