@@ -1,4 +1,4 @@
-import express, { type NextFunction, type Request, type Response } from 'express';
+import express, { type NextFunction, type Request, type Response, type Router } from 'express';
 import { LlmError } from '../llm/types.js';
 import { NotFoundError, type Orchestrator } from '../orchestrate/orchestrator.js';
 
@@ -14,9 +14,10 @@ function str(v: unknown, name: string): string {
   return v;
 }
 
-export function createApp(orchestrator: Orchestrator) {
+export function createApp(orchestrator: Orchestrator, browse?: Router) {
   const app = express();
   app.use(express.json());
+  if (browse) app.use(browse);
 
   app.get('/health', (_req, res) => {
     res.json({ ok: true });

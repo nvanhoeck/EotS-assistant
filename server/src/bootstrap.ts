@@ -23,15 +23,15 @@ export function loadEmbeddings(file: string, chunks: Chunk[]): number[][] | unde
   return aligned ? data.vectors : undefined;
 }
 
-export function buildRetriever(): { retriever: Retriever; hybrid: boolean } {
+export function buildRetriever(): { retriever: Retriever; chunks: Chunk[]; hybrid: boolean } {
   const chunks = loadChunks(path.join(config.dataDir, 'chunks.json'));
   const vectors = loadEmbeddings(path.join(config.dataDir, 'embeddings.json'), chunks);
   const embedder = vectors ? new OllamaEmbedder(config.ollamaUrl, config.embedModel) : undefined;
-  return { retriever: new Retriever(chunks, embedder, vectors), hybrid: !!vectors };
+  return { retriever: new Retriever(chunks, embedder, vectors), chunks, hybrid: !!vectors };
 }
 
 export function buildOrchestrator() {
-  const { retriever, hybrid } = buildRetriever();
+  const { retriever, chunks, hybrid } = buildRetriever();
   const llm = new OllamaLlm(config.ollamaUrl, config.chatModel);
-  return { orchestrator: new Orchestrator(retriever, llm, new SessionStore()), retriever, hybrid };
+  return { orchestrator: new Orchestrator(retriever, llm, new SessionStore()), retriever, chunks, hybrid };
 }
