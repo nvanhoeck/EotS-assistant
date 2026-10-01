@@ -1,7 +1,7 @@
 import type { RuleBlock } from '../types.js';
 
-const RULE_START = /^(\d{1,2}\.\d{1,3}(?:\.[A-Z0-9]{1,2})?)\s+([A-Z].*)$/;
-const MAX_MAJOR = 20;
+export const RULE_START = /^(\d{1,2}\.\d{1,3}(?:\.[A-Z0-9]{1,2})?)\s+([A-Z].*)$/;
+export const MAX_MAJOR = 20;
 
 function isHeading(rest: string): boolean {
   const words = rest.trim().split(/\s+/);

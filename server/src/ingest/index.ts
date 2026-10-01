@@ -4,6 +4,7 @@ import { parseRules } from './parse.js';
 import { buildChunks } from './chunk.js';
 import { stripNoise, type NoiseStats } from './noise.js';
 import type { RuleBlock } from '../types.js';
+import { ruleIdBefore } from './ruleId.js';
 
 export interface IngestReport {
   pages: number;
@@ -14,17 +15,6 @@ export interface IngestReport {
   duplicateIds: string[];
   longestChunkChars: number;
   removed: NoiseStats;
-}
-
-function idKey(id: string): [number, string] {
-  const [major, minor = ''] = id.split('.');
-  return [Number(major), minor];
-}
-
-function lessThan(a: string, b: string): boolean {
-  const [am, an] = idKey(a);
-  const [bm, bn] = idKey(b);
-  return am < bm || (am === bm && an < bn);
 }
 
 export function buildFromPages(pages: string[]): { chunks: Chunk[]; report: IngestReport } {
@@ -48,7 +38,7 @@ export function buildFromPages(pages: string[]): { chunks: Chunk[]; report: Inge
 
   const outOfOrderIds: string[] = [];
   for (let i = 1; i < parsed.length; i++) {
-    if (lessThan(parsed[i].id, parsed[i - 1].id)) outOfOrderIds.push(parsed[i].id);
+    if (ruleIdBefore(parsed[i].id, parsed[i - 1].id)) outOfOrderIds.push(parsed[i].id);
   }
 
   const counts = new Map<string, number>();
@@ -72,4 +62,10 @@ export function buildFromPages(pages: string[]): { chunks: Chunk[]; report: Inge
 
 export function ingestPdf(pdfPath: string) {
   return buildFromPages(extractPages(pdfPath));
+}
+
+/** Rule ids present in the previous ingest but missing from the new one (a re-ingest must not lose rules silently). */
+export function droppedIds(before: { sectionId: string }[], after: { sectionId: string }[]): string[] {
+  const now = new Set(after.map((c) => c.sectionId));
+  return [...new Set(before.map((c) => c.sectionId))].filter((id) => !now.has(id));
 }

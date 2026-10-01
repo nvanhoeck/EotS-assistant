@@ -1,7 +1,7 @@
 {
   "pages": 48,
   "blocks": 248,
-  "chunks": 300,
+  "chunks": 301,
   "pagesWithoutRules": [
     45,
     46,
@@ -10,9 +10,7 @@
   "outOfOrderIds": [
     "6.2",
     "6.21",
-    "6.22",
-    "7.43",
-    "11.3"
+    "6.22"
   ],
   "duplicateIds": [],
   "longestChunkChars": 1795,

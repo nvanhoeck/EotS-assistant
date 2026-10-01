@@ -33,7 +33,7 @@ State: all 14 plan tasks are built on branch `feat/eots-assistant` (not merged).
 
 - [ ] LLM query rewrite (optional in the spec; facts are appended to the query instead).
 - [ ] App component tests (only `api.ts` and `chatState.ts` logic is tested; screens are manual).
-- [ ] Parsing quality: `data/ingest-report.json` lists out-of-order ids (`6.2`, `6.21`, `6.22`, `7.43`, `11.3`) from two-column extraction. Tables, maps and card text are not parsed specially. Spot-check those sections against the PDF.
+- [ ] Parsing quality: `data/ingest-report.json` still lists out-of-order ids `6.2`, `6.21`, `6.22` (page 10: the column split finds no clean gutter there, so the default extraction is used). Pages 15 and 24 are fixed (columns read in order, see `columns.ts`). Tables, maps and card text are not parsed specially. Spot-check page 10 against the PDF.
 
 ## 5. Housekeeping
 

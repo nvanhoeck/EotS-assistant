@@ -1779,7 +1779,7 @@
   ],
   "pageStart": 14,
   "pageEnd": 15,
-  "text": "7.4 Ground Unit Movement and Stacking\nGround units have three ways of moving, generally described as one if by land and two if by sea. Ground units may move from a land hex to another land hex across a land hex side expending a variable number of movement points for each hex entered. A ground unit may not enter a hex if it has insufficient movement points to do so. This means that during certain low value OC Offensives, ground units may be unable to conduct ground movement due to insuf-\n15\nficient movement points. The player moves one unit or one stack of units at a time, and must complete the movement of a stack or single unit before beginning the movement of another. A ground unit must cease movement whenever it enters an opposing occupied hex containing land or air units, but is not inhibited by the presence of opposing naval units.\nAdditionally, ground units have two ways to move across all ocean hex sides. The first is strategic transport, which allows amphibious assault capable ground units to move from a friendly coastal hex (with or without a port) to a friendly supply eligible port along a path that never moves through an un-neutralized opposing aircraft Zone Of Influence (7.35). The second is actual amphibious assault, and allows amphibious capable ground units to move from a friendly coastal hex (with or without a port) to any other coastal hex which can contain enemy ground units. A ground unit using amphibious assault moves like a naval unit and uses the movement allowance determined for the Offensive. If the destination hex of the amphibious assault contains an enemy ground unit the hex must be declared a battle hex (6.24).",
+  "text": "7.4 Ground Unit Movement and Stacking\nGround units have three ways of moving, generally described as one if by land and two if by sea. Ground units may move from a land hex to another land hex across a land hex side expending a variable number of movement points for each hex entered. A ground unit may not enter a hex if it has insufficient movement points to do so. This means that during certain low value OC Offensives, ground units may be unable to conduct ground movement due to insuf-\nficient movement points. The player moves one unit or one stack of units at a time, and must complete the movement of a stack or single unit before beginning the movement of another. A ground unit must cease movement whenever it enters an opposing occupied hex containing land or air units, but is not inhibited by the presence of opposing naval units.\nAdditionally, ground units have two ways to move across all ocean hex sides. The first is strategic transport, which allows amphibious assault capable ground units to move from a friendly coastal hex (with or without a port) to a friendly supply eligible port along a path that never moves through an un-neutralized opposing aircraft Zone Of Influence (7.35). The second is actual amphibious assault, and allows amphibious capable ground units to move from a friendly coastal hex (with or without a port) to any other coastal hex which can contain enemy ground units. A ground unit using amphibious assault moves like a naval unit and uses the movement allowance determined for the Offensive. If the destination hex of the amphibious assault contains an enemy ground unit the hex must be declared a battle hex (6.24).",
   "crossRefs": [
    "7.35",
    "6.24"
@@ -1818,23 +1818,44 @@
  {
   "id": "7.42",
   "sectionId": "7.42",
-  "label": "7.42 Movement Restrictions A. Japanese ground",
+  "label": "7.42 Movement Restrictions",
   "headingPath": [
    "7.0 Movement and Stacking",
    "7.4 Ground Unit Movement and Stacking"
   ],
   "pageStart": 15,
   "pageEnd": 15,
-  "text": "7.42 Movement Restrictions A. Japanese ground units may not enter non-coastal Chinese hexes (for example, Japanese land units in hex 2508 [Yungning] cannot move directly to hexes 2408 or 2507 by normal ground movement). Japanese air units may not attack Chinese units in China.\nOtherwise a ground unit cannot leave the hex. If a successful ground disengagement occurs, the moving unit may continue to move if it has remaining movement.",
+  "text": "7.42 Movement Restrictions\nA. Japanese ground units may not enter non-coastal Chinese hexes (for example, Japanese land units in hex 2508 [Yungning] cannot move directly to hexes 2408 or 2507 by normal ground movement). Japanese air units may not attack Chinese units in China.\nB. Japanese ground units may enter Northern India, but may move no further into India. See the National boundary definitions. Japanese air and naval units may attack Allied units in any portion of India that is in play.\nC. No ground or air units may enter Soviet territory for any reason. If there is no other choice the unit is permanently removed from play.\nD. No Allied ground units, except Chinese ground units, may enter non-coastal China hexes.\nE. Chinese ground units can only operate in Burma, Northern India, Kunming, and all hexes adjacent to Kunming. Chinese units that are forced to move into any other land hex are eliminated.",
   "crossRefs": [],
   "conditionals": [
    "Japanese ground units may not enter non-coastal Chinese hexes (for example, Japanese land units in hex 2508 [Yungning] cannot move directly to hexes 2408 or 2507 by normal ground movement).",
    "Japanese air units may not attack Chinese units in China.",
+   "If there is no other choice the unit is permanently removed from play.",
+   "No Allied ground units, except Chinese ground units, may enter non-coastal China hexes.",
+   "Chinese ground units can only operate in Burma, Northern India, Kunming, and all hexes adjacent to Kunming."
+  ],
+  "part": 0,
+  "summary": "A."
+ },
+ {
+  "id": "7.43",
+  "sectionId": "7.43",
+  "label": "7.43 Ground Disengagement A ground unit",
+  "headingPath": [
+   "7.0 Movement and Stacking",
+   "7.4 Ground Unit Movement and Stacking"
+  ],
+  "pageStart": 15,
+  "pageEnd": 15,
+  "text": "7.43 Ground Disengagement A ground unit may move from a hex containing an opposing Offensives ground unit that just entered the hex if it has a land hex it can move to that is not the one from which the opposing unit(s) entered the hex AND if its attack strength (or combined strength if more than one unit) is greater than (not equal to) that of the opposing unit(s).\nOtherwise a ground unit cannot leave the hex. If a successful ground disengagement occurs, the moving unit may continue to move if it has remaining movement.",
+  "crossRefs": [],
+  "conditionals": [
+   "7.43 Ground Disengagement A ground unit may move from a hex containing an opposing Offensives ground unit that just entered the hex if it has a land hex it can move to that is not the one from which the opposing unit(s) entered the hex AND if its attack strength (or combined strength if more than one unit) is greater than (not equal to) that of the opposing unit(s).",
    "Otherwise a ground unit cannot leave the hex.",
    "If a successful ground disengagement occurs, the moving unit may continue to move if it has remaining movement."
   ],
   "part": 0,
-  "summary": "Movement Restrictions A."
+  "summary": "Ground Disengagement A ground unit may move from a hex containing an opposing Offensives ground unit that just entered the hex if it has a land hex it can move to that is not the…"
  },
  {
   "id": "7.44",
@@ -1868,16 +1889,13 @@
    "7.4 Ground Unit Movement and Stacking"
   ],
   "pageStart": 15,
-  "pageEnd": 15,
-  "text": "7.45 Amphibious Assault (Offensive and Reaction) All Japanese, US, Commonwealth British (except Armor Brigade), Australian, and New Zealand ground units are Amphibious Assault capable. Dutch, Indian, and Chinese units are not and may not use Amphibious Assault. A ground unit that moves in this manner may move from any coastal hex (with or without a port) to any coastal hex (with or without a port) a distance equal to the distance a naval unit in the current offensive may move. An Amphibious Assault never doubles the distance it may move, even if it enters a friendly port at the conclusion of its move. An amphibious assault may enter any non-mountain coastal hex (exception Port Moresby, hex 3823, can be amphibiously assaulted even though it is a mountain hex) whether or not it contains enemy ground units. Note that Event cards that restrict the activation of naval units do not prevent amphibious units from using amphibious assault, and that Inter-service rivalry being in effect does not prevent Army units (Japanese or US) from using amphibious assault movement. B. Japanese ground units may enter Northern India, but may move no further into India. See the National boundary definitions. Japanese air and naval units may attack Allied units in any portion of India that is in play. C. No ground or air units may enter Soviet territory for any reason. If there is no other choice the unit is permanently removed from play. D. No Allied ground units, except Chinese ground units, may enter non-coastal China hexes. E. Chinese ground units can only operate in Burma, Northern India, Kunming, and all hexes adjacent to Kunming. Chinese units that are forced to move into any other land hex are eliminated. A. Amphibious Assault ASP Requirements",
+  "pageEnd": 16,
+  "text": "7.45 Amphibious Assault (Offensive and Reaction) All Japanese, US, Commonwealth British (except Armor Brigade), Australian, and New Zealand ground units are Amphibious Assault capable. Dutch, Indian, and Chinese units are not and may not use Amphibious Assault. A ground unit that moves in this manner may move from any coastal hex (with or without a port) to any coastal hex (with or without a port) a distance equal to the distance a naval unit in the current offensive may move. An Amphibious Assault never doubles the distance it may move, even if it enters a friendly port at the conclusion of its move. An amphibious assault may enter any non-mountain coastal hex (exception Port Moresby, hex 3823, can be amphibiously assaulted even though it is a mountain hex) whether or not it contains enemy ground units. Note that Event cards that restrict the activation of naval units do not prevent amphibious units from using amphibious assault, and that Inter-service rivalry being in effect does not prevent Army units (Japanese or US) from using amphibious assault movement. A. Amphibious Assault ASP Requirements",
   "crossRefs": [],
   "conditionals": [
    "7.45 Amphibious Assault (Offensive and Reaction) All Japanese, US, Commonwealth British (except Armor Brigade), Australian, and New Zealand ground units are Amphibious Assault capable.",
    "Dutch, Indian, and Chinese units are not and may not use Amphibious Assault.",
-   "An Amphibious Assault never doubles the distance it may move, even if it enters a friendly port at the conclusion of its move.",
-   "If there is no other choice the unit is permanently removed from play.",
-   "No Allied ground units, except Chinese ground units, may enter non-coastal China hexes.",
-   "Chinese ground units can only operate in Burma, Northern India, Kunming, and all hexes adjacent to Kunming."
+   "An Amphibious Assault never doubles the distance it may move, even if it enters a friendly port at the conclusion of its move."
   ],
   "part": 0,
   "summary": "Amphibious Assault (Offensive and Reaction) All Japanese, US, Commonwealth British (except Armor Brigade), Australian, and New Zealand ground units are Amphibious Assault capable."
@@ -1891,61 +1909,60 @@
    "7.4 Ground Unit Movement and Stacking"
   ],
   "pageStart": 15,
-  "pageEnd": 15,
-  "text": "(Offensive and Reaction) One Amphibious Shipping Point (ASP) must be available for each ground unit of division size (XX) or smaller that conducts an Amphibious Assault. Each Corps or Army sized unit (XXX or XXXX) requires one ASP for each step (e.g., a reduced Corps or Army sized unit requires one ASP and a full strength Corps or Army unit requires two ASP). Exception: The Japanese Korean Army costs two ASP, not 1 ASP, per step (e.g., A full strength Korean Army costs 4 ASP to move by Amphibious Assault). An amphibious shipping point can be used only once per game turn. Note its use by moving the Amphibious Shipping Used marker on the Strategic Record. If insufficient amphibious shipping points are available, the units for which there are insufficient ASPs cannot conduct Amphibious Assault.",
-  "crossRefs": [],
+  "pageEnd": 16,
+  "text": "(Offensive and Reaction) One Amphibious Shipping Point (ASP) must be available for each ground unit of division size (XX) or smaller that conducts an Amphibious Assault. Each Corps or Army sized unit (XXX or XXXX) requires one ASP for each step (e.g., a reduced Corps or Army sized unit requires one ASP and a full strength Corps or Army unit requires two ASP). Exception: The Japanese Korean Army costs two ASP, not 1 ASP, per step (e.g., A full strength Korean Army costs 4 ASP to move by Amphibious Assault). An amphibious shipping point can be used only once per game turn. Note its use by moving the Amphibious Shipping Used marker on the Strategic Record. If insufficient amphibious shipping points are available, the units for which there are insufficient ASPs cannot conduct Amphibious Assault. Important: During Reaction no more than one ASP may be used for Reaction movement. This has no effect on Japanese organic transport (see 7.46), as this type of movement does not use an ASP. B. Amphibious Assault Restrictions (Offensive and Reaction) The path taken by the Amphibious Assault ground unit(s) may not enter or exit a hex that currently contains an opposing naval unit 16 (active or inactive), unless the assaulting unit moves with a friendly naval unit for the entire length of its movement. An Amphibious Assault unit may never enter or exit a hex within an un-neutralized opposing aircraft Zone Of Influence, even if moving with a nonaircraft carrier naval unit. If for any reason the amphibious assault ground unit finds itself in an un-neutralized opposing air ZOI, it must cease it movement and is placed back in its hex of origin.",
+  "crossRefs": [
+   "7.46"
+  ],
   "conditionals": [
    "(Offensive and Reaction) One Amphibious Shipping Point (ASP) must be available for each ground unit of division size (XX) or smaller that conducts an Amphibious Assault.",
    "An amphibious shipping point can be used only once per game turn.",
-   "If insufficient amphibious shipping points are available, the units for which there are insufficient ASPs cannot conduct Amphibious Assault."
+   "If insufficient amphibious shipping points are available, the units for which there are insufficient ASPs cannot conduct Amphibious Assault.",
+   "Amphibious Assault Restrictions (Offensive and Reaction) The path taken by the Amphibious Assault ground unit(s) may not enter or exit a hex that currently contains an opposing naval unit 16 (active or inactive), unless the assaulting unit moves with a friendly naval unit for the entire length of its movement.",
+   "An Amphibious Assault unit may never enter or exit a hex within an un-neutralized opposing aircraft Zone Of Influence, even if moving with a nonaircraft carrier naval unit.",
+   "If for any reason the amphibious assault ground unit finds itself in an un-neutralized opposing air ZOI, it must cease it movement and is placed back in its hex of origin."
   ],
   "part": 1,
   "summary": "(Offensive and Reaction) One Amphibious Shipping Point (ASP) must be available for each ground unit of division size (XX) or smaller that conducts an Amphibious Assault."
  },
  {
-  "id": "7.43",
-  "sectionId": "7.43",
-  "label": "7.43 Ground Disengagement A ground unit",
+  "id": "7.45#2",
+  "sectionId": "7.45",
+  "label": "7.45 Amphibious Assault (Offensive and Reaction)",
   "headingPath": [
    "7.0 Movement and Stacking",
    "7.4 Ground Unit Movement and Stacking"
   ],
   "pageStart": 15,
   "pageEnd": 16,
-  "text": "7.43 Ground Disengagement A ground unit may move from a hex containing an opposing Offensives ground unit that just entered the hex if it has a land hex it can move to that is not the one from which the opposing unit(s) entered the hex AND if its attack strength (or combined strength if more than one unit) is greater than (not equal to) that of the opposing unit(s). Important: During Reaction no more than one ASP may be used for Reaction movement. This has no effect on Japanese organic transport (see 7.46), as this type of movement does not use an ASP. B. Amphibious Assault Restrictions (Offensive and Reaction) The path taken by the Amphibious Assault ground unit(s) may not enter or exit a hex that currently contains an opposing naval unit 16 (active or inactive), unless the assaulting unit moves with a friendly naval unit for the entire length of its movement. An Amphibious Assault unit may never enter or exit a hex within an un-neutralized opposing aircraft Zone Of Influence, even if moving with a nonaircraft carrier naval unit. If for any reason the amphibious assault ground unit finds itself in an un-neutralized opposing air ZOI, it must cease it movement and is placed back in its hex of origin. Important: If Amphibious Assault ground unit(s) are without an accompanying friendly naval unit and opposing naval forces of any type end their movement in the battle hex as part of reaction movement, the assault is cancelled and the battle is considered lost. Each ground unit takes a one step loss and, if not eliminated, each unit then conducts post battle movement from the hex.",
-  "crossRefs": [
-   "7.46"
-  ],
-  "conditionals": [
-   "7.43 Ground Disengagement A ground unit may move from a hex containing an opposing Offensives ground unit that just entered the hex if it has a land hex it can move to that is not the one from which the opposing unit(s) entered the hex AND if its attack strength (or combined strength if more than one unit) is greater than (not equal to) that of the opposing unit(s).",
-   "Amphibious Assault Restrictions (Offensive and Reaction) The path taken by the Amphibious Assault ground unit(s) may not enter or exit a hex that currently contains an opposing naval unit 16 (active or inactive), unless the assaulting unit moves with a friendly naval unit for the entire length of its movement.",
-   "An Amphibious Assault unit may never enter or exit a hex within an un-neutralized opposing aircraft Zone Of Influence, even if moving with a nonaircraft carrier naval unit.",
-   "If for any reason the amphibious assault ground unit finds itself in an un-neutralized opposing air ZOI, it must cease it movement and is placed back in its hex of origin.",
-   "Important: If Amphibious Assault ground unit(s) are without an accompanying friendly naval unit and opposing naval forces of any type end their movement in the battle hex as part of reaction movement, the assault is cancelled and the battle is considered lost.",
-   "Each ground unit takes a one step loss and, if not eliminated, each unit then conducts post battle movement from the hex."
-  ],
-  "part": 0,
-  "summary": "Ground Disengagement A ground unit may move from a hex containing an opposing Offensives ground unit that just entered the hex if it has a land hex it can move to that is not the…"
- },
- {
-  "id": "7.43#1",
-  "sectionId": "7.43",
-  "label": "7.43 Ground Disengagement A ground unit",
-  "headingPath": [
-   "7.0 Movement and Stacking",
-   "7.4 Ground Unit Movement and Stacking"
-  ],
-  "pageStart": 15,
-  "pageEnd": 16,
-  "text": "PLAY NOTE: Moving an amphibious force with an aircraft carrier unit always neutralizes opposing Aircraft Zones of Influence throughout the move. Additionally, positioning a CV in a position that neutralizes an opposing air Zone Of influence prior to moving the amphibious assault unit allows the Amphibious Assault unit to move through the area. C. Concluding Amphibious Assault (Offensive Only) If at the conclusion of battle resolution containing an amphibious assault, the Offensive Amphibious Assaulting ground unit(s) are not in a friendly controlled hex (e.g., the assaulting forces lost the airnaval or ground battle), the Offensive amphibious assaulting unit(s) only may conduct post battle movement like a naval unit, but must end their movement in a friendly port or coastal hex. If this is not possible, the Amphibious Assaulting unit(s) are eliminated. D. US Army Amphibious Assault Special Restrictions There is a special restriction for US Army ground units (Blue US ground units). They may only conduct amphibious assault movement into a Japanese controlled and occupied one hex island if they end their movement in a hex containing a US Marine unit that also just completed amphibious assault movement into that hex. In all other circumstances, the presence of a US Marine unit is not required for a US Army unit to conduct Amphibious Assault. Nor are there any restrictions on US Army ground units for amphibious assaults on multi-hex islands or during Reaction.",
+  "text": "Important: If Amphibious Assault ground unit(s) are without an accompanying friendly naval unit and opposing naval forces of any type end their movement in the battle hex as part of reaction movement, the assault is cancelled and the battle is considered lost. Each ground unit takes a one step loss and, if not eliminated, each unit then conducts post battle movement from the hex. PLAY NOTE: Moving an amphibious force with an aircraft carrier unit always neutralizes opposing Aircraft Zones of Influence throughout the move. Additionally, positioning a CV in a position that neutralizes an opposing air Zone Of influence prior to moving the amphibious assault unit allows the Amphibious Assault unit to move through the area. C. Concluding Amphibious Assault (Offensive Only) If at the conclusion of battle resolution containing an amphibious assault, the Offensive Amphibious Assaulting ground unit(s) are not in a friendly controlled hex (e.g., the assaulting forces lost the airnaval or ground battle), the Offensive amphibious assaulting unit(s) only may conduct post battle movement like a naval unit, but must end their movement in a friendly port or coastal hex. If this is not possible, the Amphibious Assaulting unit(s) are eliminated.",
   "crossRefs": [],
   "conditionals": [
+   "Important: If Amphibious Assault ground unit(s) are without an accompanying friendly naval unit and opposing naval forces of any type end their movement in the battle hex as part of reaction movement, the assault is cancelled and the battle is considered lost.",
+   "Each ground unit takes a one step loss and, if not eliminated, each unit then conducts post battle movement from the hex.",
    "Concluding Amphibious Assault (Offensive Only) If at the conclusion of battle resolution containing an amphibious assault, the Offensive Amphibious Assaulting ground unit(s) are not in a friendly controlled hex (e.g., the assaulting forces lost the airnaval or ground battle), the Offensive amphibious assaulting unit(s) only may conduct post battle movement like a naval unit, but must end their movement in a friendly port or coastal hex.",
-   "If this is not possible, the Amphibious Assaulting unit(s) are eliminated.",
+   "If this is not possible, the Amphibious Assaulting unit(s) are eliminated."
+  ],
+  "part": 2,
+  "summary": "Important: If Amphibious Assault ground unit(s) are without an accompanying friendly naval unit and opposing naval forces of any type end their movement in the battle hex as part…"
+ },
+ {
+  "id": "7.45#3",
+  "sectionId": "7.45",
+  "label": "7.45 Amphibious Assault (Offensive and Reaction)",
+  "headingPath": [
+   "7.0 Movement and Stacking",
+   "7.4 Ground Unit Movement and Stacking"
+  ],
+  "pageStart": 15,
+  "pageEnd": 16,
+  "text": "D. US Army Amphibious Assault Special Restrictions There is a special restriction for US Army ground units (Blue US ground units). They may only conduct amphibious assault movement into a Japanese controlled and occupied one hex island if they end their movement in a hex containing a US Marine unit that also just completed amphibious assault movement into that hex. In all other circumstances, the presence of a US Marine unit is not required for a US Army unit to conduct Amphibious Assault. Nor are there any restrictions on US Army ground units for amphibious assaults on multi-hex islands or during Reaction.",
+  "crossRefs": [],
+  "conditionals": [
    "They may only conduct amphibious assault movement into a Japanese controlled and occupied one hex island if they end their movement in a hex containing a US Marine unit that also just completed amphibious assault movement into that hex."
   ],
-  "part": 1,
-  "summary": "PLAY NOTE: Moving an amphibious force with an aircraft carrier unit always neutralizes opposing Aircraft Zones of Influence throughout the move."
+  "part": 3,
+  "summary": "D."
  },
  {
   "id": "7.46",
@@ -3216,7 +3233,7 @@
   ],
   "pageStart": 23,
   "pageEnd": 24,
-  "text": "11.21 Submarine Warfare Procedure Before the Japanese card draw is made, the Allied player conducts submarine warfare. The Allied player rolls the die and subtracts the game turn number from the die roll. The result is then modified by the factors in 11.22 below. If the modified result is zero or less, the Japanese draw is reduced by one card. In addition the Japanese player permanently loses one Amphibious Shipping point and has any existing Escort modifier reduced from +4 to +2 or from +2 to\n24\nzero. However, the Japanese cannot lose their last ASP in this manner and cannot have their Escort modifier reduced below zero.",
+  "text": "11.21 Submarine Warfare Procedure Before the Japanese card draw is made, the Allied player conducts submarine warfare. The Allied player rolls the die and subtracts the game turn number from the die roll. The result is then modified by the factors in 11.22 below. If the modified result is zero or less, the Japanese draw is reduced by one card. In addition the Japanese player permanently loses one Amphibious Shipping point and has any existing Escort modifier reduced from +4 to +2 or from +2 to\nzero. However, the Japanese cannot lose their last ASP in this manner and cannot have their Escort modifier reduced below zero.",
   "crossRefs": [
    "11.22"
   ],
@@ -3237,31 +3254,11 @@
   ],
   "pageStart": 24,
   "pageEnd": 24,
-  "text": "11.22 Submarine Warfare Modifiers There are two potential modifiers to the Allied submarine warfare die roll.\nSubmarine Warfare Modifiers A. Japanese escort events, each of which add 2 to the Submarine warfare die roll.\nB. The Allied player adds 1 to the die roll for all 1942 game turns due to defective torpedoes.\nexcept during the first three game turns. On game turn one the Allied player receives no cards. On game turn 2 the Allied player draws 5 cards and 2 passes. On game turn 3 the Allied player draws 6 cards and 1 pass. Thereafter the Allied player draws 7 cards per game turn. The Allied player's minimum Strategy card draw is 4 cards per turn, even if the conditions would dictate a smaller hand. Allied passes are used in the same way as passes for the Japanese player, and, as with the Japanese player, cannot be accumulated.",
-  "crossRefs": [],
-  "conditionals": [
-   "except during the first three game turns.",
-   "The Allied player's minimum Strategy card draw is 4 cards per turn, even if the conditions would dictate a smaller hand.",
-   "Allied passes are used in the same way as passes for the Japanese player, and, as with the Japanese player, cannot be accumulated."
-  ],
-  "part": 0,
-  "summary": "Submarine Warfare Modifiers There are two potential modifiers to the Allied submarine warfare die roll."
- },
- {
-  "id": "11.52",
-  "sectionId": "11.52",
-  "label": "11.52 Allied Draw Limitations The Allied",
-  "headingPath": [
-   "11.0 Strategic Warfare",
-   "11.5 Allied Strategy Cards"
-  ],
-  "pageStart": 24,
-  "pageEnd": 24,
-  "text": "11.52 Allied Draw Limitations The Allied player loses one card draw per turn for each of the following conditions plus gains one pass per card lost up to two:",
+  "text": "11.22 Submarine Warfare Modifiers There are two potential modifiers to the Allied submarine warfare die roll.\nSubmarine Warfare Modifiers\nA. Japanese escort events, each of which add 2 to the Submarine warfare die roll.\nB. The Allied player adds 1 to the die roll for all 1942 game turns due to defective torpedoes.",
   "crossRefs": [],
   "conditionals": [],
   "part": 0,
-  "summary": "Allied Draw Limitations The Allied player loses one card draw per turn for each of the following conditions plus gains one pass per card lost up to two:"
+  "summary": "Submarine Warfare Modifiers There are two potential modifiers to the Allied submarine warfare die roll."
  },
  {
   "id": "11.3",
@@ -3381,7 +3378,27 @@
   ],
   "pageStart": 24,
   "pageEnd": 24,
-  "text": "11.51 Allied Draw The Allied player receives a Strategy card draw of 7 cards per turn,\nA. If China surrenders or has previously surrendered. B. If India surrenders or has previously surrendered. C. If Australia surrenders or has previously surrendered. D. If the War In Europe is at level 4 at the beginning of the game turn.",
+  "text": "11.51 Allied Draw The Allied player receives a Strategy card draw of 7 cards per turn,\nexcept during the first three game turns. On game turn one the Allied player receives no cards. On game turn 2 the Allied player draws 5 cards and 2 passes. On game turn 3 the Allied player draws 6 cards and 1 pass. Thereafter the Allied player draws 7 cards per game turn. The Allied player's minimum Strategy card draw is 4 cards per turn, even if the conditions would dictate a smaller hand. Allied passes are used in the same way as passes for the Japanese player, and, as with the Japanese player, cannot be accumulated.",
+  "crossRefs": [],
+  "conditionals": [
+   "11.51 Allied Draw The Allied player receives a Strategy card draw of 7 cards per turn,\nexcept during the first three game turns.",
+   "The Allied player's minimum Strategy card draw is 4 cards per turn, even if the conditions would dictate a smaller hand.",
+   "Allied passes are used in the same way as passes for the Japanese player, and, as with the Japanese player, cannot be accumulated."
+  ],
+  "part": 0,
+  "summary": "Allied Draw The Allied player receives a Strategy card draw of 7 cards per turn, except during the first three game turns."
+ },
+ {
+  "id": "11.52",
+  "sectionId": "11.52",
+  "label": "11.52 Allied Draw Limitations The Allied",
+  "headingPath": [
+   "11.0 Strategic Warfare",
+   "11.5 Allied Strategy Cards"
+  ],
+  "pageStart": 24,
+  "pageEnd": 24,
+  "text": "11.52 Allied Draw Limitations The Allied player loses one card draw per turn for each of the following conditions plus gains one pass per card lost up to two:\nA. If China surrenders or has previously surrendered.\nB. If India surrenders or has previously surrendered.\nC. If Australia surrenders or has previously surrendered.\nD. If the War In Europe is at level 4 at the beginning of the game turn.",
   "crossRefs": [],
   "conditionals": [
    "If China surrenders or has previously surrendered.",
@@ -3390,7 +3407,7 @@
    "If the War In Europe is at level 4 at the beginning of the game turn."
   ],
   "part": 0,
-  "summary": "Allied Draw The Allied player receives a Strategy card draw of 7 cards per turn, A."
+  "summary": "Allied Draw Limitations The Allied player loses one card draw per turn for each of the following conditions plus gains one pass per card lost up to two: A."
  },
  {
   "id": "12.0",

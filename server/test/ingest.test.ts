@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { buildFromPages } from '../src/ingest/index.js';
+import { buildFromPages, droppedIds } from '../src/ingest/index.js';
 
 describe('buildFromPages', () => {
   const pages = [
@@ -20,5 +20,17 @@ describe('buildFromPages', () => {
   });
   it('flags ids that appear out of numeric order', () => {
     expect(report.outOfOrderIds).toContain('6.2');
+  });
+});
+
+describe('droppedIds', () => {
+  const c = (sectionId: string) => ({ sectionId });
+  it('lists rule ids present before but missing after, once each', () => {
+    const before = [c('4.0'), c('4.1'), c('4.1'), c('ERRATA')];
+    const after = [c('4.0'), c('4.2')];
+    expect(droppedIds(before, after)).toEqual(['4.1', 'ERRATA']);
+  });
+  it('is empty when nothing was lost (new ids are fine)', () => {
+    expect(droppedIds([c('4.0')], [c('4.0'), c('4.1')])).toEqual([]);
   });
 });

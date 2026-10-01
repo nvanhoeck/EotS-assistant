@@ -17,7 +17,7 @@ The ingested rulebook text in `server/data/chunks.json` is derived from a copyri
 4. Allow inbound TCP 8787 in the OS firewall.
 5. Start: `npm start` (startup log says whether retrieval is hybrid or BM25-only).
 
-Re-ingest only if the PDF changes: `npm run ingest -- <pdf>` (needs poppler's `pdftotext` on PATH), then `npm run embed`.
+Re-ingest only if the PDF changes (or the extraction in `server/src/ingest` changes): `npm run ingest -- <pdf>` (needs `pdftotext`, poppler or xpdf, on PATH), then `npm run embed` (chunk ids change, so old embeddings are ignored until rebuilt). The ingest refuses to overwrite `data/chunks.json` if the new result has lost a rule id that the old one had; pass `--allow-drops` if that is intended. Two-column pages are read column by column when that provably fixes the rule order (`server/src/ingest/columns.ts`).
 
 ## Phone app
 
