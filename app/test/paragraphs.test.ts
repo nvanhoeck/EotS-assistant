@@ -28,11 +28,18 @@ describe('toParagraphs', () => {
     expect(out.map((p) => p.text).join(' ')).toBe(text);
   });
   it('does not split after abbreviations such as e.g. or U.S.', () => {
-    const filler = Array.from({ length: 20 }, (_, i) => `Filler sentence number ${i + 1}.`).join(' ');
-    const text = `${filler} Units move, e.g. Japanese naval units. The U.S. Navy may react.`;
-    const joined = toParagraphs(text).map((p) => p.text);
-    expect(joined.some((p) => p.includes('e.g. Japanese'))).toBe(true);
-    expect(joined.some((p) => p.includes('U.S. Navy'))).toBe(true);
+    const fill = (tag: string, n: number) =>
+      Array.from({ length: n }, (_, i) => `${tag} sentence number ${i + 1}.`).join(' ');
+    // Sized so that, without the abbreviation guard, a piece boundary falls right after "e.g." and "U.S.".
+    const text = `${fill('Filler', 15)} Units move, e.g. Japanese naval units. ${fill('Reserve', 12)} Then the U.S. Navy may react.`;
+    expect(text.length).toBeGreaterThan(600);
+    const pieces = toParagraphs(text).map((p) => p.text);
+    expect(pieces.length).toBeGreaterThan(1);
+    expect(pieces.some((p) => p.endsWith('e.g.') || p.endsWith('U.S.'))).toBe(false);
+    expect(pieces.some((p) => p.startsWith('Japanese') || p.startsWith('Navy'))).toBe(false);
+    expect(pieces.some((p) => p.includes('e.g. Japanese'))).toBe(true);
+    expect(pieces.some((p) => p.includes('U.S. Navy'))).toBe(true);
+    expect(pieces.join(' ')).toBe(text);
   });
   it('returns nothing for empty text', () => {
     expect(toParagraphs('')).toEqual([]);
