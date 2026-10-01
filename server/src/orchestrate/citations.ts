@@ -20,6 +20,9 @@ export function toCitation(c: Chunk, verified: boolean, quote = ''): Citation {
 
 function norm(s: string): string {
   return s
+    .normalize('NFKC')
+    .replace(/[–—]/g, '-')
+    .replace(/­/g, '')
     .toLowerCase()
     .replace(/[‘’“”"'`]/g, '')
     .replace(/\s+/g, ' ')
@@ -32,19 +35,23 @@ export function validateCitations(raw: RawCitation[], chunks: Chunk[]): { citati
   const seen = new Set<string>();
   let unverified = 0;
 
-  for (const rc of raw ?? []) {
+  for (const item of Array.isArray(raw) ? raw : []) {
+    if (typeof item !== 'object' || item === null) continue;
+    const rc = item as { sectionId?: unknown; quote?: unknown };
+    if (typeof rc.sectionId !== 'string') continue;
+    const quote = typeof rc.quote === 'string' ? rc.quote : '';
     const candidates = chunks.filter((c) => c.sectionId === rc.sectionId);
     if (candidates.length === 0) {
       unverified++;
       continue;
     }
-    const q = norm(rc.quote ?? '');
+    const q = norm(quote);
     const hit = q.length >= 8 ? candidates.find((c) => norm(c.text).includes(q)) : undefined;
     const chosen = hit ?? candidates[0];
     const key = `${chosen.id}|${hit ? q : ''}`;
     if (seen.has(key)) continue;
     seen.add(key);
-    out.push(toCitation(chosen, !!hit, hit ? rc.quote.trim() : ''));
+    out.push(toCitation(chosen, !!hit, hit ? quote.trim() : ''));
     if (!hit) unverified++;
   }
   return { citations: out, unverified };

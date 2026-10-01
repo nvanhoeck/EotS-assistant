@@ -13,14 +13,18 @@ export interface Session {
   pending?: Pending;
 }
 
+const MAX_SESSIONS = 200;
+
 export class SessionStore {
   private sessions = new Map<string, Session>();
 
   get(id: string): Session {
     let s = this.sessions.get(id);
-    if (!s) {
-      s = { facts: [], recent: [] };
-      this.sessions.set(id, s);
+    if (s) this.sessions.delete(id); // refresh recency
+    else s = { facts: [], recent: [] };
+    this.sessions.set(id, s);
+    while (this.sessions.size > MAX_SESSIONS) {
+      this.sessions.delete(this.sessions.keys().next().value as string);
     }
     return s;
   }

@@ -44,6 +44,23 @@ describe('validateCitations', () => {
   });
 });
 
+describe('validateCitations robustness', () => {
+  it('skips null items and tolerates non-string quote', () => {
+    const { citations, unverified } = validateCitations(
+      [null, { sectionId: '8.31', quote: 7 }, { sectionId: 5, quote: 'x' }] as never,
+      [chunk],
+    );
+    expect(citations).toHaveLength(1);
+    expect(citations[0].verified).toBe(false);
+    expect(unverified).toBe(1);
+  });
+  it('matches through ligatures, en dashes and soft hyphens', () => {
+    const c = { ...chunk, text: 'The ﬁnal step – resolve the battle.' };
+    const { citations } = validateCitations([{ sectionId: '8.31', quote: 'the final step - re­solve the battle' }], [c]);
+    expect(citations[0].verified).toBe(true);
+  });
+});
+
 describe('toCitation', () => {
   it('copies page and heading metadata from the chunk', () => {
     expect(toCitation(chunk, true, 'q')).toMatchObject({
