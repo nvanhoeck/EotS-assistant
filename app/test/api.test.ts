@@ -61,4 +61,31 @@ describe('createApi', () => {
     const fake = (async () => ({ ok: false, status: 404, json: async () => ({ error: 'No section 99.9' }) })) as any;
     await expect(createApi('http://x', fake).section('99.9')).rejects.toThrow('No section 99.9');
   });
+  describe('unexpected 200 bodies', () => {
+    const MSG = 'Unexpected response from http://x. Is that the rules server?';
+    const html = (async () => ({ ok: true, json: async () => { throw new SyntaxError('bad json'); } })) as any;
+    const empty = (async () => ({ ok: true, json: async () => ({}) })) as any;
+    it('rejects a non-JSON 200 for search, outline and section', async () => {
+      const api = createApi('http://x', html);
+      await expect(api.search('q')).rejects.toThrow(MSG);
+      await expect(api.outline()).rejects.toThrow(MSG);
+      await expect(api.section('4.0')).rejects.toThrow(MSG);
+    });
+    it('rejects a {} 200 for search, outline and section', async () => {
+      const api = createApi('http://x', empty);
+      await expect(api.search('q')).rejects.toBeInstanceOf(ApiError);
+      await expect(api.outline()).rejects.toThrow(MSG);
+      await expect(api.section('4.0')).rejects.toThrow(MSG);
+    });
+    it('still accepts valid shapes', async () => {
+      const ok = (async (url: string) => ({
+        ok: true,
+        json: async () => (url.includes('/search') ? { results: [] } : url.endsWith('/outline') ? { sections: [] } : { sectionId: '4.0' }),
+      })) as any;
+      const api = createApi('http://x', ok);
+      expect(await api.search('q')).toEqual([]);
+      expect(await api.outline()).toEqual([]);
+      expect((await api.section('4.0')).sectionId).toBe('4.0');
+    });
+  });
 });

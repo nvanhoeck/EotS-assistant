@@ -39,9 +39,9 @@ export function ClarificationCard({ pending, disabled, onSelect, onSubmit }: Pro
 
 const styles = StyleSheet.create({
   card: { backgroundColor: '#eef2ff', borderRadius: 12, padding: 12, marginVertical: 6 },
-  title: { fontWeight: '700', marginBottom: 8 },
+  title: { color: '#111827', fontWeight: '700', marginBottom: 8 },
   q: { marginBottom: 10 },
-  qText: { fontSize: 15, marginBottom: 6 },
+  qText: { color: '#111827', fontSize: 15, marginBottom: 6 },
   options: { flexDirection: 'row', flexWrap: 'wrap' },
   option: { borderWidth: 1, borderColor: '#6366f1', borderRadius: 16, paddingHorizontal: 12, paddingVertical: 6, marginRight: 6, marginBottom: 6 },
   optionOn: { backgroundColor: '#6366f1' },

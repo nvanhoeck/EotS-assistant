@@ -24,6 +24,8 @@ export function createApi(baseUrl: string, fetchImpl: typeof fetch = fetch) {
     return data as T;
   }
 
+  const unexpected = () => new ApiError(`Unexpected response from ${root}. Is that the rules server?`);
+
   const post = <T>(path: string, body: unknown) =>
     request<T>(path, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }, TIMEOUT_MS);
   const get = <T>(path: string) => request<T>(path, { method: 'GET' }, READ_TIMEOUT_MS);
@@ -33,8 +35,20 @@ export function createApi(baseUrl: string, fetchImpl: typeof fetch = fetch) {
     answerClarification: (sessionId: string, pendingId: string, answers: string[]) =>
       post<AskResult>('/answer-clarification', { sessionId, pendingId, answers }),
     reset: (sessionId: string) => post<{ ok: boolean }>('/reset', { sessionId }),
-    search: async (q: string) => (await get<{ results: SearchResult[] }>(`/search?q=${encodeURIComponent(q)}`)).results,
-    section: (id: string) => get<SectionView>(`/section/${encodeURIComponent(id)}`),
-    outline: async () => (await get<{ sections: SectionChild[] }>('/outline')).sections,
+    search: async (q: string) => {
+      const data = await get<{ results?: SearchResult[] }>(`/search?q=${encodeURIComponent(q)}`);
+      if (!Array.isArray(data?.results)) throw unexpected();
+      return data.results;
+    },
+    section: async (id: string) => {
+      const data = await get<SectionView>(`/section/${encodeURIComponent(id)}`);
+      if (typeof data?.sectionId !== 'string') throw unexpected();
+      return data;
+    },
+    outline: async () => {
+      const data = await get<{ sections?: SectionChild[] }>('/outline');
+      if (!Array.isArray(data?.sections)) throw unexpected();
+      return data.sections;
+    },
   };
 }

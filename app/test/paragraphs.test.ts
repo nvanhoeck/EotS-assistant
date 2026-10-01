@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { toParagraphs } from '../src/paragraphs';
+import { dropLead, toParagraphs } from '../src/paragraphs';
 
 describe('toParagraphs', () => {
   it('splits on line breaks and drops empties', () => {
@@ -44,5 +44,12 @@ describe('toParagraphs', () => {
   it('returns nothing for empty text', () => {
     expect(toParagraphs('')).toEqual([]);
     expect(toParagraphs(' \n ')).toEqual([]);
+  });
+});
+
+describe('dropLead', () => {
+  it('removes a lead equal to the section id, keeps others', () => {
+    const ps = [{ lead: '4.1', text: 'a' }, { lead: '4.2', text: 'b' }, { lead: null, text: 'c' }];
+    expect(dropLead(ps, '4.1')).toEqual([{ lead: null, text: 'a' }, { lead: '4.2', text: 'b' }, { lead: null, text: 'c' }]);
   });
 });

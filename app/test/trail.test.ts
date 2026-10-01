@@ -15,6 +15,9 @@ describe('trail', () => {
     expect(stepSection([a, b], c)).toEqual([a, c]);
     expect(stepSection([], c)).toEqual([c]);
   });
+  it('step back onto the entry below pops instead of duplicating it', () => {
+    expect(stepSection([a, b], a)).toEqual([a]);
+  });
   it('back pops one entry and ends up empty (the search list)', () => {
     expect(backFrom([a, b])).toEqual([a]);
     expect(backFrom([a])).toEqual([]);

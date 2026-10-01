@@ -14,9 +14,24 @@ import { DEFAULT_SIZE_INDEX, stepSize } from './src/textSize';
 import { usePalette } from './src/theme';
 import { backFrom, backLabel, openSection, stepSection, type Trail } from './src/trail';
 
+// Hidden panes stay mounted and laid out (never display:none: iOS Fabric unmounts that subtree and
+// the search list would lose its scroll position).
+function layerStyle(active: boolean) {
+  return [StyleSheet.absoluteFill, { opacity: active ? 1 : 0 }];
+}
+
+function layerProps(active: boolean) {
+  return {
+    pointerEvents: (active ? 'auto' : 'none') as 'auto' | 'none',
+    importantForAccessibility: (active ? 'auto' : 'no-hide-descendants') as 'auto' | 'no-hide-descendants',
+    accessibilityElementsHidden: !active,
+  };
+}
+
 export default function App() {
   const [state, dispatch] = useReducer(reduce, initialState);
-  const [serverUrl, setServerUrl] = useState('');
+  const [serverUrl, setServerUrl] = useState(''); // text-box draft
+  const [committedUrl, setCommittedUrl] = useState(''); // what the api is built from
   const [sessionId, setSessionId] = useState('');
   const [showSettings, setShowSettings] = useState(false);
   const [input, setInput] = useState('');
@@ -27,7 +42,10 @@ export default function App() {
   const pal = usePalette();
 
   useEffect(() => {
-    loadServerUrl().then(setServerUrl);
+    loadServerUrl().then((u) => {
+      setServerUrl(u);
+      setCommittedUrl(u);
+    });
     loadSessionId().then(setSessionId);
     loadTextSize().then(setSizeIndex);
   }, []);
@@ -43,7 +61,7 @@ export default function App() {
     return () => sub.remove();
   }, [reading]);
 
-  const api = useMemo(() => createApi(serverUrl), [serverUrl]);
+  const api = useMemo(() => createApi(committedUrl), [committedUrl]);
 
   async function run(call: () => Promise<import('./src/types').AskResult>) {
     try {
@@ -97,21 +115,26 @@ export default function App() {
           <ModeToggle mode={mode} onChange={setMode} />
           {showSettings && (
             <View style={styles.settings}>
-              <Text>Server address (your PC's LAN IP)</Text>
+              <Text style={styles.label}>Server address (your PC's LAN IP)</Text>
               <TextInput
                 style={styles.input}
                 value={serverUrl}
                 autoCapitalize="none"
                 autoCorrect={false}
+                placeholderTextColor="#6b7280"
                 onChangeText={setServerUrl}
-                onEndEditing={() => saveServerUrl(serverUrl)}
+                onEndEditing={() => {
+                  saveServerUrl(serverUrl);
+                  setCommittedUrl(serverUrl);
+                }}
               />
             </View>
           )}
         </>
       )}
 
-      <View style={[styles.fill, mode !== 'ai' && styles.hidden]}>
+      <View style={styles.stack}>
+      <View style={layerStyle(mode === 'ai' && !reading)} {...layerProps(mode === 'ai' && !reading)}>
         <FlatList
           ref={list}
           style={styles.list}
@@ -153,6 +176,7 @@ export default function App() {
               value={input}
               onChangeText={setInput}
               placeholder="Ask a rules question…"
+              placeholderTextColor="#6b7280"
               onSubmitEditing={send}
               returnKeyType="send"
             />
@@ -164,11 +188,12 @@ export default function App() {
       </View>
 
       {/* Kept mounted while reading or in AI mode, so the query, results and scroll position survive Back. */}
-      <View style={[styles.fill, (mode !== 'search' || reading) && styles.hidden]}>
+      <View style={layerStyle(mode === 'search' && !reading)} {...layerProps(mode === 'search' && !reading)}>
         <SearchScreen api={api} onOpen={(ref) => setTrail((t) => openSection(t, ref))} />
       </View>
 
       {reading && (
+        <View style={[StyleSheet.absoluteFill, { backgroundColor: pal.page }]} pointerEvents="auto">
         <ReaderScreen
           api={api}
           entry={trail[trail.length - 1]}
@@ -179,17 +204,19 @@ export default function App() {
           onStep={(ref) => setTrail((t) => stepSection(t, ref))}
           onSize={changeSize}
         />
+        </View>
       )}
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: '#fff', paddingTop: Platform.OS === 'android' ? 32 : 0 },
-  fill: { flex: 1 },
-  hidden: { display: 'none' },
+  stack: { flex: 1, position: 'relative' },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 12, borderBottomWidth: 1, borderColor: '#e5e7eb' },
-  title: { fontSize: 17, fontWeight: '700' },
+  label: { color: '#111827' },
+  title: { color: '#111827', fontSize: 17, fontWeight: '700' },
   headerButtons: { flexDirection: 'row', gap: 16 },
   link: { color: '#1e3a8a', fontWeight: '600' },
   settings: { padding: 12, backgroundColor: '#f9fafb' },
@@ -199,7 +226,7 @@ const styles = StyleSheet.create({
   userText: { color: '#fff', fontSize: 15 },
   error: { color: '#b91c1c', marginVertical: 8 },
   inputRow: { flexDirection: 'row', padding: 8, gap: 8, borderTopWidth: 1, borderColor: '#e5e7eb' },
-  input: { borderWidth: 1, borderColor: '#d1d5db', borderRadius: 8, padding: 10, marginTop: 4 },
+  input: { color: '#111827', borderWidth: 1, borderColor: '#d1d5db', borderRadius: 8, padding: 10, marginTop: 4 },
   send: { backgroundColor: '#1e3a8a', borderRadius: 8, paddingHorizontal: 16, justifyContent: 'center', marginTop: 4 },
   sendText: { color: '#fff', fontWeight: '600' },
 });

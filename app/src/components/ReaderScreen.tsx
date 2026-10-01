@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { ActivityIndicator, Animated, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import type { createApi } from '../api';
-import { toParagraphs } from '../paragraphs';
+import { dropLead, toParagraphs } from '../paragraphs';
 import { TEXT_SIZES } from '../textSize';
 import { serif, usePalette } from '../theme';
 import type { SectionRef, SectionView } from '../types';
@@ -55,7 +55,7 @@ export function ReaderScreen({ api, entry, backText, sizeIndex, onBack, onOpen, 
     };
   }, [api, entry.sectionId, attempt, fade]);
 
-  const paragraphs = useMemo(() => toParagraphs(view?.text ?? ''), [view]);
+  const paragraphs = useMemo(() => dropLead(toParagraphs(view?.text ?? ''), view?.sectionId ?? ''), [view]);
   const size = TEXT_SIZES[sizeIndex];
 
   return (

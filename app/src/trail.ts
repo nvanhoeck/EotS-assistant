@@ -9,7 +9,9 @@ export function openSection(trail: Trail, ref: SectionRef): Trail {
 
 /** Previous/Next move within the document, so they replace the current entry instead of stacking. */
 export function stepSection(trail: Trail, ref: SectionRef): Trail {
-  return trail.length === 0 ? [ref] : [...trail.slice(0, -1), ref];
+  if (trail.length === 0) return [ref];
+  if (trail.length >= 2 && trail[trail.length - 2].sectionId === ref.sectionId) return trail.slice(0, -1);
+  return [...trail.slice(0, -1), ref];
 }
 
 export function backFrom(trail: Trail): Trail {

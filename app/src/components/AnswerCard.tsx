@@ -28,7 +28,7 @@ export function AnswerCard({ result }: { result: AnswerResult | NotFoundResult }
         <View style={styles.assumptions}>
           <Text style={styles.assumptionsTitle}>Assumed</Text>
           {result.assumptions.map((a, i) => (
-            <Text key={i}>• {a}</Text>
+            <Text key={i} style={styles.assumed}>• {a}</Text>
           ))}
         </View>
       )}
@@ -46,10 +46,11 @@ export function AnswerCard({ result }: { result: AnswerResult | NotFoundResult }
 
 const styles = StyleSheet.create({
   card: { backgroundColor: '#f3f4f6', borderRadius: 12, padding: 12, marginVertical: 6, alignSelf: 'flex-start', maxWidth: '95%' },
-  answer: { fontSize: 15, lineHeight: 22 },
-  step: { marginTop: 6, fontSize: 15 },
+  answer: { color: '#111827', fontSize: 15, lineHeight: 22 },
+  step: { color: '#111827', marginTop: 6, fontSize: 15 },
   row: { flexDirection: 'row', flexWrap: 'wrap', marginTop: 4 },
   assumptions: { marginTop: 8, padding: 8, backgroundColor: '#fef3c7', borderRadius: 8 },
-  assumptionsTitle: { fontWeight: '700' },
+  assumptionsTitle: { color: '#111827', fontWeight: '700' },
+  assumed: { color: '#111827' },
   warn: { marginTop: 8, color: '#b45309', fontSize: 12 },
 });

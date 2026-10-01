@@ -67,8 +67,14 @@ export function SearchScreen({ api, onOpen }: { api: Api; onOpen(ref: SectionRef
         style={styles.input}
         value={state.query}
         onChangeText={change}
-        onSubmitEditing={() => run.flush()}
+        onSubmitEditing={() => {
+          const q = state.query.trim();
+          if (!q) return;
+          run(q);
+          run.flush();
+        }}
         placeholder="Search the rules…"
+        placeholderTextColor="#6b7280"
         autoCapitalize="none"
         autoCorrect={false}
         returnKeyType="search"
@@ -100,14 +106,14 @@ export function SearchScreen({ api, onOpen }: { api: Api; onOpen(ref: SectionRef
 
 const styles = StyleSheet.create({
   fill: { flex: 1, paddingHorizontal: 12 },
-  input: { borderWidth: 1, borderColor: '#d1d5db', borderRadius: 8, padding: 10, marginTop: 4, fontSize: 16 },
+  input: { color: '#111827', borderWidth: 1, borderColor: '#d1d5db', borderRadius: 8, padding: 10, marginTop: 4, fontSize: 16 },
   spin: { margin: 8 },
   error: { color: '#b91c1c', marginVertical: 8 },
   empty: { color: '#6b7280', marginVertical: 16 },
   hint: { color: '#6b7280', marginVertical: 12 },
   row: { paddingVertical: 12, borderBottomWidth: 1, borderColor: '#e5e7eb' },
   best: { color: '#1e3a8a', fontSize: 11, fontWeight: '700', letterSpacing: 1, marginBottom: 2 },
-  label: { fontSize: 16, fontWeight: '600' },
+  label: { color: '#111827', fontSize: 16, fontWeight: '600' },
   path: { color: '#6b7280', fontSize: 12, marginTop: 2 },
   snippet: { color: '#374151', fontSize: 14, marginTop: 4 },
 });

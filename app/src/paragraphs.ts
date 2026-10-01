@@ -51,3 +51,8 @@ export function toParagraphs(text: string): Paragraph[] {
   }
   return out;
 }
+
+/** Drops a run-in lead that merely repeats the section id already shown as the eyebrow. */
+export function dropLead(paragraphs: Paragraph[], sectionId: string): Paragraph[] {
+  return paragraphs.map((p) => (p.lead === sectionId ? { ...p, lead: null } : p));
+}
