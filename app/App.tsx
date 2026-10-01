@@ -1,12 +1,18 @@
 import React, { useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import {
-  ActivityIndicator, FlatList, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, StyleSheet, Text, TextInput, View,
+  ActivityIndicator, BackHandler, FlatList, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, StyleSheet, Text, TextInput, View,
 } from 'react-native';
 import { createApi } from './src/api';
 import { initialState, reduce } from './src/chatState';
 import { AnswerCard } from './src/components/AnswerCard';
 import { ClarificationCard } from './src/components/ClarificationCard';
-import { loadServerUrl, loadSessionId, saveServerUrl } from './src/storage';
+import { ModeToggle, type Mode } from './src/components/ModeToggle';
+import { ReaderScreen } from './src/components/ReaderScreen';
+import { SearchScreen } from './src/components/SearchScreen';
+import { loadServerUrl, loadSessionId, loadTextSize, saveServerUrl, saveTextSize } from './src/storage';
+import { DEFAULT_SIZE_INDEX, stepSize } from './src/textSize';
+import { usePalette } from './src/theme';
+import { backFrom, backLabel, openSection, stepSection, type Trail } from './src/trail';
 
 export default function App() {
   const [state, dispatch] = useReducer(reduce, initialState);
@@ -14,12 +20,28 @@ export default function App() {
   const [sessionId, setSessionId] = useState('');
   const [showSettings, setShowSettings] = useState(false);
   const [input, setInput] = useState('');
+  const [mode, setMode] = useState<Mode>('ai');
+  const [trail, setTrail] = useState<Trail>([]);
+  const [sizeIndex, setSizeIndex] = useState(DEFAULT_SIZE_INDEX);
   const list = useRef<FlatList>(null);
+  const pal = usePalette();
 
   useEffect(() => {
     loadServerUrl().then(setServerUrl);
     loadSessionId().then(setSessionId);
+    loadTextSize().then(setSizeIndex);
   }, []);
+
+  const reading = mode === 'search' && trail.length > 0;
+
+  useEffect(() => {
+    const sub = BackHandler.addEventListener('hardwareBackPress', () => {
+      if (!reading) return false;
+      setTrail(backFrom);
+      return true;
+    });
+    return () => sub.remove();
+  }, [reading]);
 
   const api = useMemo(() => createApi(serverUrl), [serverUrl]);
 
@@ -55,83 +77,117 @@ export default function App() {
     dispatch({ type: 'reset' });
   }
 
+  function changeSize(delta: -1 | 1) {
+    const next = stepSize(sizeIndex, delta);
+    setSizeIndex(next);
+    saveTextSize(next).catch(() => {});
+  }
+
   return (
-    <SafeAreaView style={styles.root}>
-      <View style={styles.header}>
-        <Text style={styles.title}>Empire of the Sun Rules</Text>
-        <View style={styles.headerButtons}>
-          <Pressable onPress={clearContext}><Text style={styles.link}>Clear</Text></Pressable>
-          <Pressable onPress={() => setShowSettings((v) => !v)}><Text style={styles.link}>Server</Text></Pressable>
-        </View>
-      </View>
-      {showSettings && (
-        <View style={styles.settings}>
-          <Text>Server address (your PC's LAN IP)</Text>
-          <TextInput
-            style={styles.input}
-            value={serverUrl}
-            autoCapitalize="none"
-            autoCorrect={false}
-            onChangeText={setServerUrl}
-            onEndEditing={() => saveServerUrl(serverUrl)}
-          />
-        </View>
-      )}
-      <FlatList
-        ref={list}
-        style={styles.list}
-        data={state.messages}
-        keyExtractor={(_, i) => String(i)}
-        onContentSizeChange={() => list.current?.scrollToEnd({ animated: true })}
-        ListEmptyComponent={
-          <Text style={styles.hint}>
-            Ask about setup, the sequence of play, special cases or combat. For example: "What happens if no air or naval units survive a battle?"
-          </Text>
-        }
-        renderItem={({ item }) =>
-          item.kind === 'user' ? (
-            <View style={styles.userBubble}><Text style={styles.userText}>{item.text}</Text></View>
-          ) : item.kind === 'error' ? (
-            <Text style={styles.error}>{item.text}</Text>
-          ) : (
-            <AnswerCard result={item.result} />
-          )
-        }
-        ListFooterComponent={
-          <>
-            {state.pending && (
-              <ClarificationCard
-                pending={state.pending}
-                disabled={state.busy}
-                onSelect={(index, option) => dispatch({ type: 'select', index, option })}
-                onSubmit={submitClarification}
+    <SafeAreaView style={[styles.root, reading && { backgroundColor: pal.page }]}>
+      {!reading && (
+        <>
+          <View style={styles.header}>
+            <Text style={styles.title}>Empire of the Sun Rules</Text>
+            <View style={styles.headerButtons}>
+              {mode === 'ai' && <Pressable onPress={clearContext}><Text style={styles.link}>Clear</Text></Pressable>}
+              <Pressable onPress={() => setShowSettings((v) => !v)}><Text style={styles.link}>Server</Text></Pressable>
+            </View>
+          </View>
+          <ModeToggle mode={mode} onChange={setMode} />
+          {showSettings && (
+            <View style={styles.settings}>
+              <Text>Server address (your PC's LAN IP)</Text>
+              <TextInput
+                style={styles.input}
+                value={serverUrl}
+                autoCapitalize="none"
+                autoCorrect={false}
+                onChangeText={setServerUrl}
+                onEndEditing={() => saveServerUrl(serverUrl)}
               />
-            )}
-            {state.busy && <ActivityIndicator style={{ margin: 12 }} />}
-          </>
-        }
-      />
-      <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-        <View style={styles.inputRow}>
-          <TextInput
-            style={[styles.input, { flex: 1 }]}
-            value={input}
-            onChangeText={setInput}
-            placeholder="Ask a rules question…"
-            onSubmitEditing={send}
-            returnKeyType="send"
-          />
-          <Pressable onPress={send} style={[styles.send, state.busy && { opacity: 0.4 }]} disabled={state.busy}>
-            <Text style={styles.sendText}>Send</Text>
-          </Pressable>
-        </View>
-      </KeyboardAvoidingView>
+            </View>
+          )}
+        </>
+      )}
+
+      <View style={[styles.fill, mode !== 'ai' && styles.hidden]}>
+        <FlatList
+          ref={list}
+          style={styles.list}
+          data={state.messages}
+          keyExtractor={(_, i) => String(i)}
+          onContentSizeChange={() => list.current?.scrollToEnd({ animated: true })}
+          ListEmptyComponent={
+            <Text style={styles.hint}>
+              Ask about setup, the sequence of play, special cases or combat. For example: "What happens if no air or naval units survive a battle?"
+            </Text>
+          }
+          renderItem={({ item }) =>
+            item.kind === 'user' ? (
+              <View style={styles.userBubble}><Text style={styles.userText}>{item.text}</Text></View>
+            ) : item.kind === 'error' ? (
+              <Text style={styles.error}>{item.text}</Text>
+            ) : (
+              <AnswerCard result={item.result} />
+            )
+          }
+          ListFooterComponent={
+            <>
+              {state.pending && (
+                <ClarificationCard
+                  pending={state.pending}
+                  disabled={state.busy}
+                  onSelect={(index, option) => dispatch({ type: 'select', index, option })}
+                  onSubmit={submitClarification}
+                />
+              )}
+              {state.busy && <ActivityIndicator style={{ margin: 12 }} />}
+            </>
+          }
+        />
+        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+          <View style={styles.inputRow}>
+            <TextInput
+              style={[styles.input, { flex: 1 }]}
+              value={input}
+              onChangeText={setInput}
+              placeholder="Ask a rules question…"
+              onSubmitEditing={send}
+              returnKeyType="send"
+            />
+            <Pressable onPress={send} style={[styles.send, state.busy && { opacity: 0.4 }]} disabled={state.busy}>
+              <Text style={styles.sendText}>Send</Text>
+            </Pressable>
+          </View>
+        </KeyboardAvoidingView>
+      </View>
+
+      {/* Kept mounted while reading or in AI mode, so the query, results and scroll position survive Back. */}
+      <View style={[styles.fill, (mode !== 'search' || reading) && styles.hidden]}>
+        <SearchScreen api={api} onOpen={(ref) => setTrail((t) => openSection(t, ref))} />
+      </View>
+
+      {reading && (
+        <ReaderScreen
+          api={api}
+          entry={trail[trail.length - 1]}
+          backText={backLabel(trail)}
+          sizeIndex={sizeIndex}
+          onBack={() => setTrail(backFrom)}
+          onOpen={(ref) => setTrail((t) => openSection(t, ref))}
+          onStep={(ref) => setTrail((t) => stepSection(t, ref))}
+          onSize={changeSize}
+        />
+      )}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: '#fff', paddingTop: Platform.OS === 'android' ? 32 : 0 },
+  fill: { flex: 1 },
+  hidden: { display: 'none' },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 12, borderBottomWidth: 1, borderColor: '#e5e7eb' },
   title: { fontSize: 17, fontWeight: '700' },
   headerButtons: { flexDirection: 'row', gap: 16 },

@@ -28,6 +28,10 @@ npx expo start
 ```
 Open in Expo Go on a phone on the same Wi-Fi. Tap **Server** and enter `http://<PC LAN IP>:8787`.
 
+### Search mode
+
+Tap **Search** (next to **AI**) to browse and search the rulebook without the model. Type a query (it searches 1 s after you stop typing, or on the keyboard's search key); results are ranked with the best match first. Open a section to read it; use the subsection list, Previous/Next and the underlined cross-references; **Back** returns to where you came from. A−/A+ change the text size. Search needs the server running but not Ollama.
+
 ## Evaluate
 
 ```
