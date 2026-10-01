@@ -1,8 +1,12 @@
 {
   "pages": 48,
   "blocks": 248,
-  "chunks": 319,
-  "pagesWithoutRules": [],
+  "chunks": 300,
+  "pagesWithoutRules": [
+    45,
+    46,
+    47
+  ],
   "outOfOrderIds": [
     "6.2",
     "6.21",
@@ -11,5 +15,10 @@
     "11.3"
   ],
   "duplicateIds": [],
-  "longestChunkChars": 1798
+  "longestChunkChars": 1795,
+  "removed": {
+    "designNoteLines": 30,
+    "sidenoteLines": 4,
+    "endMatterLines": 64
+  }
 }

@@ -36,3 +36,29 @@ describe.skipIf(!have)('real rulebook chunks', () => {
     expect(new Set(chunks.map((c) => c.id)).size).toBe(chunks.length);
   });
 });
+
+describe.skipIf(!have)('real rulebook noise removal', () => {
+  const chunks: Chunk[] = have ? JSON.parse(fs.readFileSync(file, 'utf8')) : [];
+  const anywhere = (s: string) => chunks.some((c) => c.text.includes(s));
+
+  it('drops designer notes, bibliography and index', () => {
+    expect(anywhere('DESIGN NOTE')).toBe(false);
+    expect(chunks.some((c) => c.sectionId === '20.0')).toBe(false);
+    expect(anywhere('Allen, Louis')).toBe(false);
+    expect(anywhere('GAME DESIGNER')).toBe(false);
+  });
+  it('keeps errata', () => {
+    const e = chunks.find((c) => c.sectionId === 'ERRATA' && c.text.includes('Japanese Card 27'));
+    expect(e).toBeDefined();
+    expect(e!.text).toContain('37th');
+    expect(e!.pageStart).toBe(48);
+  });
+  it('keeps play guidance and drops pure commentary', () => {
+    expect(anywhere('PLAY NOTE: Moving air and aircraft carrier units first')).toBe(true);
+    expect(anywhere('important concept in the game')).toBe(false);
+    expect(anywhere('dominated by carrier warfare')).toBe(false);
+  });
+  it('is smaller overall', () => {
+    expect(chunks.reduce((n, c) => n + c.text.length, 0)).toBeLessThan(235000);
+  });
+});

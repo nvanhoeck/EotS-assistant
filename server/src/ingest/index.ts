@@ -2,6 +2,8 @@ import type { Chunk } from '../types.js';
 import { extractPages } from './extract.js';
 import { parseRules } from './parse.js';
 import { buildChunks } from './chunk.js';
+import { stripNoise, type NoiseStats } from './noise.js';
+import type { RuleBlock } from '../types.js';
 
 export interface IngestReport {
   pages: number;
@@ -11,6 +13,7 @@ export interface IngestReport {
   outOfOrderIds: string[];
   duplicateIds: string[];
   longestChunkChars: number;
+  removed: NoiseStats;
 }
 
 function idKey(id: string): [number, string] {
@@ -25,7 +28,17 @@ function lessThan(a: string, b: string): boolean {
 }
 
 export function buildFromPages(pages: string[]): { chunks: Chunk[]; report: IngestReport } {
-  const blocks = parseRules(pages);
+  const stripped = stripNoise(pages);
+  const parsed = parseRules(stripped.pages);
+  const errataBlocks: RuleBlock[] = stripped.errata.map((e) => ({
+    id: 'ERRATA',
+    heading: true,
+    title: 'Errata and printing notes',
+    page: e.page,
+    pageEnd: e.page,
+    text: 'ERRATA Errata and printing notes ' + e.text,
+  }));
+  const blocks = [...parsed, ...errataBlocks];
   const chunks = buildChunks(blocks);
 
   const pagesWithRules = new Set<number>();
@@ -34,8 +47,8 @@ export function buildFromPages(pages: string[]): { chunks: Chunk[]; report: Inge
   for (let p = 2; p <= pages.length; p++) if (!pagesWithRules.has(p)) pagesWithoutRules.push(p);
 
   const outOfOrderIds: string[] = [];
-  for (let i = 1; i < blocks.length; i++) {
-    if (lessThan(blocks[i].id, blocks[i - 1].id)) outOfOrderIds.push(blocks[i].id);
+  for (let i = 1; i < parsed.length; i++) {
+    if (lessThan(parsed[i].id, parsed[i - 1].id)) outOfOrderIds.push(parsed[i].id);
   }
 
   const counts = new Map<string, number>();
@@ -52,6 +65,7 @@ export function buildFromPages(pages: string[]): { chunks: Chunk[]; report: Inge
       outOfOrderIds,
       duplicateIds,
       longestChunkChars: chunks.reduce((m, c) => Math.max(m, c.text.length), 0),
+      removed: stripped.stats,
     },
   };
 }

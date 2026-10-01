@@ -136,13 +136,12 @@
   ],
   "pageStart": 3,
   "pageEnd": 5,
-  "text": "1.3 Glossary Aircraft Carrier: All CV, CVL, and CVE type naval units are collectively known as aircraft carriers or carriers. When the rules reference aircraft carriers, they are referring to all three types. When distinctions are required in the rules, they are cited by their particular naval unit type letter designator. Aircraft Range: Air units (land based aircraft units) have two range values (normal and extended) on their counter. If an air unit's extended range is in parentheses, it cannot participate in a battle if it uses this range to move during an Offensive. Consequently, an aircraft unit cannot react using its parenthetical value, since all reaction units have to participate in a battle in order to reaction move. An aircraft unit's range is the distance in hexes that it can move from airfield to airfield, and the distance in hexes it can be from a battle that it participates in. When an aircraft uses its extended range in battle only, its attack strength is halved for combat purposes. DESIGN NOTE: The normal range is the operational range of the fighters in the air unit, whereas the extended range represents solely the two engine bombers traveling alone. Only the Allies had four engine bombers, which are in separate Long Range Bomber air units that have one range value. Aircraft Carrier air range: Aircraft carrier naval units also possess an aircraft range. It acts in a manner analogous to the normal range of air units. In order to participate in a battle, this is the maximum distance in hexes that an aircraft carrier may be from a battle hex. DESIGN NOTE: The Japanese have a small advantage when apportioning hits in air naval combat due to their superior aircraft carrier range.",
+  "text": "1.3 Glossary Aircraft Carrier: All CV, CVL, and CVE type naval units are collectively known as aircraft carriers or carriers. When the rules reference aircraft carriers, they are referring to all three types. When distinctions are required in the rules, they are cited by their particular naval unit type letter designator. Aircraft Range: Air units (land based aircraft units) have two range values (normal and extended) on their counter. If an air unit's extended range is in parentheses, it cannot participate in a battle if it uses this range to move during an Offensive. Consequently, an aircraft unit cannot react using its parenthetical value, since all reaction units have to participate in a battle in order to reaction move. An aircraft unit's range is the distance in hexes that it can move from airfield to airfield, and the distance in hexes it can be from a battle that it participates in. When an aircraft uses its extended range in battle only, its attack strength is halved for combat purposes. Aircraft Carrier air range: Aircraft carrier naval units also possess an aircraft range. It acts in a manner analogous to the normal range of air units. In order to participate in a battle, this is the maximum distance in hexes that an aircraft carrier may be from a battle hex.",
   "crossRefs": [],
   "conditionals": [
    "If an air unit's extended range is in parentheses, it cannot participate in a battle if it uses this range to move during an Offensive.",
    "Consequently, an aircraft unit cannot react using its parenthetical value, since all reaction units have to participate in a battle in order to reaction move.",
-   "When an aircraft uses its extended range in battle only, its attack strength is halved for combat purposes.",
-   "Only the Allies had four engine bombers, which are in separate Long Range Bomber air units that have one range value."
+   "When an aircraft uses its extended range in battle only, its attack strength is halved for combat purposes."
   ],
   "part": 0
  },
@@ -155,7 +154,7 @@
   ],
   "pageStart": 3,
   "pageEnd": 5,
-  "text": "Aircraft Zone Of Influence (ZOI): (see 7.35) All in supply air and carrier units project a 2 hex zone of influence, which can only be neutralized by the presence of an opposing, in supply non-LRB air unit or carrier projecting its Zone of Influence into the same hex. A Zone of Influence that is not neutralized impacts several game functions, such as blocking HQ ranges for unit activation and lines of communication for supply determination. An aircraft zone of influence cannot be neutralized for Special Reaction purposes (6.27) or intelligence die rolls. Certain event cards temporarily cancel Aircraft Zones of Influence. Operations Value Black = Military Yellow = Political Green = Resource Blue = Reaction Event If the Event title is in red, then the card must be removed from play if used as an event. Intelligence Card Card Num- Values Type ber Card Symbols These symbols are provided to help players notice these important cards even when the card is partially covered up. Surprise Attack Ambush Intercept Attack Response Interservice Rivalry Interservice Rivalry China US Political Will War in Europe Weather Gandhi Tojo PLAY NOTE: This is an important concept in the game as you will regularly find yourself thinking about your position in terms of aircraft ZOI. Allied: This term refers to any unit controlled by the Allied player, and includes British, Australian, New Zealand, Indian, Dutch, Chinese, and US units. Allied Control: All hexes that are outside the Japanese Empire Boundary, outside Korea, and outside the coastal hexes of China (except Hong Kong, which is Allied controlled), begin the 1941 campaign scenario under Allied control. Each other scenario will specify initial control locations individually in relation to the scenario starting situation.",
+  "text": "Aircraft Zone Of Influence (ZOI): (see 7.35) All in supply air and carrier units project a 2 hex zone of influence, which can only be neutralized by the presence of an opposing, in supply non-LRB air unit or carrier projecting its Zone of Influence into the same hex. A Zone of Influence that is not neutralized impacts several game functions, such as blocking HQ ranges for unit activation and lines of communication for supply determination. An aircraft zone of influence cannot be neutralized for Special Reaction purposes (6.27) or intelligence die rolls. Certain event cards temporarily cancel Aircraft Zones of Influence. Operations Value Black = Military Yellow = Political Green = Resource Blue = Reaction Event If the Event title is in red, then the card must be removed from play if used as an event. Intelligence Card Card Num- Values Type ber Card Symbols These symbols are provided to help players notice these important cards even when the card is partially covered up. Surprise Attack Ambush Intercept Attack Response Interservice Rivalry Interservice Rivalry China US Political Will War in Europe Weather Gandhi Tojo Allied: This term refers to any unit controlled by the Allied player, and includes British, Australian, New Zealand, Indian, Dutch, Chinese, and US units. Allied Control: All hexes that are outside the Japanese Empire Boundary, outside Korea, and outside the coastal hexes of China (except Hong Kong, which is Allied controlled), begin the 1941 campaign scenario under Allied control. Each other scenario will specify initial control locations individually in relation to the scenario starting situation.",
   "crossRefs": [
    "7.35",
    "6.27"
@@ -237,7 +236,7 @@
   ],
   "pageStart": 3,
   "pageEnd": 5,
-  "text": "Named Location: Cities, with or without intrinsic defense, Resource hexes, and hexes with ports or airfields are named locations. Pre-War Units: Most of the units that start the game on the map (those with set up hexes on the counter) and certain others are denoted by a dot on their counters. These are defined as pre-war units. Pre-war units cannot receive replacements. DESIGN NOTE: Pre-war units were in two categories: professional soldiers and colonial constabulary troops who were trained for internal security. Range: Range is the distance between two hexes. When counting range do not include the starting hex the HQ or combat unit occupies, but include the destination hex in the calculation. Removed From Play Pile: These are cards that once played will not return to play during the current game. Rounding: Any time the players have to round a number or value that is fractional, round it up, never down. Strategy Cards: The engine of the game is the play of the strategy cards. A strategy card can be played as an Operations card (OC), which uses the large numerical value at the top of the card(1, 2, or 3) or as an Event card (EC), which uses the written event. If the text of a card contradicts the rules, the event text supersedes the rules. Players in the game receive their own set of Strategy cards (one Japanese and one Allied). The Japanese player is the only player that may use the Japanese Strategy cards and the Allied player is the only player that may use the Allied player cards. Supply Eligible. A port or airfield from which a path of hexes can be traced to an ultimate supply source.",
+  "text": "Named Location: Cities, with or without intrinsic defense, Resource hexes, and hexes with ports or airfields are named locations. Pre-War Units: Most of the units that start the game on the map (those with set up hexes on the counter) and certain others are denoted by a dot on their counters. These are defined as pre-war units. Pre-war units cannot receive replacements. Range: Range is the distance between two hexes. When counting range do not include the starting hex the HQ or combat unit occupies, but include the destination hex in the calculation. Removed From Play Pile: These are cards that once played will not return to play during the current game. Rounding: Any time the players have to round a number or value that is fractional, round it up, never down. Strategy Cards: The engine of the game is the play of the strategy cards. A strategy card can be played as an Operations card (OC), which uses the large numerical value at the top of the card(1, 2, or 3) or as an Event card (EC), which uses the written event. If the text of a card contradicts the rules, the event text supersedes the rules. Players in the game receive their own set of Strategy cards (one Japanese and one Allied). The Japanese player is the only player that may use the Japanese Strategy cards and the Allied player is the only player that may use the Allied player cards. Supply Eligible. A port or airfield from which a path of hexes can be traced to an ultimate supply source. Unplayable Ocean Hexside: No naval movement, including Amphibious Assault, or supply can be traced across an unplayable Ocean hexside. These are the game effects of Unplayable Ocean hexsides . US: This term refers to the subset of Allied units that are American.",
   "crossRefs": [],
   "conditionals": [
    "Pre-war units cannot receive replacements.",
@@ -256,7 +255,7 @@
   ],
   "pageStart": 3,
   "pageEnd": 5,
-  "text": "Unplayable Ocean Hexside: No naval movement, including Amphibious Assault, or supply can be traced across an unplayable Ocean hexside. These are the game effects of Unplayable Ocean hexsides . US: This term refers to the subset of Allied units that are American. US Army: The US Army consists of all Corps (XXX unit size designated) American ground units, the P Brigade, and the 11th Airborne Division, plus all American Air Force units. These units are blue background. US Navy: The US Navy consists of all American naval units, Marine Air units (VMF211 is Marine), the SF Brigade, Marine Divisions and Brigades. US Navy units are also blue, but of a larger size than Army units and have a naval ship silhouette. All Marine units are olive green.",
+  "text": "US Army: The US Army consists of all Corps (XXX unit size designated) American ground units, the P Brigade, and the 11th Airborne Division, plus all American Air Force units. These units are blue background. US Navy: The US Navy consists of all American naval units, Marine Air units (VMF211 is Marine), the SF Brigade, Marine Divisions and Brigades. US Navy units are also blue, but of a larger size than Army units and have a naval ship silhouette. All Marine units are olive green.",
   "crossRefs": [],
   "conditionals": [],
   "part": 6
@@ -607,7 +606,7 @@
   "headingPath": [],
   "pageStart": 6,
   "pageEnd": 7,
-  "text": "5.0 Strategy Cards Each player has a deck of unique Strategy cards. A player can only draw and play Strategy cards from their own deck, although some cards allow you to force the other player to discard from their hand. Each turn a player draws a hand of 4 to 7 Strategy cards. Players alternate playing strategy cards during the Offensives segment of the Offensives Phase. They must play a Strategy card, play one of a limited number of passes, or discard a Strategy card. When both players have played all of the Strategy cards in their hand, the Offensives Phase of the game turn is concluded. DESIGN NOTE: Strategy cards are the heart of my card driven game system as used in my earlier We The People and For The People designs. The cards are the mechanism through which all movement, battle, and events are initiated during the game. A Strategy card may be played as either an Operations Card (OC), as an Event Card (EC) or discarded. When played as an OC card, the player may perform one of the following actions: A. Conduct an OC Offensive (6.0). B. Conduct a China OC Offensive (12.72). C. Withdraw an air unit (7.33). D. Withdraw an HQ (7.54). E. Bring a HQ into play from the game turn record track (7.56). It should be noted that many Events enable Offensives and Offensives can also be conducted by an OC play. These Offensives have differences that are covered later in the rules.",
+  "text": "5.0 Strategy Cards\nEach player has a deck of unique Strategy cards. A player can only draw and play Strategy cards from their own deck, although some cards allow you to force the other player to discard from their hand. Each turn a player draws a hand of 4 to 7 Strategy cards. Players alternate playing strategy cards during the Offensives segment of the Offensives Phase. They must play a Strategy card, play one of a limited number of passes, or discard a Strategy card. When both players have played all of the Strategy cards in their hand, the Offensives Phase of the game turn is concluded.\nA Strategy card may be played as either an Operations Card (OC), as an Event Card (EC) or discarded. When played as an OC card, the player may perform one of the following actions:\nA. Conduct an OC Offensive (6.0). B. Conduct a China OC Offensive (12.72). C. Withdraw an air unit (7.33). D. Withdraw an HQ (7.54). E. Bring a HQ into play from the game turn record track (7.56).\nIt should be noted that many Events enable Offensives and Offensives can also be conducted by an OC play. These Offensives have\ndifferences that are covered later in the rules.\nPlayed and discarded strategy cards are placed in a separate Discard pile for later reuse unless the card text specifies otherwise. The Discard pile is disclosed information and can be examined by either player. Some cards indicate that if played as an event (EC) they are completely removed from play. Note that a card that is discarded, rather than played, is placed in the Discard pile for possible reuse, even if it indicates it is a card that would normally be removed from use after being played. An un-played discard is not considered to be a played card for removal from the game purposes.",
   "crossRefs": [
    "6.0",
    "12.72",
@@ -617,25 +616,12 @@
   ],
   "conditionals": [
    "A player can only draw and play Strategy cards from their own deck, although some cards allow you to force the other player to discard from their hand.",
-   "They must play a Strategy card, play one of a limited number of passes, or discard a Strategy card."
-  ],
-  "part": 0
- },
- {
-  "id": "5.0#1",
-  "sectionId": "5.0",
-  "label": "5.0 Strategy Cards",
-  "headingPath": [],
-  "pageStart": 6,
-  "pageEnd": 7,
-  "text": "Played and discarded strategy cards are placed in a separate Discard pile for later reuse unless the card text specifies otherwise. The Discard pile is disclosed information and can be examined by either player. Some cards indicate that if played as an event (EC) they are completely removed from play. Note that a card that is discarded, rather than played, is placed in the Discard pile for possible reuse, even if it indicates it is a card that would normally be removed from use after being played. An un-played discard is not considered to be a played card for removal from the game purposes.",
-  "crossRefs": [],
-  "conditionals": [
+   "They must play a Strategy card, play one of a limited number of passes, or discard a Strategy card.",
    "Played and discarded strategy cards are placed in a separate Discard pile for later reuse unless the card text specifies otherwise.",
    "Some cards indicate that if played as an event (EC) they are completely removed from play.",
    "Note that a card that is discarded, rather than played, is placed in the Discard pile for possible reuse, even if it indicates it is a card that would normally be removed from use after being played."
   ],
-  "part": 1
+  "part": 0
  },
  {
   "id": "5.1",
@@ -1020,14 +1006,14 @@
   ],
   "pageStart": 9,
   "pageEnd": 10,
-  "text": "6.1 Offensives Overview\nPlayers alternate being the Offensives player, playing Strategy Cards either as Operations Cards (OC) or Event Cards (EC) to conduct offensives (6.0) or to implement other game functions through events (5.3). The player initiating an offensive is referred to as the Offensives Player and the opponent is referred to as the Reaction Player until the conclusion of the offensive. To initiate an Offensive, the Offensives player plays one Strategy Card as either an Event Card (EC) whose text specifies an offensive or as an Operations Card (OC).\nAt the conclusion of an Offensive, the opponent becomes the Offensives player and plays a card, which starts another Offensive or causes an event, and play continues in this manner until both players have played all of their Strategy Cards. If one player runs out of cards, the other player continues to play them one at a time as the Offensives player until all cards are played.\nDESIGN NOTE: There are differences, noted throughout the rules, between conducting an Offensive using OCs and ECs. An OC represents a localized action conducted with local forces. Consequently\n10\nan OC offensive can be used to declare only one battle hex. Since player movement greater than the OC value of the card and takes\nan OC offensive uses less high-level command resources, it is con- precedence.\nsidered more operationally secure and less likely to be discovered and intercepted by the enemy. An EC offensive is larger in scope with superior logistic preparation. An EC offensive can encompass any number of declared battle hexes, but the increased requirement for coordination makes operational security more challenging and is more likely to tip off the opposition.",
+  "text": "6.1 Offensives Overview\nPlayers alternate being the Offensives player, playing Strategy Cards either as Operations Cards (OC) or Event Cards (EC) to conduct offensives (6.0) or to implement other game functions through events (5.3). The player initiating an offensive is referred to as the Offensives Player and the opponent is referred to as the Reaction Player until the conclusion of the offensive. To initiate an Offensive, the Offensives player plays one Strategy Card as either an Event Card (EC) whose text specifies an offensive or as an Operations Card (OC).\nAt the conclusion of an Offensive, the opponent becomes the Offensives player and plays a card, which starts another Offensive or causes an event, and play continues in this manner until both players have played all of their Strategy Cards. If one player runs out of cards, the other player continues to play them one at a time as the Offensives player until all cards are played.\n10\nan OC offensive can be used to declare only one battle hex. Since player movement greater than the OC value of the card and takes\nan OC offensive uses less high-level command resources, it is con- precedence.\nsidered more operationally secure and less likely to be discovered and intercepted by the enemy. An EC offensive is larger in scope with superior logistic preparation. An EC offensive can encompass any number of declared battle hexes, but the increased requirement for coordination makes operational security more challenging and is more likely to tip off the opposition.",
   "crossRefs": [
    "6.0",
    "5.3"
   ],
   "conditionals": [
    "If one player runs out of cards, the other player continues to play them one at a time as the Offensives player until all cards are played.",
-   "Consequently\n10\nan OC offensive can be used to declare only one battle hex."
+   "10\nan OC offensive can be used to declare only one battle hex."
   ],
   "part": 0
  },
@@ -1767,7 +1753,7 @@
   ],
   "pageStart": 15,
   "pageEnd": 15,
-  "text": "7.44 Strategic Ground Transport An Amphibous Assault capable Ground unit may move from a coastal hex (with or without a port) to a friendly port a distance equal to the distance a friendly naval unit in the current offensive may move. Since a naval unit can move twice its movement allowance if it moves from a friendly port to a friendly port, a ground unit conducting Strategic Transport that starts its move in a friendly port may also double its movement allowance. The path of the move may never enter an un-neutralized opposing aircraft Zone Of Influence (7.35) and can never enter a battle hex. The ground unit must finish its movement in a friendly port or it cannot attempt the move. A given ground unit may not combine Strategic Transport with other forms of movement in the same offensive. Note that strategic ground transport does not require the use of amphibious shipping points (ASPs). A port captured during the Offensive counts as a friendly port and can be used during the Offensive for Strategic Ground Transportation.\nDESIGN NOTE: This is an administrative naval movement using slow troop transports, which is why it does not use an ASP.",
+  "text": "7.44 Strategic Ground Transport An Amphibous Assault capable Ground unit may move from a coastal hex (with or without a port) to a friendly port a distance equal to the distance a friendly naval unit in the current offensive may move. Since a naval unit can move twice its movement allowance if it moves from a friendly port to a friendly port, a ground unit conducting Strategic Transport that starts its move in a friendly port may also double its movement allowance. The path of the move may never enter an un-neutralized opposing aircraft Zone Of Influence (7.35) and can never enter a battle hex. The ground unit must finish its movement in a friendly port or it cannot attempt the move. A given ground unit may not combine Strategic Transport with other forms of movement in the same offensive. Note that strategic ground transport does not require the use of amphibious shipping points (ASPs). A port captured during the Offensive counts as a friendly port and can be used during the Offensive for Strategic Ground Transportation.",
   "crossRefs": [
    "7.35"
   ],
@@ -1789,15 +1775,15 @@
   ],
   "pageStart": 15,
   "pageEnd": 15,
-  "text": "7.45 Amphibious Assault (Offensive and Reaction) All Japanese, US, Commonwealth British (except Armor Brigade), Australian, and New Zealand ground units are Amphibious Assault capable. Dutch, Indian, and Chinese units are not and may not use Amphibious Assault. A ground unit that moves in this manner may move from any coastal hex (with or without a port) to any coastal hex (with or without a port) a distance equal to the distance a naval unit in the current offensive may move. An Amphibious Assault never doubles the distance it may move, even if it enters a friendly port at the conclusion of its move. An amphibious assault may enter any non-mountain coastal hex (exception Port Moresby, hex 3823, can be amphibiously assaulted even though it is a mountain hex) whether or not it contains enemy ground units. Note that Event cards that restrict the activation of naval units do not prevent amphibious units from using amphibious assault, and that Inter-service rivalry being in effect does not prevent Army units (Japanese or US) from using amphibious assault movement. DESIGN NOTE: Only Chinese CBI forces are in the game. B. Japanese ground units may enter Northern India, but may move no further into India. See the National boundary definitions. Japanese air and naval units may attack Allied units in any portion of India that is in play. C. No ground or air units may enter Soviet territory for any reason. If there is no other choice the unit is permanently removed from play. D. No Allied ground units, except Chinese ground units, may enter non-coastal China hexes. E. Chinese ground units can only operate in Burma, Northern India, Kunming, and all hexes adjacent to Kunming. Chinese units that are forced to move into any other land hex are eliminated.",
+  "text": "7.45 Amphibious Assault (Offensive and Reaction) All Japanese, US, Commonwealth British (except Armor Brigade), Australian, and New Zealand ground units are Amphibious Assault capable. Dutch, Indian, and Chinese units are not and may not use Amphibious Assault. A ground unit that moves in this manner may move from any coastal hex (with or without a port) to any coastal hex (with or without a port) a distance equal to the distance a naval unit in the current offensive may move. An Amphibious Assault never doubles the distance it may move, even if it enters a friendly port at the conclusion of its move. An amphibious assault may enter any non-mountain coastal hex (exception Port Moresby, hex 3823, can be amphibiously assaulted even though it is a mountain hex) whether or not it contains enemy ground units. Note that Event cards that restrict the activation of naval units do not prevent amphibious units from using amphibious assault, and that Inter-service rivalry being in effect does not prevent Army units (Japanese or US) from using amphibious assault movement. B. Japanese ground units may enter Northern India, but may move no further into India. See the National boundary definitions. Japanese air and naval units may attack Allied units in any portion of India that is in play. C. No ground or air units may enter Soviet territory for any reason. If there is no other choice the unit is permanently removed from play. D. No Allied ground units, except Chinese ground units, may enter non-coastal China hexes. E. Chinese ground units can only operate in Burma, Northern India, Kunming, and all hexes adjacent to Kunming. Chinese units that are forced to move into any other land hex are eliminated. A. Amphibious Assault ASP Requirements",
   "crossRefs": [],
   "conditionals": [
    "7.45 Amphibious Assault (Offensive and Reaction) All Japanese, US, Commonwealth British (except Armor Brigade), Australian, and New Zealand ground units are Amphibious Assault capable.",
    "Dutch, Indian, and Chinese units are not and may not use Amphibious Assault.",
    "An Amphibious Assault never doubles the distance it may move, even if it enters a friendly port at the conclusion of its move.",
-   "DESIGN NOTE: Only Chinese CBI forces are in the game.",
    "If there is no other choice the unit is permanently removed from play.",
-   "No Allied ground units, except Chinese ground units, may enter non-coastal China hexes."
+   "No Allied ground units, except Chinese ground units, may enter non-coastal China hexes.",
+   "Chinese ground units can only operate in Burma, Northern India, Kunming, and all hexes adjacent to Kunming."
   ],
   "part": 0
  },
@@ -1811,10 +1797,10 @@
   ],
   "pageStart": 15,
   "pageEnd": 15,
-  "text": "A. Amphibious Assault ASP Requirements (Offensive and Reaction) One Amphibious Shipping Point (ASP) must be available for each ground unit of division size (XX) or smaller that conducts an Amphibious Assault. Each Corps or Army sized unit (XXX or XXXX) requires one ASP for each step (e.g., a reduced Corps or Army sized unit requires one ASP and a full strength Corps or Army unit requires two ASP). Exception: The Japanese Korean Army costs two ASP, not 1 ASP, per step (e.g., A full strength Korean Army costs 4 ASP to move by Amphibious Assault). An amphibious shipping point can be used only once per game turn. Note its use by moving the Amphibious Shipping Used marker on the Strategic Record. If insufficient amphibious shipping points are available, the units for which there are insufficient ASPs cannot conduct Amphibious Assault.",
+  "text": "(Offensive and Reaction) One Amphibious Shipping Point (ASP) must be available for each ground unit of division size (XX) or smaller that conducts an Amphibious Assault. Each Corps or Army sized unit (XXX or XXXX) requires one ASP for each step (e.g., a reduced Corps or Army sized unit requires one ASP and a full strength Corps or Army unit requires two ASP). Exception: The Japanese Korean Army costs two ASP, not 1 ASP, per step (e.g., A full strength Korean Army costs 4 ASP to move by Amphibious Assault). An amphibious shipping point can be used only once per game turn. Note its use by moving the Amphibious Shipping Used marker on the Strategic Record. If insufficient amphibious shipping points are available, the units for which there are insufficient ASPs cannot conduct Amphibious Assault.",
   "crossRefs": [],
   "conditionals": [
-   "Amphibious Assault ASP Requirements (Offensive and Reaction) One Amphibious Shipping Point (ASP) must be available for each ground unit of division size (XX) or smaller that conducts an Amphibious Assault.",
+   "(Offensive and Reaction) One Amphibious Shipping Point (ASP) must be available for each ground unit of division size (XX) or smaller that conducts an Amphibious Assault.",
    "An amphibious shipping point can be used only once per game turn.",
    "If insufficient amphibious shipping points are available, the units for which there are insufficient ASPs cannot conduct Amphibious Assault."
   ],
@@ -1854,32 +1840,14 @@
   ],
   "pageStart": 15,
   "pageEnd": 16,
-  "text": "PLAY NOTE: Moving an amphibious force with an aircraft carrier unit always neutralizes opposing Aircraft Zones of Influence throughout the move. Additionally, positioning a CV in a position that neutralizes an opposing air Zone Of influence prior to moving the amphibious assault unit allows the Amphibious Assault unit to move through the area. DESIGN NOTE: Amphibious Assault is the use of specialized naval units to conduct the amphibious invasions that were the hallmark of the Pacific War. The movement through opposing units is very restrictive on purpose. Invasions cannot bypass opposing locations that contain active naval and air forces. These forces would first have to be neutralized before the precious combat troops would be put in harm's way. Although the Amphibious Assault forces enter the battle hex, this is a mechanical convenience to speed play. In actuality, if the air naval struggle for a hex were not successful, the troop transports would be turned around at sea beyond the range of the battle as the Japanese did at the Battle of the Coral Sea. Lightly escorted offensives did occur, though very rarely, such as the capture of the Admiralty Islands, when the defenses were primarily garrison troops and total surprise was achieved. C. Concluding Amphibious Assault (Offensive Only) If at the conclusion of battle resolution containing an amphibious assault, the Offensive Amphibious Assaulting ground unit(s) are not in a friendly controlled hex (e.g., the assaulting forces lost the airnaval or ground battle), the Offensive amphibious assaulting unit(s) only may conduct post battle movement like a naval unit, but must end their movement in a friendly port or coastal hex. If this is not possible, the Amphibious Assaulting unit(s) are eliminated.",
+  "text": "PLAY NOTE: Moving an amphibious force with an aircraft carrier unit always neutralizes opposing Aircraft Zones of Influence throughout the move. Additionally, positioning a CV in a position that neutralizes an opposing air Zone Of influence prior to moving the amphibious assault unit allows the Amphibious Assault unit to move through the area. C. Concluding Amphibious Assault (Offensive Only) If at the conclusion of battle resolution containing an amphibious assault, the Offensive Amphibious Assaulting ground unit(s) are not in a friendly controlled hex (e.g., the assaulting forces lost the airnaval or ground battle), the Offensive amphibious assaulting unit(s) only may conduct post battle movement like a naval unit, but must end their movement in a friendly port or coastal hex. If this is not possible, the Amphibious Assaulting unit(s) are eliminated. D. US Army Amphibious Assault Special Restrictions There is a special restriction for US Army ground units (Blue US ground units). They may only conduct amphibious assault movement into a Japanese controlled and occupied one hex island if they end their movement in a hex containing a US Marine unit that also just completed amphibious assault movement into that hex. In all other circumstances, the presence of a US Marine unit is not required for a US Army unit to conduct Amphibious Assault. Nor are there any restrictions on US Army ground units for amphibious assaults on multi-hex islands or during Reaction.",
   "crossRefs": [],
   "conditionals": [
-   "Invasions cannot bypass opposing locations that contain active naval and air forces.",
-   "In actuality, if the air naval struggle for a hex were not successful, the troop transports would be turned around at sea beyond the range of the battle as the Japanese did at the Battle of the Coral Sea.",
    "Concluding Amphibious Assault (Offensive Only) If at the conclusion of battle resolution containing an amphibious assault, the Offensive Amphibious Assaulting ground unit(s) are not in a friendly controlled hex (e.g., the assaulting forces lost the airnaval or ground battle), the Offensive amphibious assaulting unit(s) only may conduct post battle movement like a naval unit, but must end their movement in a friendly port or coastal hex.",
-   "If this is not possible, the Amphibious Assaulting unit(s) are eliminated."
-  ],
-  "part": 1
- },
- {
-  "id": "7.43#2",
-  "sectionId": "7.43",
-  "label": "7.43 Ground Disengagement A ground unit",
-  "headingPath": [
-   "7.0 Movement and Stacking",
-   "7.4 Ground Unit Movement and Stacking"
-  ],
-  "pageStart": 15,
-  "pageEnd": 16,
-  "text": "D. US Army Amphibious Assault Special Restrictions There is a special restriction for US Army ground units (Blue US ground units). They may only conduct amphibious assault movement into a Japanese controlled and occupied one hex island if they end their movement in a hex containing a US Marine unit that also just completed amphibious assault movement into that hex. In all other circumstances, the presence of a US Marine unit is not required for a US Army unit to conduct Amphibious Assault. Nor are there any restrictions on US Army ground units for amphibious assaults on multi-hex islands or during Reaction. DESIGN NOTE: Besides Marine units whose raison d'etre is amphibious assault, many Allied army units were trained in this operational art during the war. The US Army restriction maintains the role the US Marines had in late war amphibious invasions, although there were some solely Army invasions during the New Guinea and Philippines campaigns.",
-  "crossRefs": [],
-  "conditionals": [
+   "If this is not possible, the Amphibious Assaulting unit(s) are eliminated.",
    "They may only conduct amphibious assault movement into a Japanese controlled and occupied one hex island if they end their movement in a hex containing a US Marine unit that also just completed amphibious assault movement into that hex."
   ],
-  "part": 2
+  "part": 1
  },
  {
   "id": "7.46",
@@ -1891,14 +1859,13 @@
   ],
   "pageStart": 16,
   "pageEnd": 16,
-  "text": "7.46 Japanese (only) Organic Naval Unit Transport Capability The Japanese have five brigade sized land units (1st, 2nd, 3rd ,\nand 4th SN and the SS). These units can conduct amphibious assault by either using one amphibious shipping point per unit or they can conduct amphibious assault by beginning the offensive stacked with and moving their entire move with a CA, CL, or APD naval unit at no cost in amphibious shipping points. Each naval unit of these types, at either reduced or full strength, can move one of these five brigade sized units. If the naval unit is eliminated during an offensive, the ground unit it was transporting is also eliminated. If the naval unit loses a step there is no effect on the transported unit.\nEXAMPLE: On the December '41 game turn, the Japanese CA Aoba can enable the South Seas (SS Brigade) detachment to conduct Amphibious Assault by moving as a stack from Truk to Rabaul, New Britain. Units transporting and units to be transported must start the move in the same location.\nPLAY NOTE: There are only a handful of naval and ground unit combinations that can conduct this type of move, but it is a useful way to cheaply capture unoccupied opposing bases, especially early in the war.",
+  "text": "7.46 Japanese (only) Organic Naval Unit Transport Capability The Japanese have five brigade sized land units (1st, 2nd, 3rd ,\nand 4th SN and the SS). These units can conduct amphibious assault by either using one amphibious shipping point per unit or they can conduct amphibious assault by beginning the offensive stacked with and moving their entire move with a CA, CL, or APD naval unit at no cost in amphibious shipping points. Each naval unit of these types, at either reduced or full strength, can move one of these five brigade sized units. If the naval unit is eliminated during an offensive, the ground unit it was transporting is also eliminated. If the naval unit loses a step there is no effect on the transported unit.\nEXAMPLE: On the December '41 game turn, the Japanese CA Aoba can enable the South Seas (SS Brigade) detachment to conduct Amphibious Assault by moving as a stack from Truk to Rabaul, New Britain. Units transporting and units to be transported must start the move in the same location.",
   "crossRefs": [],
   "conditionals": [
    "7.46 Japanese (only) Organic Naval Unit Transport Capability The Japanese have five brigade sized land units (1st, 2nd, 3rd ,\nand 4th SN and the SS).",
    "If the naval unit is eliminated during an offensive, the ground unit it was transporting is also eliminated.",
    "If the naval unit loses a step there is no effect on the transported unit.",
-   "Units transporting and units to be transported must start the move in the same location.",
-   "PLAY NOTE: There are only a handful of naval and ground unit combinations that can conduct this type of move, but it is a useful way to cheaply capture unoccupied opposing bases, especially early in the war."
+   "Units transporting and units to be transported must start the move in the same location."
   ],
   "part": 0
  },
@@ -2143,11 +2110,9 @@
   ],
   "pageStart": 18,
   "pageEnd": 18,
-  "text": "8.12 Naval Units in Battle Activated non-aircraft carrier naval units that enter the battle hex add their naval strengths into the total air-naval combat value. Nonaircraft carrier naval units that are not in a battle hex, but in a hex with an aircraft carrier naval unit, do not use their combat value in battle resolution, but their presence with the aircraft carriers makes them part of the losses procedure. Aircraft carrier units that are within their air range of the battle hex, including actually residing in the battle hex, always add their combat value to the air-naval combat.\nDESIGN NOTE: Land based air units that are operating at extended range are using their two engine aircraft only. This reduces their combat potential due to the lack of their shorter ranged fighters and the fact that bomb loads are reduced at longer ranges. LRB units have factored into their combat ratings their basic ineffectiveness against naval units and the fact that the Pacific theater for the most part had sparse infrastructure targets that were not easy to damage with high altitude bombing. The Strategic bombing campaign against Japan is handled as a separate procedure.",
+  "text": "8.12 Naval Units in Battle Activated non-aircraft carrier naval units that enter the battle hex add their naval strengths into the total air-naval combat value. Nonaircraft carrier naval units that are not in a battle hex, but in a hex with an aircraft carrier naval unit, do not use their combat value in battle resolution, but their presence with the aircraft carriers makes them part of the losses procedure. Aircraft carrier units that are within their air range of the battle hex, including actually residing in the battle hex, always add their combat value to the air-naval combat.",
   "crossRefs": [],
-  "conditionals": [
-   "DESIGN NOTE: Land based air units that are operating at extended range are using their two engine aircraft only."
-  ],
+  "conditionals": [],
   "part": 0
  },
  {
@@ -2177,29 +2142,10 @@
   ],
   "pageStart": 18,
   "pageEnd": 18,
-  "text": "8.14 Supply in Battle Supply has no effect on battle resolution. Its effects are accounted for in the Attrition Phase of the turn. DESIGN NOTE: Combat in Empire of the Sun is not intended to be an operational or tactical analysis of air, naval, and ground interactions in the Pacific. The goal is to reward the player for bringing a balanced mix of forces, which, in combination with good intelligence, bring superior firepower to bear, while achieving an historical loss rate. Surface naval units that are stacked with aircraft carriers, but not physically located in the battle hex, reflect escorts, whose defense values protect the carriers, but do not contribute to surface combat, which is why their combat values are not applied offensively. Also, the fact that surface ships in the battle hex can apply their hits to units that are within range of, but not in the battle hex, is an abstraction that reflects a surface action that occurs in the vicinity of the battle hex between those forces. However, as long as carriers are not in the battle hex, it requires the presence of opposing air or carrier units (on a one for one basis) in order for them to take battle damage.",
+  "text": "8.14 Supply in Battle Supply has no effect on battle resolution. Its effects are accounted for in the Attrition Phase of the turn.",
   "crossRefs": [],
-  "conditionals": [
-   "However, as long as carriers are not in the battle hex, it requires the presence of opposing air or carrier units (on a one for one basis) in order for them to take battle damage."
-  ],
+  "conditionals": [],
   "part": 0
- },
- {
-  "id": "8.14#1",
-  "sectionId": "8.14",
-  "label": "8.14 Supply in Battle Supply has",
-  "headingPath": [
-   "8.0 Battle Resolution"
-  ],
-  "pageStart": 18,
-  "pageEnd": 18,
-  "text": "The system will recreate the outcomes from the campaigns fought during the war, but due to the strategic level of play, will give little insight, except at that macro level, into why the outcomes were achieved. Combat tends to be bloody, given the time scale and the attritional nature of much of the conflict that is below the scale of the game, but must be accounted for through this mechanism. It should also be noted that some battles actually represent a series of battles. For example a large naval battle in the Guadalcanal hex could represent all of the losses taken in the Battles of Eastern Solomon, Santa Cruz, and Guadalcanal. A game with more granularity and detail than Empire of the Sun is required for a more cause and effect view of Pacific War combat resolution.",
-  "crossRefs": [],
-  "conditionals": [
-   "The system will recreate the outcomes from the campaigns fought during the war, but due to the strategic level of play, will give little insight, except at that macro level, into why the outcomes were achieved.",
-   "Combat tends to be bloody, given the time scale and the attritional nature of much of the conflict that is below the scale of the game, but must be accounted for through this mechanism."
-  ],
-  "part": 1
  },
  {
   "id": "8.2",
@@ -2244,13 +2190,14 @@
   ],
   "pageStart": 18,
   "pageEnd": 20,
-  "text": "Die Roll Modifiers 1. Ambush: Allies +4 2. Surprise Attack: +3 3. 1943 game turn: +1 for the Allied player if any US air or aircraft carrier units are present. 4. 1944 or 1945 game turn: +3 for the Allied player if any US air or aircraft carrier units are present. 5. Event Modifier: + any battle modifiers specified by an EC. Note: Some event cards have special battle modifiers. DESIGN NOTE: Modifiers 3 and 4 reflect the growing technological superiority of US aircraft and improved combat doctrine. Air Naval Combat Results Table Modified 1D10 Die Roll = Combat Effectiveness Rating 0,1,2 = One Quarter (.25) (round up if required) 3,4,5 = One Half (.5) (round up if required) 6,7,8 = One (1) 9 = One* (1*) 9 or greater = One (1) *=If the die roll was a 9 before any required modification, then that side has achieved a critical hit in addition to receiving a one result. See 8.2.F. How To Apply Hits. C. If the intelligence condition was Intercept, both players simulta- 19 neously apply a number of hits equal to their combat effectiveness rating times their total air-naval strength. EXAMPLE: The Allied player has a 12 attack strength CV unit, a 4 attack strength LRB unit, a 10 attack strength air unit at normal range, a 10 attack strength air unit at extended range, and a 16 attack strength BB unit in the battle hex. The Allied strength total would be 47 (12+4+10+5+16). The intelligence condition is intercept, so there is no die roll modifier. On a roll of 2 or less, 12 hits would be assessed against Japanese units, on a die roll of 3-5, 24 hits would be assessed, and on a roll of 6 or greater, 47 hits would be assessed.",
+  "text": "Die Roll Modifiers 1. Ambush: Allies +4 2. Surprise Attack: +3 3. 1943 game turn: +1 for the Allied player if any US air or aircraft carrier units are present. 4. 1944 or 1945 game turn: +3 for the Allied player if any US air or aircraft carrier units are present. 5. Event Modifier: + any battle modifiers specified by an EC. Note: Some event cards have special battle modifiers. Air Naval Combat Results Table Modified 1D10 Die Roll = Combat Effectiveness Rating 0,1,2 = One Quarter (.25) (round up if required) 3,4,5 = One Half (.5) (round up if required) 6,7,8 = One (1) 9 = One* (1*) 9 or greater = One (1) *=If the die roll was a 9 before any required modification, then that side has achieved a critical hit in addition to receiving a one result. See 8.2.F. How To Apply Hits. C. If the intelligence condition was Intercept, both players simulta- 19 neously apply a number of hits equal to their combat effectiveness rating times their total air-naval strength. EXAMPLE: The Allied player has a 12 attack strength CV unit, a 4 attack strength LRB unit, a 10 attack strength air unit at normal range, a 10 attack strength air unit at extended range, and a 16 attack strength BB unit in the battle hex. The Allied strength total would be 47 (12+4+10+5+16). The intelligence condition is intercept, so there is no die roll modifier. On a roll of 2 or less, 12 hits would be assessed against Japanese units, on a die roll of 3-5, 24 hits would be assessed, and on a roll of 6 or greater, 47 hits would be assessed. D. If the intelligence condition was surprise attack, the Offensives player applies all hits first. Surviving Reaction player units in the battle hex then calculate their combat strength, make a die roll on the CRT, and apply any hits to the Offensives player's units.",
   "crossRefs": [],
   "conditionals": [
    "1943 game turn: +1 for the Allied player if any US air or aircraft carrier units are present.",
    "1944 or 1945 game turn: +3 for the Allied player if any US air or aircraft carrier units are present.",
    "Air Naval Combat Results Table Modified 1D10 Die Roll = Combat Effectiveness Rating 0,1,2 = One Quarter (.25) (round up if required) 3,4,5 = One Half (.5) (round up if required) 6,7,8 = One (1) 9 = One* (1*) 9 or greater = One (1) *=If the die roll was a 9 before any required modification, then that side has achieved a critical hit in addition to receiving a one result.",
-   "If the intelligence condition was Intercept, both players simulta- 19 neously apply a number of hits equal to their combat effectiveness rating times their total air-naval strength."
+   "If the intelligence condition was Intercept, both players simulta- 19 neously apply a number of hits equal to their combat effectiveness rating times their total air-naval strength.",
+   "If the intelligence condition was surprise attack, the Offensives player applies all hits first."
   ],
   "part": 2
  },
@@ -2263,15 +2210,15 @@
   ],
   "pageStart": 18,
   "pageEnd": 20,
-  "text": "D. If the intelligence condition was surprise attack, the Offensives player applies all hits first. Surviving Reaction player units in the battle hex then calculate their combat strength, make a die roll on the CRT, and apply any hits to the Offensives player's units. E. If the intelligence condition was ambush (only possible on the play of a reaction card), the Reaction player applies all hits first. Only surviving Offensives player units then calculate a result and apply hits to the Reaction player's units. F. How to Apply Hits. The player who rolled the die applies all hits against opposing units. Hits cannot be avoided if a legitimate target can be damaged or eliminated. They may be applied in any manner within the restrictions on how hits scored can be applied. All restrictions on how to apply hits are in effect at all times. If any situation arises which seems to create a contradiction amongst the restrictions, the player who rolls the die is to determine the outcome. DESIGN NOTE: No matter how well a set of conditions is written there are always disagreements, especially during a tournament. In cases of disagreement, the attackers view prevails. PLAY NOTE: Combat only gives limited possible results and the trick is to understand how applying hits, which can create a wide range of battle outcomes, can be best apportioned, and how to guard against as much damage as possible by force composition. It is important to remember to bring screening forces to prevent having precious aircraft carriers eliminated.",
+  "text": "E. If the intelligence condition was ambush (only possible on the play of a reaction card), the Reaction player applies all hits first. Only surviving Offensives player units then calculate a result and apply hits to the Reaction player's units. F. How to Apply Hits. The player who rolled the die applies all hits against opposing units. Hits cannot be avoided if a legitimate target can be damaged or eliminated. They may be applied in any manner within the restrictions on how hits scored can be applied. All restrictions on how to apply hits are in effect at all times. If any situation arises which seems to create a contradiction amongst the restrictions, the player who rolls the die is to determine the outcome. PLAY NOTE: Combat only gives limited possible results and the trick is to understand how applying hits, which can create a wide range of battle outcomes, can be best apportioned, and how to guard against as much damage as possible by force composition. It is important to remember to bring screening forces to prevent having precious aircraft carriers eliminated. 1. If a number of hits equal to an opposing unit's defense strength are applied, the unit is flipped to its reduced side or eliminated if already on its reduced side. 2. Full strength units must be reduced before reduced units can be eliminated. Units that have only one side are considered to be reduced units. Non-aircraft carrier naval units that are not in a battle hex, but stacked with an aircraft carrier naval unit that participates in the battle, can and must take losses before any reduced strength unit can be eliminated, with the exception of a critical hit.",
   "crossRefs": [],
   "conditionals": [
-   "If the intelligence condition was surprise attack, the Offensives player applies all hits first.",
    "If the intelligence condition was ambush (only possible on the play of a reaction card), the Reaction player applies all hits first.",
    "Only surviving Offensives player units then calculate a result and apply hits to the Reaction player's units.",
    "Hits cannot be avoided if a legitimate target can be damaged or eliminated.",
    "If any situation arises which seems to create a contradiction amongst the restrictions, the player who rolls the die is to determine the outcome.",
-   "PLAY NOTE: Combat only gives limited possible results and the trick is to understand how applying hits, which can create a wide range of battle outcomes, can be best apportioned, and how to guard against as much damage as possible by force composition."
+   "PLAY NOTE: Combat only gives limited possible results and the trick is to understand how applying hits, which can create a wide range of battle outcomes, can be best apportioned, and how to guard against as much damage as possible by force composition.",
+   "If a number of hits equal to an opposing unit's defense strength are applied, the unit is flipped to its reduced side or eliminated if already on its reduced side."
   ],
   "part": 3
  },
@@ -2284,14 +2231,13 @@
   ],
   "pageStart": 18,
   "pageEnd": 20,
-  "text": "HISTORICAL NOTE: The common perception is that the Pacific War was dominated by carrier warfare. At the macro level this is a true statement, but in fact by late 1942 the pre-war carrier forces had hunted each other into virtual extinction. This is why the signature surface battles of the Solomons campaign became the dominant form of naval combat until US shipyards began to turn out an unending stream of Essex class carriers. Players will often see a similar ebb and flow pattern develop regarding their available carrier forces. 1. If a number of hits equal to an opposing unit's defense strength are applied, the unit is flipped to its reduced side or eliminated if already on its reduced side. 2. Full strength units must be reduced before reduced units can be eliminated. Units that have only one side are considered to be reduced units. Non-aircraft carrier naval units that are not in a battle hex, but stacked with an aircraft carrier naval unit that participates in the battle, can and must take losses before any reduced strength unit can be eliminated, with the exception of a critical hit. 3. No unit can take a second consecutive hit (full strength to eliminated), until all units that can be reduced are first reduced in strength. Excess hits are lost if this condition cannot be fulfilled. Continuing the example from case C above, the 47 attack strength Allied force gets a 6 or greater die roll and applies 47 hits to the Japanese air and naval units. Using the hits available, the Allied",
+  "text": "3. No unit can take a second consecutive hit (full strength to eliminated), until all units that can be reduced are first reduced in strength. Excess hits are lost if this condition cannot be fulfilled. Continuing the example from case C above, the 47 attack strength Allied force gets a 6 or greater die roll and applies 47 hits to the Japanese air and naval units. Using the hits available, the Allied player reduces all of the Japanese units except for one full strength unit, which remains with a defense of 18, and the Allied player only has 10 unapplied hits. The Allied player could not eliminate one of the reduced Japanese units because there remains a full strength unit, so the remaining 10 hits are lost. 4. Air, CV, CVL, and CVE units that are not in a hex containing opposing naval units (they are within range of the battle, but not actually in the battle hex), cannot receive hits unless the opposing force also possesses at least one Air, CV, CVL, and CVE unit. For each unit that is so matched, a unit can take hits. For example, if one side had one air and one CV unit and the opposition had three CV, CVL, or CVE units, hits could be applied to only two of the three units. In all cases the side applying the hits chooses which aircraft carrier or air units take the hits. Non-air capable naval units can always be the target of hits generated during an air naval battle and are unaffected by the restrictions in this case.",
   "crossRefs": [],
   "conditionals": [
-   "If a number of hits equal to an opposing unit's defense strength are applied, the unit is flipped to its reduced side or eliminated if already on its reduced side.",
-   "Full strength units must be reduced before reduced units can be eliminated.",
-   "Units that have only one side are considered to be reduced units.",
-   "Non-aircraft carrier naval units that are not in a battle hex, but stacked with an aircraft carrier naval unit that participates in the battle, can and must take losses before any reduced strength unit can be eliminated, with the exception of a critical hit.",
-   "Excess hits are lost if this condition cannot be fulfilled."
+   "Excess hits are lost if this condition cannot be fulfilled.",
+   "Using the hits available, the Allied player reduces all of the Japanese units except for one full strength unit, which remains with a defense of 18, and the Allied player only has 10 unapplied hits.",
+   "Air, CV, CVL, and CVE units that are not in a hex containing opposing naval units (they are within range of the battle, but not actually in the battle hex), cannot receive hits unless the opposing force also possesses at least one Air, CV, CVL, and CVE unit.",
+   "For example, if one side had one air and one CV unit and the opposition had three CV, CVL, or CVE units, hits could be applied to only two of the three units."
   ],
   "part": 4
  },
@@ -2304,14 +2250,15 @@
   ],
   "pageStart": 18,
   "pageEnd": 20,
-  "text": "player reduces all of the Japanese units except for one full strength unit, which remains with a defense of 18, and the Allied player only has 10 unapplied hits. The Allied player could not eliminate one of the reduced Japanese units because there remains a full strength unit, so the remaining 10 hits are lost. 4. Air, CV, CVL, and CVE units that are not in a hex containing opposing naval units (they are within range of the battle, but not actually in the battle hex), cannot receive hits unless the opposing force also possesses at least one Air, CV, CVL, and CVE unit. For each unit that is so matched, a unit can take hits. For example, if one side had one air and one CV unit and the opposition had three CV, CVL, or CVE units, hits could be applied to only two of the three units. In all cases the side applying the hits chooses which aircraft carrier or air units take the hits. Non-air capable naval units can always be the target of hits generated during an air naval battle and are unaffected by the restrictions in this case. EXAMPLE: If the Japanese side had one carrier and achieved 45 hits versus an Allied force with two full strength carriers, it is possible that a large number of hits could go unapplied because the inability to reduce one of the two Allied carriers would prevent any reduced strength unit from being eliminated, since there would still be a full strength Allied naval unit present. The corollary of this condition is if one side has no air or carrier units present and the other does have one or more present, none of the air or carrier units can be damaged if they are not actually in the battle hex with opposing naval units.",
+  "text": "EXAMPLE: If the Japanese side had one carrier and achieved 45 hits versus an Allied force with two full strength carriers, it is possible that a large number of hits could go unapplied because the inability to reduce one of the two Allied carriers would prevent any reduced strength unit from being eliminated, since there would still be a full strength Allied naval unit present. The corollary of this condition is if one side has no air or carrier units present and the other does have one or more present, none of the air or carrier units can be damaged if they are not actually in the battle hex with opposing naval units. 5. If a player was the only side with air and/or naval units in the air naval battle, then hits may be applied to any opposing ground units in the hex. If opposing air or naval units were present in the battle, hits can only be applied to air and/or naval units. The last ground step in a hex cannot be eliminated due to air and naval hits; when there is a choice for what will be the last ground step, Reaction choice. Intrinsic defense strength is always considered the last step in a hex. Additional hits that cannot be so used are lost.",
   "crossRefs": [],
   "conditionals": [
-   "player reduces all of the Japanese units except for one full strength unit, which remains with a defense of 18, and the Allied player only has 10 unapplied hits.",
-   "Air, CV, CVL, and CVE units that are not in a hex containing opposing naval units (they are within range of the battle, but not actually in the battle hex), cannot receive hits unless the opposing force also possesses at least one Air, CV, CVL, and CVE unit.",
-   "For example, if one side had one air and one CV unit and the opposition had three CV, CVL, or CVE units, hits could be applied to only two of the three units.",
    "EXAMPLE: If the Japanese side had one carrier and achieved 45 hits versus an Allied force with two full strength carriers, it is possible that a large number of hits could go unapplied because the inability to reduce one of the two Allied carriers would prevent any reduced strength unit from being eliminated, since there would still be a full strength Allied naval unit present.",
-   "The corollary of this condition is if one side has no air or carrier units present and the other does have one or more present, none of the air or carrier units can be damaged if they are not actually in the battle hex with opposing naval units."
+   "The corollary of this condition is if one side has no air or carrier units present and the other does have one or more present, none of the air or carrier units can be damaged if they are not actually in the battle hex with opposing naval units.",
+   "If a player was the only side with air and/or naval units in the air naval battle, then hits may be applied to any opposing ground units in the hex.",
+   "If opposing air or naval units were present in the battle, hits can only be applied to air and/or naval units.",
+   "The last ground step in a hex cannot be eliminated due to air and naval hits; when there is a choice for what will be the last ground step, Reaction choice.",
+   "Additional hits that cannot be so used are lost."
   ],
   "part": 5
  },
@@ -2324,13 +2271,9 @@
   ],
   "pageStart": 18,
   "pageEnd": 20,
-  "text": "5. If a player was the only side with air and/or naval units in the air naval battle, then hits may be applied to any opposing ground units in the hex. If opposing air or naval units were present in the battle, hits can only be applied to air and/or naval units. The last ground step in a hex cannot be eliminated due to air and naval hits; when there is a choice for what will be the last ground step, Reaction choice. Intrinsic defense strength is always considered the last step in a hex. Additional hits that cannot be so used are lost. 6. Critical Hit. If a critical hit is achieved (by an unmodified nine die roll or due to an event), the player may circumvent the restriction of case number 2 or 3 above, and apply hits in any manner desired, even eliminating units while other full strength units remain. Continuing the example above, the Allied player has played the Rochefort card making the intelligence condition an Ambush with a special condition that allows any modified die roll that is nine or greater to be considered a critical hit. The Allied player could apply the 10 unapplied hits to eliminate one of the reduced Japanese units, even though a full strength naval unit remained. Additionally, any time a player achieves a critical hit, and is mathematically unable to achieve at least a one step loss, then one step loss is assessed to the opposing unit with the lowest defense strength that can receive the hits (in case of ties, Reactive players choice).",
+  "text": "6. Critical Hit. If a critical hit is achieved (by an unmodified nine die roll or due to an event), the player may circumvent the restriction of case number 2 or 3 above, and apply hits in any manner desired, even eliminating units while other full strength units remain. Continuing the example above, the Allied player has played the Rochefort card making the intelligence condition an Ambush with a special condition that allows any modified die roll that is nine or greater to be considered a critical hit. The Allied player could apply the 10 unapplied hits to eliminate one of the reduced Japanese units, even though a full strength naval unit remained. Additionally, any time a player achieves a critical hit, and is mathematically unable to achieve at least a one step loss, then one step loss is assessed to the opposing unit with the lowest defense strength that can receive the hits (in case of ties, Reactive players choice). 7. Japanese Naval Aircraft Range Advantage. In an air naval battle where the Allied player has not achieved a critical hit and the Japanese player has more than one aircraft carrier unit present, then this case applies. After all hits have been applied the Japanese player can reduce one Japanese aircraft carrier or eliminate a Japanese 20 aircraft carrier and recover one step lost by another aircraft carrier (either from reduced to full strength or from eliminated to reduced strength). The number of hits represented by this is not calculated, this is a one step for one step transfer.",
   "crossRefs": [],
   "conditionals": [
-   "If a player was the only side with air and/or naval units in the air naval battle, then hits may be applied to any opposing ground units in the hex.",
-   "If opposing air or naval units were present in the battle, hits can only be applied to air and/or naval units.",
-   "The last ground step in a hex cannot be eliminated due to air and naval hits; when there is a choice for what will be the last ground step, Reaction choice.",
-   "Additional hits that cannot be so used are lost.",
    "If a critical hit is achieved (by an unmodified nine die roll or due to an event), the player may circumvent the restriction of case number 2 or 3 above, and apply hits in any manner desired, even eliminating units while other full strength units remain."
   ],
   "part": 6
@@ -2344,11 +2287,9 @@
   ],
   "pageStart": 18,
   "pageEnd": 20,
-  "text": "DESIGN NOTE: This simulates the ability of the Ambushing force, or a fortuitous opportunity during a battle, to pick off a portion of the opposing force. This is how a Midway like outcome would occur in the game. There are only two Allied cards that enable the Ambush condition, so it is not the normal state of affairs unless you can roll a lot of 9s. 7. Japanese Naval Aircraft Range Advantage. In an air naval battle where the Allied player has not achieved a critical hit and the Japanese player has more than one aircraft carrier unit present, then this case applies. After all hits have been applied the Japanese player can reduce one Japanese aircraft carrier or eliminate a Japanese 20 aircraft carrier and recover one step lost by another aircraft carrier (either from reduced to full strength or from eliminated to reduced strength). The number of hits represented by this is not calculated, this is a one step for one step transfer. EXAMPLE: Assuming the Allied player had not achieved a critical hit, and the Japanese player had a CV and a CVL naval unit amongst the units that the Allied player had reduced from full to reduced strength, the Japanese player could shift one step lost by the CV onto the CVL, eliminating it and bringing the CV back to full strength. DESIGN NOTE: This rule is intended to capture two effects. First the Japanese naval aircraft for much of the war out ranged the better armed US naval aircraft. Second Japanese doctrine often had any light carriers in their formation forward of the larger fleet carriers. What is being simulated here are the US pilots hitting the isolated CVL and expending their ordnance without finding the larger fleet carriers.",
+  "text": "EXAMPLE: Assuming the Allied player had not achieved a critical hit, and the Japanese player had a CV and a CVL naval unit amongst the units that the Allied player had reduced from full to reduced strength, the Japanese player could shift one step lost by the CV onto the CVL, eliminating it and bringing the CV back to full strength.",
   "crossRefs": [],
-  "conditionals": [
-   "There are only two Allied cards that enable the Ambush condition, so it is not the normal state of affairs unless you can roll a lot of 9s."
-  ],
+  "conditionals": [],
   "part": 7
  },
  {
@@ -2360,7 +2301,7 @@
   ],
   "pageStart": 20,
   "pageEnd": 20,
-  "text": "8.3 Determining The Winner Of The Air Naval Combat\nBoth sides add up the attack strengths of the surviving air & naval units which contributed attack strength in the battle, active or inactive. Air units that had their attack strengths halved for the battle due to range, continue to do so for this calculation. Only non-CV naval units in the battle hex are considered for this calculation (for example, a BB naval unit in the battle hex counts, but a BB naval unit that is escorting the distant carriers which also participated in the battle does not, since it did not contribute its attack values for the battle). The side with the higher total is the winner of the air-naval combat. In case of ties the Reaction player wins. Special exception: If the Reaction player has one or more air or carrier units present, and the Offensives player has no surviving air or carrier units present, the Reaction player automatically wins the battle, regardless of the attack strengths involved.\nDESIGN NOTE: Air power was the critical variable in World War II naval combat. The special exception covers the potential situations, such as Guadalcanal, where even small numbers of air units could prevent powerful surface units from sustained operations in the area.",
+  "text": "8.3 Determining The Winner Of The Air Naval Combat\nBoth sides add up the attack strengths of the surviving air & naval units which contributed attack strength in the battle, active or inactive. Air units that had their attack strengths halved for the battle due to range, continue to do so for this calculation. Only non-CV naval units in the battle hex are considered for this calculation (for example, a BB naval unit in the battle hex counts, but a BB naval unit that is escorting the distant carriers which also participated in the battle does not, since it did not contribute its attack values for the battle). The side with the higher total is the winner of the air-naval combat. In case of ties the Reaction player wins. Special exception: If the Reaction player has one or more air or carrier units present, and the Offensives player has no surviving air or carrier units present, the Reaction player automatically wins the battle, regardless of the attack strengths involved.",
   "crossRefs": [],
   "conditionals": [
    "Only non-CV naval units in the battle hex are considered for this calculation (for example, a BB naval unit in the battle hex counts, but a BB naval unit that is escorting the distant carriers which also participated in the battle does not, since it did not contribute its attack values for the battle).",
@@ -2416,14 +2357,12 @@
   ],
   "pageStart": 20,
   "pageEnd": 20,
-  "text": "8.33 Offensives Player Victory If the Offensives player wins and any ground units, through amphibious assault or land movement, remain in the battle hex with Reaction ground units (active or inactive), a ground combat procedure is conducted. If the Offensives player loses the ground battle, then the battle is concluded and any ground units in the battle hex must retreat or withdraw. If the Offensives player wins the ground combat, the battle is won and the Offensives player gains control of the hex.\nDESIGN NOTE: If a side gains air naval supremacy over the battle hex, the ground forces can engage. If not, it is assumed that amphibious assault forces are turned back as at Coral Sea.",
+  "text": "8.33 Offensives Player Victory If the Offensives player wins and any ground units, through amphibious assault or land movement, remain in the battle hex with Reaction ground units (active or inactive), a ground combat procedure is conducted. If the Offensives player loses the ground battle, then the battle is concluded and any ground units in the battle hex must retreat or withdraw. If the Offensives player wins the ground combat, the battle is won and the Offensives player gains control of the hex.",
   "crossRefs": [],
   "conditionals": [
    "8.33 Offensives Player Victory If the Offensives player wins and any ground units, through amphibious assault or land movement, remain in the battle hex with Reaction ground units (active or inactive), a ground combat procedure is conducted.",
    "If the Offensives player loses the ground battle, then the battle is concluded and any ground units in the battle hex must retreat or withdraw.",
-   "If the Offensives player wins the ground combat, the battle is won and the Offensives player gains control of the hex.",
-   "DESIGN NOTE: If a side gains air naval supremacy over the battle hex, the ground forces can engage.",
-   "If not, it is assumed that amphibious assault forces are turned back as at Coral Sea."
+   "If the Offensives player wins the ground combat, the battle is won and the Offensives player gains control of the hex."
   ],
   "part": 0
  },
@@ -2493,7 +2432,7 @@
   ],
   "pageStart": 20,
   "pageEnd": 21,
-  "text": "4. No unit may take a second hit (full strength to eliminated), until all units are first reduced in strength. Excess hits are lost if this condition cannot be fulfilled. 5. Offensive ground units that conducted amphibious assault to enter the battle hex have their defense strength halved (rounding up if required) for calculating hits. C. Concluding Ground Combat. 1. If, after all hits are applied, only one side has ground units in the hex, that side is the winner. If not, the side that took the most step losses during ground combat retreats during post battle movement. Flipping a ground unit from its full strength to its reduced strength side or the elimination of a reduced unit counts as one step lost. If it is a tie, the Reaction player wins and the Offensives player retreats. 2. It is possible for both sides to be eliminated in a ground combat. If this happens, the Reaction player maintains control of the hex, but all forces are still eliminated. DESIGN NOTE: What is being simulated here is that both sides' units are no longer combat effective, and a remnant force remains in the defender's hex. 3. If the Offensives player is the only one with surviving ground units in the battle hex, the hex is now controlled by that player and air & naval units may conduct post battle movement to that hex. If the Reaction player is the only one with surviving ground units in the battle hex, the Reaction player maintains control of the hex.",
+  "text": "4. No unit may take a second hit (full strength to eliminated), until all units are first reduced in strength. Excess hits are lost if this condition cannot be fulfilled. 5. Offensive ground units that conducted amphibious assault to enter the battle hex have their defense strength halved (rounding up if required) for calculating hits. C. Concluding Ground Combat. 1. If, after all hits are applied, only one side has ground units in the hex, that side is the winner. If not, the side that took the most step losses during ground combat retreats during post battle movement. Flipping a ground unit from its full strength to its reduced strength side or the elimination of a reduced unit counts as one step lost. If it is a tie, the Reaction player wins and the Offensives player retreats. 2. It is possible for both sides to be eliminated in a ground combat. If this happens, the Reaction player maintains control of the hex, but all forces are still eliminated. 3. If the Offensives player is the only one with surviving ground units in the battle hex, the hex is now controlled by that player and air & naval units may conduct post battle movement to that hex. If the Reaction player is the only one with surviving ground units in the battle hex, the Reaction player maintains control of the hex.",
   "crossRefs": [],
   "conditionals": [
    "Excess hits are lost if this condition cannot be fulfilled.",
@@ -2504,22 +2443,6 @@
    "If this happens, the Reaction player maintains control of the hex, but all forces are still eliminated."
   ],
   "part": 2
- },
- {
-  "id": "8.4#3",
-  "sectionId": "8.4",
-  "label": "8.4 Ground Combat Procedure",
-  "headingPath": [
-   "8.0 Battle Resolution"
-  ],
-  "pageStart": 20,
-  "pageEnd": 21,
-  "text": "DESIGN NOTE: Ground combat is quite bloody given the time scale of the game. If both sides are eliminated, it is not the case that everyone was dead, but that the forces of both sides are no longer combat effective. For the Allies, this means the unit needs to be rebuilt. For the Japanese, this means the unit is usually lost, because the unit in fact fought to the last man. In addition, there were times, especially during the Solomons campaigns, that both sides occupied the same island. For the sake of simplicity, this situation is treated a bit abstractly, given the length of the game turns.",
-  "crossRefs": [],
-  "conditionals": [
-   "If both sides are eliminated, it is not the case that everyone was dead, but that the forces of both sides are no longer combat effective."
-  ],
-  "part": 3
  },
  {
   "id": "8.5",
@@ -3300,7 +3223,7 @@
   "headingPath": [],
   "pageStart": 24,
   "pageEnd": 24,
-  "text": "12.0 National Status\nA nation surrenders if the opposing player controls certain hexes of that nation during the National Status Segment. If Japan surrenders the game is over and the Allied player wins the game. If an Allied nation surrenders, the Japanese player automatically gains control of all of its on map airfields and ports that are not occupied by Allied units. An Allied nation can only surrender once per game. However, should the Allies recapture the locations that the Japanese player had to capture to make the nation surrender, they regain control of all of that nation's airfields and ports except for those that have a Japanese unit (of any type) in the hex. In this case those occupied hexes remain Japanese until they are evacuated or abandoned. Additionally, as noted in rule 11.52, the Allied card draw does not recover along with the recapture of a nation that has previously surrendered.\nPLAY NOTE: Surrender markers have been supplied to keep track of which nations have surrendered over the course of the game.\nDESIGN NOTE: We have chosen not to burden the map with extensive map boundaries and other means of denoting to which nation each and every island belongs. From a game point of view it is only important to know which ports, airfields, and resource hexes belong to a given nation. Consequently, we have defined many of these boundaries in terms of their distance from some key hex. Most are obvious, but this section of the rules defines them specifically for all game purposes.",
+  "text": "12.0 National Status\nA nation surrenders if the opposing player controls certain hexes of that nation during the National Status Segment. If Japan surrenders the game is over and the Allied player wins the game. If an Allied nation surrenders, the Japanese player automatically gains control of all of its on map airfields and ports that are not occupied by Allied units. An Allied nation can only surrender once per game. However, should the Allies recapture the locations that the Japanese player had to capture to make the nation surrender, they regain control of all of that nation's airfields and ports except for those that have a Japanese unit (of any type) in the hex. In this case those occupied hexes remain Japanese until they are evacuated or abandoned. Additionally, as noted in rule 11.52, the Allied card draw does not recover along with the recapture of a nation that has previously surrendered.",
   "crossRefs": [
    "11.52"
   ],
@@ -3309,8 +3232,7 @@
    "If Japan surrenders the game is over and the Allied player wins the game.",
    "If an Allied nation surrenders, the Japanese player automatically gains control of all of its on map airfields and ports that are not occupied by Allied units.",
    "An Allied nation can only surrender once per game.",
-   "However, should the Allies recapture the locations that the Japanese player had to capture to make the nation surrender, they regain control of all of that nation's airfields and ports except for those that have a Japanese unit (of any type) in the hex.",
-   "From a game point of view it is only important to know which ports, airfields, and resource hexes belong to a given nation."
+   "However, should the Allies recapture the locations that the Japanese player had to capture to make the nation surrender, they regain control of all of that nation's airfields and ports except for those that have a Japanese unit (of any type) in the hex."
   ],
   "part": 0
  },
@@ -3457,7 +3379,7 @@
   ],
   "pageStart": 25,
   "pageEnd": 25,
-  "text": "12.41 Dutch East Indies Definition The Dutch East Indies comprises the Islands of Sumatra (1813, 1914, 1916, 1917,2017), Java (2018, 2019, 2220), Borneo (2216, 2318, 2415, 2517, 2616), Celebes (2620, 2719, 2917), Bali (2320), Amboina (2919), Timor (2721), and Morotai (3017).\nDESIGN NOTE: The Dutch East Indies comprises most of the islands surrounding those that are defined above. Since they have no bases they rarely come into play. Consequently we have simplified the definition to what has impact vice geographical correctness.",
+  "text": "12.41 Dutch East Indies Definition The Dutch East Indies comprises the Islands of Sumatra (1813, 1914, 1916, 1917,2017), Java (2018, 2019, 2220), Borneo (2216, 2318, 2415, 2517, 2616), Celebes (2620, 2719, 2917), Bali (2320), Amboina (2919), Timor (2721), and Morotai (3017).",
   "crossRefs": [],
   "conditionals": [],
   "part": 0
@@ -3530,7 +3452,7 @@
   ],
   "pageStart": 25,
   "pageEnd": 25,
-  "text": "12.6 India\nDESIGN NOTE: India was too large for the Japanese to conquer, but it could be made unstable and taken out of the war due to the Gandhi peace movement and the requirements of garrisoning a very unstable native population, which could defect from Allied offensive operations.",
+  "text": "12.6 India",
   "crossRefs": [],
   "conditionals": [],
   "part": 0
@@ -3675,7 +3597,7 @@
   ],
   "pageStart": 26,
   "pageEnd": 26,
-  "text": "12.73 China Surrenders The instant (does not wait for the National Status Segment) the Chinese marker is in the China Collapses box during the Offensive Segment, China surrenders. If China surrenders, all Allied air units in China are placed on the game turn track to return as reinforcements in the next game turn. These reinforcements may be delayed. In addition, permanently remove all Chinese units from the game. Please note that China cannot collapse based on an Event card play, but only due to a Chinese offensive initiated by an OC. If an Event\ncard play would move the China marker into the Government Collapsed box, it is instead simply not moved.\nDESIGN NOTE: China was always too much for the Japanese to swallow. Surrender in this context means that the Central government has collapsed and the portions not under Japanese control have fallen into the hands of local warlords. The Japanese might have been able to make separate deals with these warlords, while continuing the conflict against the Communists allowing Japan to annex the occupied portions of China.",
+  "text": "12.73 China Surrenders The instant (does not wait for the National Status Segment) the Chinese marker is in the China Collapses box during the Offensive Segment, China surrenders. If China surrenders, all Allied air units in China are placed on the game turn track to return as reinforcements in the next game turn. These reinforcements may be delayed. In addition, permanently remove all Chinese units from the game. Please note that China cannot collapse based on an Event card play, but only due to a Chinese offensive initiated by an OC. If an Event\ncard play would move the China marker into the Government Collapsed box, it is instead simply not moved.",
   "crossRefs": [],
   "conditionals": [
    "If China surrenders, all Allied air units in China are placed on the game turn track to return as reinforcements in the next game turn.",
@@ -4247,15 +4169,10 @@
   ],
   "pageStart": 29,
   "pageEnd": 29,
-  "text": "16.2 Allied Victory\nThe Allied player wins if, during the game turn 12 End Of Turn Phase, Japan has been successfully strategically bombed on four consecutive turns, has 1 or zero resource hexes, and a B29 is in range of Tokyo, or Japan has surrendered.\nDESIGN NOTE: The most difficult part of this design was how to determine Allied victory, while still making the game interesting for the Japanese player. There was never a chance that Japan could \"win\" the war. Their strategy, and the best they could have hoped for, was that the US would negotiate a settlement of less than unconditional surrender. In addition, I needed to force the historical mindset on the Allied player that an invasion of Japan had to be contemplated and planned for, especially since most wartime personages were unaware of the Manhattan project until the A-bomb was ready for operational use. Consequently, to make a contest of it, the Allied player must perform a bit better than was achieved historically by the conclusion of the war or the Allies must carry out the invasion of the home islands. The notion here is that, if a variety of factors associated with the Japanese decision to surrender were delayed, other paths may have been chosen. So, if the Allies have to invade Japan to win the game, it is because the Manhattan project was delayed, the Soviets failed to invade Manchuria, or the Allies were unable to destroy Japanese industry due to a later starting B29 campaign. If the Allies do not complete the surrender of Japan through invasion, it is assumed that the high casualty cost causes a move to negotiate an end to hostilities, resulting in a phrrhic Japanese victory.",
+  "text": "16.2 Allied Victory\nThe Allied player wins if, during the game turn 12 End Of Turn Phase, Japan has been successfully strategically bombed on four consecutive turns, has 1 or zero resource hexes, and a B29 is in range of Tokyo, or Japan has surrendered.",
   "crossRefs": [],
   "conditionals": [
-   "16.2 Allied Victory\nThe Allied player wins if, during the game turn 12 End Of Turn Phase, Japan has been successfully strategically bombed on four consecutive turns, has 1 or zero resource hexes, and a B29 is in range of Tokyo, or Japan has surrendered.",
-   "There was never a chance that Japan could \"win\" the war.",
-   "Consequently, to make a contest of it, the Allied player must perform a bit better than was achieved historically by the conclusion of the war or the Allies must carry out the invasion of the home islands.",
-   "The notion here is that, if a variety of factors associated with the Japanese decision to surrender were delayed, other paths may have been chosen.",
-   "So, if the Allies have to invade Japan to win the game, it is because the Manhattan project was delayed, the Soviets failed to invade Manchuria, or the Allies were unable to destroy Japanese industry due to a later starting B29 campaign.",
-   "If the Allies do not complete the surrender of Japan through invasion, it is assumed that the high casualty cost causes a move to negotiate an end to hostilities, resulting in a phrrhic Japanese victory."
+   "16.2 Allied Victory\nThe Allied player wins if, during the game turn 12 End Of Turn Phase, Japan has been successfully strategically bombed on four consecutive turns, has 1 or zero resource hexes, and a B29 is in range of Tokyo, or Japan has surrendered."
   ],
   "part": 0
  },
@@ -4485,7 +4402,7 @@
   ],
   "pageStart": 30,
   "pageEnd": 31,
-  "text": "1. If both players pick the same side, the player who bid more US Political Will boxes gets to play that side. If the winning player is playing the Japanese side, the US Political Will bid is added to the US Political Will total at the conclusion of Operation Z when the US Political Will is normally set at +8. If the winning player is playing the Allied side, the bid amount is subtracted from the US Political Will total at the conclusion of Operation Z. 2. If both players pick different sides, the net difference of US Political Will bids are added or subtracted from the initial US Political Will total of +8 at the conclusion of Operation Z. DESIGN NOTE: The 1942 campaign scenario and the yearly scenarios were intended as the main format for tournament play.",
+  "text": "1. If both players pick the same side, the player who bid more US Political Will boxes gets to play that side. If the winning player is playing the Japanese side, the US Political Will bid is added to the US Political Will total at the conclusion of Operation Z when the US Political Will is normally set at +8. If the winning player is playing the Allied side, the bid amount is subtracted from the US Political Will total at the conclusion of Operation Z. 2. If both players pick different sides, the net difference of US Political Will bids are added or subtracted from the initial US Political Will total of +8 at the conclusion of Operation Z.",
   "crossRefs": [],
   "conditionals": [
    "If both players pick the same side, the player who bid more US Political Will boxes gets to play that side.",
@@ -4531,12 +4448,12 @@
   ],
   "pageStart": 31,
   "pageEnd": 31,
-  "text": "17.11 December 1941 Special Turn This is a mini-turn consisting of the Japanese player only playing two specific Strategy cards as Event cards in the following order: Card 1: Operation Z- Attack on Pearl Harbor. All Japanese naval units must remain together. Allied units at sea (e.g., US CVs) may not be attacked. Follow all event text. Card 2: IAI-Operation No. 1- Conquest of SE Asia The Allied player may not react to any Japanese moves that are not specified in the event descriptions. No Allied air units project Zones of Influence during IAI, but all Allied air units that are not in a battle hex can automatically participate in a battle hex that is within range of its location. For the duration of the IAI card only, due to pre-war coastal fortifications, Manila (hex 2813) and Singapore (hex 2015) prevent Japanese amphibious assault unless the ground units are escorted by a Japanese naval unit (adhering to all restrictions in 7.45 B) and the Japanese cannot use the Shore Bombardment die roll modifier in the ensuing Ground combat. The Japanese may only use Amphibious Assault to hexes that are within 5 hexes of a Japanese controlled port. At the conclusion of IAI the Allies get a one time Emergency Naval Move for all of their naval units. After this Allied action finish out the remaining phases of the turn, except the Attrition Phase, and then start normal play. Optional: The Allies may choose Allied card 4: Arcadia Conference as one of their cards for game turn 2.",
+  "text": "17.11 December 1941 Special Turn This is a mini-turn consisting of the Japanese player only playing two specific Strategy cards as Event cards in the following order:\nCard 1: Operation Z- Attack on Pearl Harbor. All Japanese naval units must remain together. Allied units at sea (e.g., US CVs) may not be attacked. Follow all event text.\nCard 2: IAI-Operation No. 1- Conquest of SE Asia The Allied player may not react to any Japanese moves that are not specified in the event descriptions. No Allied air units project Zones of Influence during IAI, but all Allied air units that are not in a battle hex can automatically participate in a battle hex that is within range of its location. For the duration of the IAI card only, due to pre-war coastal fortifications, Manila (hex 2813) and Singapore (hex 2015) prevent Japanese amphibious assault unless the ground units are escorted by a Japanese naval unit (adhering to all restrictions in 7.45 B) and the Japanese cannot use the Shore Bombardment die roll modifier in the ensuing Ground combat. The Japanese may only use Amphibious Assault to hexes that are within 5 hexes of a Japanese controlled port.\nAt the conclusion of IAI the Allies get a one time Emergency Naval Move for all of their naval units. After this Allied action finish out the remaining phases of the turn, except the Attrition Phase, and then start normal play.\nOptional: The Allies may choose Allied card 4: Arcadia Conference as one of their cards for game turn 2.",
   "crossRefs": [
    "7.45"
   ],
   "conditionals": [
-   "17.11 December 1941 Special Turn This is a mini-turn consisting of the Japanese player only playing two specific Strategy cards as Event cards in the following order: Card 1: Operation Z- Attack on Pearl Harbor.",
+   "17.11 December 1941 Special Turn This is a mini-turn consisting of the Japanese player only playing two specific Strategy cards as Event cards in the following order:\nCard 1: Operation Z- Attack on Pearl Harbor.",
    "All Japanese naval units must remain together.",
    "Allied units at sea (e.g., US CVs) may not be attacked.",
    "1- Conquest of SE Asia The Allied player may not react to any Japanese moves that are not specified in the event descriptions.",
@@ -4544,21 +4461,6 @@
    "The Japanese may only use Amphibious Assault to hexes that are within 5 hexes of a Japanese controlled port."
   ],
   "part": 0
- },
- {
-  "id": "17.11#1",
-  "sectionId": "17.11",
-  "label": "17.11 December 1941 Special Turn This",
-  "headingPath": [
-   "17.0 Scenarios",
-   "17.1 The Full Campaign, Dec '41-Aug '45"
-  ],
-  "pageStart": 31,
-  "pageEnd": 31,
-  "text": "DESIGN NOTE: This card has been very hard to get right, as the Japanese went into the war without foreknowledge of how successful they would be in catching the Allies unprepared for war. Consequently, they went into this initial operation with some critical assumptions that need to be accounted for in order to give you the opportunity to write your own history of this event within a reasonable set of historical restrictions. Players who want a more unrestrictive environment can unofficially relax the restriction on where the Japanese can Amphibious Assault.",
-  "crossRefs": [],
-  "conditionals": [],
-  "part": 1
  },
  {
   "id": "17.12",
@@ -5089,7 +4991,7 @@
   "headingPath": [],
   "pageStart": 37,
   "pageEnd": 40,
-  "text": "18.0 Master Scenario Setup List This extensive chart shows the setup location for every counter at the beginning of the four yearly starts. Numbers in brackets [ ] indicate that a unit sets up on its reduced side. DESIGN NOTE: The Designer and Developer of this game have over fifty years of experience designing and publishing games. We have learned that no matter how many times you check this quantity of numbers, it is possible that some unintended mistakes are made. In any situation where there is ambiguity, the hierarchy of correctness is the counters are always correct, followed by the master scenario list, and last the scenario listings. US Scenario Hex Setup/Game Turn of Entry Numbers in brackets [ ] set up at reduced strength Unit Type Unit Designation1941194219431944 Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground 5AF 5AF LRB 7AF 7AF LRB 10AF LRB 11AF 11AF LRB 13AF 13AF LRB 14AF 14AF LRB 19 LRB 20BC 21BC AVG FEAF Marine 211 Marine 1 MAW Marine 2 MAW Marine 3 MAW Marine 1M Div Marine 2M Div Marine 3M Div Marine 5M Div Marine 6M Div Marine M Bde Marine SF Bde Marine W Bde M Corps NL Corps P Brigade R Corps SL Corps 11 Division I Corps 2 2 5808 5808 2 3 3 3 3 Event 4 2812 9 10 2008 2812 4612 2 4 9 3 4 6 10 8 2 2 4612 2915 2812 3014 2813 2913 8 [3] Delay 3626 3823 Delay 3626 3823 5108 5808 5018 5808 5108 5018 Delay 1905 1905 3 5100 5100 3 5100 5100 3 4825 4322 3 4825 4322 Event 2104 2104 4 China Box China Box [2917] Elim Elim 9 9 9 10 10 10 2008 Elim Elim [2813] Elim Elim 4612 Elim Elim Delay 4423 5108 4 4825 4222 9 9 9 3 3626 3921 4 4423 5018 6 6 4222 10 10 10 8 8 4826 Delay 5808 5808 Delay 4825 4423 4612 Elim Elim Elim Elim Elim",
+  "text": "18.0 Master Scenario Setup List This extensive chart shows the setup location for every counter at the beginning of the four yearly starts. Numbers in brackets [ ] indicate that a unit sets up on its reduced side. US Scenario Hex Setup/Game Turn of Entry Numbers in brackets [ ] set up at reduced strength Unit Type Unit Designation1941194219431944 Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground 5AF 5AF LRB 7AF 7AF LRB 10AF LRB 11AF 11AF LRB 13AF 13AF LRB 14AF 14AF LRB 19 LRB 20BC 21BC AVG FEAF Marine 211 Marine 1 MAW Marine 2 MAW Marine 3 MAW Marine 1M Div Marine 2M Div Marine 3M Div Marine 5M Div Marine 6M Div Marine M Bde Marine SF Bde Marine W Bde M Corps NL Corps P Brigade R Corps SL Corps 11 Division I Corps 2 2 5808 5808 2 3 3 3 3 Event 4 2812 9 10 2008 2812 4612 2 4 9 3 4 6 10 8 2 2 4612 2915 2812 3014 2813 2913 8 [3] Delay 3626 3823 Delay 3626 3823 5108 5808 5018 5808 5108 5018 Delay 1905 1905 3 5100 5100 3 5100 5100 3 4825 4322 3 4825 4322 Event 2104 2104 4 China Box China Box [2917] Elim Elim 9 9 9 10 10 10 2008 Elim Elim [2813] Elim Elim 4612 Elim Elim Delay 4423 5108 4 4825 4222 9 9 9 3 3626 3921 4 4423 5018 6 6 4222 10 10 10 8 8 4826 Delay 5808 5808 Delay 4825 4423 4612 Elim Elim Elim Elim Elim Elim Elim Elim 3014 Elim Elim 2813 Elim Elim [2912] Elim Elim 8 8 3626 [3] 4024 3922 38 Ground IX Corps 8 Ground X Corps 5808 Ground XI Corps 2 Ground XIV Corps [3] Ground XXIV Corps 5 HQ C Pac 5808 HQ S Pac Gho 3 HQ S Pac Hal Event HQ SW Pac 2813 Naval BB Mass 5 Naval BB MD/CA 5808 Naval BB Miss 2 Naval BB Missouri 9 Naval BB N Carolina 3 Naval BB New Jersey 7 Naval BB New York 9 Naval BB Washington 4 Naval BC Alaska 10",
   "crossRefs": [],
   "conditionals": [],
   "part": 0
@@ -5101,7 +5003,7 @@
   "headingPath": [],
   "pageStart": 37,
   "pageEnd": 40,
-  "text": "Elim Elim Elim 3014 Elim Elim 2813 Elim Elim [2912] Elim Elim 8 8 3626 [3] 4024 3922 38 Ground IX Corps 8 Ground X Corps 5808 Ground XI Corps 2 Ground XIV Corps [3] Ground XXIV Corps 5 HQ C Pac 5808 HQ S Pac Gho 3 HQ S Pac Hal Event HQ SW Pac 2813 Naval BB Mass 5 Naval BB MD/CA 5808 Naval BB Miss 2 Naval BB Missouri 9 Naval BB N Carolina 3 Naval BB New Jersey 7 Naval BB New York 9 Naval BB Washington 4 Naval BC Alaska 10 Naval CA Balitmore 11 Naval CA N. Orleans 5808 Naval CA Northampton 2 Naval CA US Asia 3014 Naval CV B. H. Richard 10 Naval CV Bunker Hill 6 Naval CV Enterprise [5609] Naval CV Essex 6 Naval CV Franklin 7 Naval CV Hancock 8 Naval CV Intrepid 7 Naval CV Lexington [5410] Naval CV Shangri La 9 Naval CV Wasp 3 Naval CVE C. Bay 10 Naval CVE Casablanca 8 Naval CVE Casablnc 2 10 Naval CVE Sangamon 6 Naval CVL Bataan 7 Naval CVL Belleau Wood 6 Naval CVL Cowpens 6 Naval CVL San Jacinto 5 Naval DD US Asia 2616 8 5808 Delay [3] 5 5808 3 Event 2813 5 Elim Delay 9 3 7 9 4 10 11 [5808] Delay [3014] 10 6 5808 6 7 8 7 5808 9 3 10 8 10 6 7 6 6 5 2616 8 5808 3922 4423 Delay 5808 Elim 4828 3727 Delay Elim 5808 9 4828 7 9 4828 10 11 Elim Elim Elim 10 6 [4828] 6 7 8 7 [4828] 9 Elim 10 8 10 6 7 6 6 Delay Elim 4828 5808 3822 4222 5808 5808 Elim 4828 3727 5808 Elim 5808 9 4828 4826 9 4828 10 11 Elim Elim Elim 10 4828 4828 4828 5808 5808 5808 4828 9 Elim 10 4826 10 4826 4826 4826 4826 5808 Elim Commonwealth/Joint Unit Unit Type Designation1941194219431944 Air Aus Air FE Air MA Air SEAC Air SEAC LRB Ground 7 Armor Brigade Ground 77 Brigade 3727 1905 2015 2 5 Event Event 3727 1905 2015 Delay 5 Event Event 3823 Elim Elim 1805 Delay Event Event 3823 Elim Elim 1805 1805 Event 2205 Ground 1 Australian Corps 3023 Ground 2 Australian Corps 3727 Ground 3 Australian Corps 3",
+  "text": "Naval CA Balitmore 11 Naval CA N. Orleans 5808 Naval CA Northampton 2 Naval CA US Asia 3014 Naval CV B. H. Richard 10 Naval CV Bunker Hill 6 Naval CV Enterprise [5609] Naval CV Essex 6 Naval CV Franklin 7 Naval CV Hancock 8 Naval CV Intrepid 7 Naval CV Lexington [5410] Naval CV Shangri La 9 Naval CV Wasp 3 Naval CVE C. Bay 10 Naval CVE Casablanca 8 Naval CVE Casablnc 2 10 Naval CVE Sangamon 6 Naval CVL Bataan 7 Naval CVL Belleau Wood 6 Naval CVL Cowpens 6 Naval CVL San Jacinto 5 Naval DD US Asia 2616 8 5808 Delay [3] 5 5808 3 Event 2813 5 Elim Delay 9 3 7 9 4 10 11 [5808] Delay [3014] 10 6 5808 6 7 8 7 5808 9 3 10 8 10 6 7 6 6 5 2616 8 5808 3922 4423 Delay 5808 Elim 4828 3727 Delay Elim 5808 9 4828 7 9 4828 10 11 Elim Elim Elim 10 6 [4828] 6 7 8 7 [4828] 9 Elim 10 8 10 6 7 6 6 Delay Elim 4828 5808 3822 4222 5808 5808 Elim 4828 3727 5808 Elim 5808 9 4828 4826 9 4828 10 11 Elim Elim Elim 10 4828 4828 4828 5808 5808 5808 4828 9 Elim 10 4826 10 4826 4826 4826 4826 5808 Elim Commonwealth/Joint Unit Unit Type Designation1941194219431944 Air Aus Air FE Air MA Air SEAC Air SEAC LRB Ground 7 Armor Brigade Ground 77 Brigade 3727 1905 2015 2 5 Event Event 3727 1905 2015 Delay 5 Event Event 3823 Elim Elim 1805 Delay Event Event 3823 Elim Elim 1805 1805 Event 2205 Ground 1 Australian Corps 3023 Ground 2 Australian Corps 3727 Ground 3 Australian Corps 3 Ground 4 Australian Corps 8 Ground 8A Division 2015 Ground 1B Division 2108 Ground B Ind Division 2008 Ground 15 British Corps 3 Ground 33 British Corps 3 Ground HK Division 2709 Ground 1 Ind Corps 2105 Ground 2 Ind Corps 1805 Ground 3 Ind Corps 2014 Ground 4 Ind Corps 4 Ground 3NZ Division 3 Ground PM Brigade 3823 HQ ABDA Event HQ ANZAC 3 HQ Malaya 2015 HQ SEAC 2 Naval BB Duke of York 10 Naval BB Force Z 2015 Naval BB Warspite 2",
   "crossRefs": [],
   "conditionals": [],
   "part": 1
@@ -5113,7 +5015,7 @@
   "headingPath": [],
   "pageStart": 37,
   "pageEnd": 40,
-  "text": "Ground 4 Australian Corps 8 Ground 8A Division 2015 Ground 1B Division 2108 Ground B Ind Division 2008 Ground 15 British Corps 3 Ground 33 British Corps 3 Ground HK Division 2709 Ground 1 Ind Corps 2105 Ground 2 Ind Corps 1805 Ground 3 Ind Corps 2014 Ground 4 Ind Corps 4 Ground 3NZ Division 3 Ground PM Brigade 3823 HQ ABDA Event HQ ANZAC 3 HQ Malaya 2015 HQ SEAC 2 Naval BB Duke of York 10 Naval BB Force Z 2015 Naval BB Warspite 2 Naval CA Exeter 1307 Naval CA Kent 3727 Naval CA London 4 Naval CV Indomitable 2 Naval CV Victorious 10 Naval CVL Hermes 2 3023 3727 3 8 2015 2108 2008 3 3 Elim 2105 1805 2014 4 3 3823 Event 3 2015 1805 10 Elim Delay 1307 3727 4 Delay 10 Delay 3023 3727 3823 8 Elim Elim Elim 1905 2105 Elim [2205] Elim Elim 2006 4828 [3823] Elim 3823 Elim 1805 10 Elim 1005 Elim 3727 1005 1005 10 Elim 3023 3727 3822 3823 Elim Elim Elim 1905 2105 Elim Elim Elim Elim 2006 4322 [4024] Elim 3823 Elim 1805 10 Elim 1005 Elim 3727 1005 1005 10 Elim Chinese Unit Unit Type Designation1941194219431944 Ground Ground Ground 5 Army 6 Army 66 Army [2407] [2407] 2205 [2205] [2407] [2407] [2407] [2407] [2407] [2407] [2407] [2407] Dutch Unit Type Air Ground Ground Ground Ground Ground Ground Ground Ground Ground Naval Unit Designation1941194219431944 Dut 1 Regiment 2 Regiment 3 Regiment 4 Regiment 5 Regiment 6 Regiment 7 Regiment 8 Regiment J Division CA Dutch 2019 2019 Elim Elim 1916 1916 Elim Elim 1813 1813 Elim Elim 2616 2616 Elim Elim 2919 2919 Elim Elim 2517 2517 Elim Elim 2917 2917 Elim Elim 2719 2719 Elim Elim 2721 2721 Elim Elim 2019 2019 Elim Elim 2019 2019 Elim Elim 39 Japanese Scenario Hex Setup/Game Turn of Entry Numbers in brackets [ ] set up at reduced strength Unit Type Unit Designation1941194219431944",
+  "text": "Naval CA Exeter 1307 Naval CA Kent 3727 Naval CA London 4 Naval CV Indomitable 2 Naval CV Victorious 10 Naval CVL Hermes 2 3023 3727 3 8 2015 2108 2008 3 3 Elim 2105 1805 2014 4 3 3823 Event 3 2015 1805 10 Elim Delay 1307 3727 4 Delay 10 Delay 3023 3727 3823 8 Elim Elim Elim 1905 2105 Elim [2205] Elim Elim 2006 4828 [3823] Elim 3823 Elim 1805 10 Elim 1005 Elim 3727 1005 1005 10 Elim 3023 3727 3822 3823 Elim Elim Elim 1905 2105 Elim Elim Elim Elim 2006 4322 [4024] Elim 3823 Elim 1805 10 Elim 1005 Elim 3727 1005 1005 10 Elim Chinese Unit Unit Type Designation1941194219431944 Ground Ground Ground 5 Army 6 Army 66 Army [2407] [2407] 2205 [2205] [2407] [2407] [2407] [2407] [2407] [2407] [2407] [2407] Dutch Unit Type Air Ground Ground Ground Ground Ground Ground Ground Ground Ground Naval Unit Designation1941194219431944 Dut 1 Regiment 2 Regiment 3 Regiment 4 Regiment 5 Regiment 6 Regiment 7 Regiment 8 Regiment J Division CA Dutch 2019 2019 Elim Elim 1916 1916 Elim Elim 1813 1813 Elim Elim 2616 2616 Elim Elim 2919 2919 Elim Elim 2517 2517 Elim Elim 2917 2917 Elim Elim 2719 2719 Elim Elim 2721 2721 Elim Elim 2019 2019 Elim Elim 2019 2019 Elim Elim 39 Japanese Scenario Hex Setup/Game Turn of Entry Numbers in brackets [ ] set up at reduced strength Unit Type Unit Designation1941194219431944 Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground",
   "crossRefs": [],
   "conditionals": [],
   "part": 2
@@ -5125,7 +5027,7 @@
   "headingPath": [],
   "pageStart": 37,
   "pageEnd": 40,
-  "text": "Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Air Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground Ground 1 2 3 4 5 6 7 8 9 10 11 12 21 22 23 24 25 26 27 28 50 51 61 62 T 1 SN Brigade 2 SN Brigade 3 SN Brigade 4 SN Brigade SS Brigade 2 Army 14 Army 15 Army 16 Army 17 Army 18 Army 19 Army 25 Army 27 Army 28 Army 29 Army 31 Army 32 Army 33 Army 35 Army 36 Army 37 Army 3706 3004 3607 3607 2909 3 4 5 6 7 8 9 3009 2212 3009 4715 2 3 4 5 6 6 8 8 Event 2909 2311 4017 4715 4017 [7] 2909 2211 [3416] [2708] [3706] [3209] [2509] [3704] [2] [8] [3] [9] [5] [3007] 10 [4] 3706 3004 3607 3607 2812 3 4 5 6 7 8 9 2909 2212 3009 4715 3407 3 4 5 6 6 8 8 Event 2911 2415 3814 [4715] 4021 [7] 2812 1913 [2915] [2709] [3706] [2913] [2112] [3704] [2110] [8] [3] [9] [5] [3007] 10 [4] 3706 3004 [1916] 3004 2008 3720 3119 2915 6 7 8 9 [4021] [2909] 2220 [4715] [4021] 4017 2212 2620 6 6 8 8 Elim 5018 [4600] 4715 [4612] 4322 [7] 2813 2206 [2220] 4021 3822 3720 [1916] [3704] 2008 [8] [3813] [9] 2106 2915 10 [2616] 3706 3004 [2909] 3004 [2008] [3720] [3720] 2409 1916 3706 3407 9 Elim [4017] 2813 [4715] [4021] [3416] [3704] [2015] Elim 3704 3813 3813 Elim Elim Elim 4715 [4612] Elim [3520] 2813 2206 [2220] 4021 [3721] [3720] [1916] [3704] 2008 [2015] [3813] [9] 2106 2915 10 [2616] Ground 38 Army Ground 39 Army Ground ED Army Ground Korean Army HQ Comb Fleet Oza HQ Comb Fleet Yam HQ South HQ South Seas Naval APD Kamikaze Naval BB Kongo 1 Naval BB Kongo 2 Naval BB Nagato Naval BB Yamato Naval CA Aoba Naval CA Mogami Naval CA Nachi Naval CA Takao Naval CL Tenyru Naval CV Akagi Naval CV Shokaku Naval CV Soryu Naval CV Taiho Naval CVL Amagi Naval CVL Junyo",
+  "text": "1 2 3 4 5 6 7 8 9 10 11 12 21 22 23 24 25 26 27 28 50 51 61 62 T 1 SN Brigade 2 SN Brigade 3 SN Brigade 4 SN Brigade SS Brigade 2 Army 14 Army 15 Army 16 Army 17 Army 18 Army 19 Army 25 Army 27 Army 28 Army 29 Army 31 Army 32 Army 33 Army 35 Army 36 Army 37 Army 3706 3004 3607 3607 2909 3 4 5 6 7 8 9 3009 2212 3009 4715 2 3 4 5 6 6 8 8 Event 2909 2311 4017 4715 4017 [7] 2909 2211 [3416] [2708] [3706] [3209] [2509] [3704] [2] [8] [3] [9] [5] [3007] 10 [4] 3706 3004 3607 3607 2812 3 4 5 6 7 8 9 2909 2212 3009 4715 3407 3 4 5 6 6 8 8 Event 2911 2415 3814 [4715] 4021 [7] 2812 1913 [2915] [2709] [3706] [2913] [2112] [3704] [2110] [8] [3] [9] [5] [3007] 10 [4] 3706 3004 [1916] 3004 2008 3720 3119 2915 6 7 8 9 [4021] [2909] 2220 [4715] [4021] 4017 2212 2620 6 6 8 8 Elim 5018 [4600] 4715 [4612] 4322 [7] 2813 2206 [2220] 4021 3822 3720 [1916] [3704] 2008 [8] [3813] [9] 2106 2915 10 [2616] 3706 3004 [2909] 3004 [2008] [3720] [3720] 2409 1916 3706 3407 9 Elim [4017] 2813 [4715] [4021] [3416] [3704] [2015] Elim 3704 3813 3813 Elim Elim Elim 4715 [4612] Elim [3520] 2813 2206 [2220] 4021 [3721] [3720] [1916] [3704] 2008 [2015] [3813] [9] 2106 2915 10 [2616] Ground 38 Army Ground 39 Army Ground ED Army Ground Korean Army HQ Comb Fleet Oza HQ Comb Fleet Yam HQ South HQ South Seas Naval APD Kamikaze Naval BB Kongo 1 Naval BB Kongo 2 Naval BB Nagato Naval BB Yamato Naval CA Aoba Naval CA Mogami Naval CA Nachi Naval CA Takao Naval CL Tenyru Naval CV Akagi Naval CV Shokaku Naval CV Soryu Naval CV Taiho Naval CVL Amagi Naval CVL Junyo Naval CVL Kaiyo Naval CVL Ryuho Naval CVL Zuiho 2211 [10] 3706 3305 Event 3407 2212 4017 4017 3705 2909 3407 [2] 4017 2311 3416 2909 4715 3705 3705 3705 8 9 3 [7] 3416 3407",
   "crossRefs": [],
   "conditionals": [],
   "part": 3
@@ -5137,7 +5039,7 @@
   "headingPath": [],
   "pageStart": 37,
   "pageEnd": 40,
-  "text": "Naval CVL Kaiyo Naval CVL Ryuho Naval CVL Zuiho 2211 [10] 3706 3305 Event 3407 2212 4017 4017 3705 2909 3407 [2] 4017 2311 3416 2909 4715 3705 3705 3705 8 9 3 [7] 3416 3407 2109 [10] 3706 3305 Event 3407 2212 4017 4017 3706 2311 3407 [3407] 4021 2311 2915 2909 4715 3706 3706 3706 8 9 3 [7] 2915 2915 2212 [10] 3706 3305 Event 3407 2212 4017 4021 4017 Elim 3407 4017 [4021] [3407] 4017 4021 Elim Elim 4017 Elim 8 9 3407 [7] Elim 4017 2212 [10] 3706 3305 3407 Elim 2212 3813 [4021] 3615 Elim 3407 3615 Elim [3407] 4017 [4021] Elim Elim 3407 Elim 3407 9 3407 3407 Elim 3615 40",
+  "text": "2109 [10] 3706 3305 Event 3407 2212 4017 4017 3706 2311 3407 [3407] 4021 2311 2915 2909 4715 3706 3706 3706 8 9 3 [7] 2915 2915 2212 [10] 3706 3305 Event 3407 2212 4017 4021 4017 Elim 3407 4017 [4021] [3407] 4017 4021 Elim Elim 4017 Elim 8 9 3407 [7] Elim 4017 2212 [10] 3706 3305 3407 Elim 2212 3813 [4021] 3615 Elim 3407 3615 Elim [3407] 4017 [4021] Elim Elim 3407 Elim 3407 9 3407 3407 Elim 3615 40",
   "crossRefs": [],
   "conditionals": [],
   "part": 4
@@ -5149,10 +5051,10 @@
   "headingPath": [],
   "pageStart": 40,
   "pageEnd": 44,
-  "text": "19.0 Comprehensive Example of Play Game Turn 1: December 1941 Card 1: Operation Z The Japanese naval units CVs Akagi, Soryu, Shokaku, Kongo move from Ominato (hex 3705) to hex 5506 and attack Oahu (hex 5808). There is no US response to the attack. The Japanese die roll is a 8, so 36 hits are apportioned to the US forces in the hex which defend at half strength. Historical result: Eliminate BB MD/CA (10 hits), eliminate both 7th AF unit (20 hits), reduce CA New Orleans (4 hits) for a total of 34 hits, 2 are unused. Japanese naval units return to Tokyo (hex 3706). The US CVs move to the Oahu hex and the US Political Will marker is moved to the +8 box on the US Political Will track. Card 2: IAI: Operation No. 1 Conquest of SE Asia 5. 2211: 38th Army moves to 2109 via 2110 (Strategic Route not yet built, which requires the Bridge Over the River Kwai event card). DESIGN NOTE: IAI was one of the key historical examples of economy of force. The Japanese gained the majority of their objectives within one month of Pearl Harbor. EOTS allows you to see the broad outlines of this conquest and much of the initial order of battle is designed to give some insight into the complexity of this multi-dimensional plan. Due to the small-scale nature of some of these operations that are below the granularity of EOTS, although all key features are accounted for, some of the smaller detachments are subsumed into the broader tapestry of the game design. It is important to note that the card indicates that there are no Allied ZOI during this Offensive. The order of the Japanese moves would be different if this had to be taken into account.",
+  "text": "19.0 Comprehensive Example of Play Game Turn 1: December 1941 Card 1: Operation Z The Japanese naval units CVs Akagi, Soryu, Shokaku, Kongo move from Ominato (hex 3705) to hex 5506 and attack Oahu (hex 5808). There is no US response to the attack. The Japanese die roll is a 8, so 36 hits are apportioned to the US forces in the hex which defend at half strength. Historical result: Eliminate BB MD/CA (10 hits), eliminate both 7th AF unit (20 hits), reduce CA New Orleans (4 hits) for a total of 34 hits, 2 are unused. Japanese naval units return to Tokyo (hex 3706). The US CVs move to the Oahu hex and the US Political Will marker is moved to the +8 box on the US Political Will track. Card 2: IAI: Operation No. 1 Conquest of SE Asia 5. 2211: 38th Army moves to 2109 via 2110 (Strategic Route not yet built, which requires the Bridge Over the River Kwai event card). The Japanese player has 26 activations for this Offensive. Each group of coordinated activations will be described below in a roughly West to East direction. Battle resolution occurs after all Offensive and Reaction movement has been completed. Since the Allies have no reaction movement during the 1st game turn (except for Force Z mandated movement), the battle resolution description is included in each Offensive axis of advance. Malaya 1. 22nd Air Flotilla in hex 2212 is activated and is within range of Malaya peninsula. 2. In support of the 25th Army, BB Kongo 2 in hex 2909 moves to hex 2112 (it was actually in distant support). 6. Battle is declared for hex 2112, where the Japanese during the Air Naval combat eliminate Force Z and take no losses in return. 7. Post Battle movement: Kongo 2 moves to Cam Ranh hex 2311. Borneo",
   "crossRefs": [],
   "conditionals": [
-   "The order of the Japanese moves would be different if this had to be taken into account."
+   "Since the Allies have no reaction movement during the 1st game turn (except for Force Z mandated movement), the battle resolution description is included in each Offensive axis of advance."
   ],
   "part": 0
  },
@@ -5163,11 +5065,9 @@
   "headingPath": [],
   "pageStart": 40,
   "pageEnd": 44,
-  "text": "The Japanese player has 26 activations for this Offensive. Each group of coordinated activations will be described below in a roughly West to East direction. Battle resolution occurs after all Offensive and Reaction movement has been completed. Since the Allies have no reaction movement during the 1st game turn (except for Force Z mandated movement), the battle resolution description is included in each Offensive axis of advance. Malaya 1. 22nd Air Flotilla in hex 2212 is activated and is within range of Malaya peninsula. 2. In support of the 25th Army, BB Kongo 2 in hex 2909 moves to hex 2112 (it was actually in distant support). 6. Battle is declared for hex 2112, where the Japanese during the Air Naval combat eliminate Force Z and take no losses in return. 7. Post Battle movement: Kongo 2 moves to Cam Ranh hex 2311. Borneo 1. 2311: Activate CA Mogami and 2nd SN to Miri hex 2415 using Amphibious Assault. The CA Mogami supplies the Amphibious transport negating the need for the use of an ASP. 2. There is no battle since the hex is unoccupied, place a Japanese control marker in Situation after Post Battle Movethe hex and increase Japanese ment. resources by one by moving the Japanese resource marker from the 3 to the 4 box of the Strategic Record Track. 3. 2509: 25th Army reduced (represents elements of the 5th and 18th divisions) uses Amphibious Assault movement (1 Amphibious Shipping Point= ASP) to move to Kota Bharu: 2112; this causes Force Z in hex 2015 to be moved to hex 2112 during Reaction movement. 4. 2211: 15th Army (includes the Imperial Guard division) moves to Kuala Lumpur hex 1913 via 2110, 2011, 2012, 1912 and capturing all hexes as they are passed through. 3. Post Battle movement: CA Mogami returns to Cam Ranh hex 2311. Hong Kong",
+  "text": "1. 2311: Activate CA Mogami and 2nd SN to Miri hex 2415 using Amphibious Assault. The CA Mogami supplies the Amphibious transport negating the need for the use of an ASP. 2. There is no battle since the hex is unoccupied, place a Japanese control marker in Situation after Post Battle Movethe hex and increase Japanese ment. resources by one by moving the Japanese resource marker from the 3 to the 4 box of the Strategic Record Track. 3. 2509: 25th Army reduced (represents elements of the 5th and 18th divisions) uses Amphibious Assault movement (1 Amphibious Shipping Point= ASP) to move to Kota Bharu: 2112; this causes Force Z in hex 2015 to be moved to hex 2112 during Reaction movement. 4. 2211: 15th Army (includes the Imperial Guard division) moves to Kuala Lumpur hex 1913 via 2110, 2011, 2012, 1912 and capturing all hexes as they are passed through. 3. Post Battle movement: CA Mogami returns to Cam Ranh hex 2311. Hong Kong 1. 2708: Activate the 17th Army reduced and move to Hong Kong hex 2709; declare a battle hex. 41 2. Battle Resolution: The Japanese 17th Army has a -2 DRM and achieves a one times result scoring 9 hits. This is sufficient to eliminate the British Hong Kong Division. The British Hong Kong Division has insufficient strength to damage the Japanese 17th Army, which captures Hong Kong. 11. Battle Resolution: Hex 2913, Japanese Zuiho conducts air naval combat against SL Corps but has insufficient hits to reduce the ground unit. The 19th Army adds two to its die roll (air and naval modifiers minus 2 for mixed terrain) and gets a result sufficient to reduce the SL Corps, which then retreats into hex 2912.",
   "crossRefs": [],
-  "conditionals": [
-   "Since the Allies have no reaction movement during the 1st game turn (except for Force Z mandated movement), the battle resolution description is included in each Offensive axis of advance."
-  ],
+  "conditionals": [],
   "part": 1
  },
  {
@@ -5177,7 +5077,7 @@
   "headingPath": [],
   "pageStart": 40,
   "pageEnd": 44,
-  "text": "1. 2708: Activate the 17th Army reduced and move to Hong Kong hex 2709; declare a battle hex. 41 2. Battle Resolution: The Japanese 17th Army has a -2 DRM and achieves a one times result scoring 9 hits. This is sufficient to eliminate the British Hong Kong Division. The British Hong Kong Division has insufficient strength to damage the Japanese 17th Army, which captures Hong Kong. 11. Battle Resolution: Hex 2913, Japanese Zuiho conducts air naval combat against SL Corps but has insufficient hits to reduce the ground unit. The 19th Army adds two to its die roll (air and naval modifiers minus 2 for mixed terrain) and gets a result sufficient to reduce the SL Corps, which then retreats into hex 2912. 12. Battle Resolution: Samar/Leyte hex 3014, the Japanese CVL Ryuho attacks at 3 hex range, so only the Japanese player can cause damage in this battle since the US CA Asia naval unit is a surface unit. The Japanese player adds 3 to the die roll for Surprise Attack and achieves a one times result that causes 6 hits, which reduces the US CA Asia naval unit. 13. Battle Resolution: Hex 2915, the Japanese conduct air naval combat using the Nachi to fire at the Mindanao Corps. This can be done because there are no US air or naval units present in the battle. The Nachi achieves a one times result causing 10 hits. This is sufficient to reduce the Mindanao Corps. The ensuing ground combat sees the 16th Army achieve a result scoring 14 hits, which is sufficient to eliminate the Mindanao Corps and win the battle. Philippines 1. 2909 and 3009: Activate 5th Air Division, 21st Air Flotilla and 23rd Air Flotilla. 2. 2909: Activate 1st SN and use Amphibious Assault (1 ASP) to move to hex 2911.",
+  "text": "12. Battle Resolution: Samar/Leyte hex 3014, the Japanese CVL Ryuho attacks at 3 hex range, so only the Japanese player can cause damage in this battle since the US CA Asia naval unit is a surface unit. The Japanese player adds 3 to the die roll for Surprise Attack and achieves a one times result that causes 6 hits, which reduces the US CA Asia naval unit. 13. Battle Resolution: Hex 2915, the Japanese conduct air naval combat using the Nachi to fire at the Mindanao Corps. This can be done because there are no US air or naval units present in the battle. The Nachi achieves a one times result causing 10 hits. This is sufficient to reduce the Mindanao Corps. The ensuing ground combat sees the 16th Army achieve a result scoring 14 hits, which is sufficient to eliminate the Mindanao Corps and win the battle. Philippines 1. 2909 and 3009: Activate 5th Air Division, 21st Air Flotilla and 23rd Air Flotilla. 2. 2909: Activate 1st SN and use Amphibious Assault (1 ASP) to move to hex 2911. 14. Post Battle Movement: The two US air units in hex 2812 use emergency air movement with the FEAF air unit being placed in the Manila hex (2813) and the 19th LRB being placed in Menando hex 2917. The CVL Ryuho, CVL Zuhio, and CA Nachi end their movement in Davao hex 2915. CA Takao returns to Tainan hex 2909. The 5th Air Division moves to hex 2812. The 21st Air Flotilla moves to hex 2909. South Pacific 1. 4017: Activate the 3rd SN and APD Kamikaze (supplies organic naval transport) which conduct an Amphibious Assault to Guam 3. 2909: Activate 14th Army and use Amphibious Assault (2 ASP) to move to hex 2812; declare battle hex. 4. 2909: Activate CA Takao and move to hex 2812. 5. 3407: Activate CVL Zuiho and move it to hex 2913.",
   "crossRefs": [],
   "conditionals": [
    "Battle Resolution: Samar/Leyte hex 3014, the Japanese CVL Ryuho attacks at 3 hex range, so only the Japanese player can cause damage in this battle since the US CA Asia naval unit is a surface unit."
@@ -5191,7 +5091,7 @@
   "headingPath": [],
   "pageStart": 40,
   "pageEnd": 44,
-  "text": "14. Post Battle Movement: The two US air units in hex 2812 use emergency air movement with the FEAF air unit being placed in the Manila hex (2813) and the 19th LRB being placed in Menando hex 2917. The CVL Ryuho, CVL Zuhio, and CA Nachi end their movement in Davao hex 2915. CA Takao returns to Tainan hex 2909. The 5th Air Division moves to hex 2812. The 21st Air Flotilla moves to hex 2909. South Pacific 1. 4017: Activate the 3rd SN and APD Kamikaze (supplies organic naval transport) which conduct an Amphibious Assault to Guam 3. 2909: Activate 14th Army and use Amphibious Assault (2 ASP) to move to hex 2812; declare battle hex. 4. 2909: Activate CA Takao and move to hex 2812. 5. 3407: Activate CVL Zuiho and move it to hex 2913. 6. 3209: Activate 19th Army reduced and use Amphibious Assault (1 ASP) to move to hex 2913; declare battle hex. 7. 3416: Activate 16th Army reduced and use Amphibious Assault (1 ASP) to move to Davao hex 2915; declare battle hex. 8. 3416: Activate CA Nachi and move it to Davao hex 2915. 9. 3416: Activate CVL Ryuho and move to within 3 hexes of 3014 Samar/Leyte; declare battle hex.",
+  "text": "6. 3209: Activate 19th Army reduced and use Amphibious Assault (1 ASP) to move to hex 2913; declare battle hex. 7. 3416: Activate 16th Army reduced and use Amphibious Assault (1 ASP) to move to Davao hex 2915; declare battle hex. 8. 3416: Activate CA Nachi and move it to Davao hex 2915. 9. 3416: Activate CVL Ryuho and move to within 3 hexes of 3014 Samar/Leyte; declare battle hex. 10. Battle Resolution: Hex 2812, Japanese air units on Formosa (hexes 2909 and 3009) in conjunction with CA Takao attack US FE and 19th Air Units (famous B-17 19th Bomber Squadron). Since this is a Surprise attack all Japanese attacks are resolved first with surviving US units then responding in kind. Japanese strength is 54 Air strength points reduced to 27 due to use of extended range plus 12 for CA Takao, the die roll has 3 added to it for Surprise Attack and achieves a .5 result for a total of 20 hits. This reduces both US air units (FE takes 10 hits and 19th takes 9 for a total of 19). The Japanese win the air naval battle enabling an ensuing ground combat with the 14th Army moving via amphibious assault. The 14th Army attacks the NL Corps. The Japanese get +2 for having naval support in the hex, but the inactive air units in the battle hex prevents the Japanese from getting an additional +2 for air superiority, while the NL Corps gets a +3. The Japanese 14th Army gets 27 hits on the NL Corps destroying it, and receives 6 hits, losing one step. Post Battle Movement Situation. 42",
   "crossRefs": [],
   "conditionals": [],
   "part": 3
@@ -5203,7 +5103,7 @@
   "headingPath": [],
   "pageStart": 40,
   "pageEnd": 44,
-  "text": "10. Battle Resolution: Hex 2812, Japanese air units on Formosa (hexes 2909 and 3009) in conjunction with CA Takao attack US FE and 19th Air Units (famous B-17 19th Bomber Squadron). Since this is a Surprise attack all Japanese attacks are resolved first with surviving US units then responding in kind. Japanese strength is 54 Air strength points reduced to 27 due to use of extended range plus 12 for CA Takao, the die roll has 3 added to it for Surprise Attack and achieves a .5 result for a total of 20 hits. This reduces both US air units (FE takes 10 hits and 19th takes 9 for a total of 19). The Japanese win the air naval battle enabling an ensuing ground combat with the 14th Army moving via amphibious assault. The 14th Army attacks the NL Corps. The Japanese get +2 for having naval support in the hex, but the inactive air units in the battle hex prevents the Japanese from getting an additional +2 for air superiority, while the NL Corps gets a +3. The Japanese 14th Army gets 27 hits on the NL Corps destroying it, and receives 6 hits, losing one step. Post Battle Movement Situation. 42 hex 3814. The move is unopposed and Guam becomes Japanese controlled. The APD Kamikaze returns to Truk hex 4017. 2. 4017: Activate the South Seas Detachment and the CAAoba (supplies Amphibious transport) which conduct an Amphibious Assault of Rabaul hex 4021. The move is unopposed and Rabaul becomes Japanese controlled. The CA Aoba remains at Rabaul. Wake",
+  "text": "hex 3814. The move is unopposed and Guam becomes Japanese controlled. The APD Kamikaze returns to Truk hex 4017. 2. 4017: Activate the South Seas Detachment and the CAAoba (supplies Amphibious transport) which conduct an Amphibious Assault of Rabaul hex 4021. The move is unopposed and Rabaul becomes Japanese controlled. The CA Aoba remains at Rabaul. Wake",
   "crossRefs": [],
   "conditionals": [],
   "part": 4
@@ -5310,7 +5210,7 @@
   "headingPath": [],
   "pageStart": 40,
   "pageEnd": 44,
-  "text": "During Post combat movement, the BB Kongo 2 and CA Mogami naval units return to Cam Ranh and the 22nd air unit remains in Kota Baru. There is no Japanese post battle movement from the Kuantan battle hex. This concludes post battle movement, it is now the Allied players turn to play a strategy card or pass. This ends the comprehensive example of play. Battle of Singapore: Both sides add up their combat values, the Japanese have 45 (BB-13 + CA-12 + 22nd - 20) and the Allies 44 from the military planners. Consequently, the Allied player must play the game with the historical mindset that they will probably have to invade Japan to end the war. The Allies can still avoid the invasion of Japan, but they have to perform militarily on par with their predecessors. If not, the development of the A-bomb is considered to be delayed by six months forcing the invasion of Nippon and the possibility that the U.S., if faced with a very successful defense, would fall off of unconditional surrender, if only by a little, giving the Japanese a face saving `game' victory. Although it is possible that the Japanese earlier in the war can defeat the Allies through superior play and force an early negotiation, this will usually not be the case.",
+  "text": "During Post combat movement, the BB Kongo 2 and CA Mogami naval units return to Cam Ranh and the 22nd air unit remains in Kota Baru. There is no Japanese post battle movement from the Kuantan battle hex. This concludes post battle movement, it is now the Allied players turn to play a strategy card or pass. This ends the comprehensive example of play. Battle of Singapore: Both sides add up their combat values, the Japanese have 45 (BB-13 + CA-12 + 22nd - 20) and the Allies 44 from the military planners. Consequently, the Allied player must play the game with the historical mindset that they will probably have to invade Japan to end the war. The Allies can still avoid the invasion of Japan, but they have to perform militarily on par with their predecessors. If not, the development of the A-bomb is considered to be delayed by six months forcing the invasion of Nippon and the possibility that the U.S., if faced with a very successful defense, would fall off of unconditional surrender, if only by a little, giving the Japanese a face saving `game' victory. Although it is possible that the Japanese earlier in the war can defeat the Allies through superior play and force an early negotiation, this will usually not be the case. ",
   "crossRefs": [],
   "conditionals": [
    "Consequently, the Allied player must play the game with the historical mindset that they will probably have to invade Japan to end the war.",
@@ -5319,432 +5219,15 @@
   "part": 11
  },
  {
-  "id": "20.0",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
+  "id": "ERRATA",
+  "sectionId": "ERRATA",
+  "label": "ERRATA Errata and printing notes",
   "headingPath": [],
-  "pageStart": 44,
+  "pageStart": 48,
   "pageEnd": 48,
-  "text": "20.0 Designer's Notes My history with Pacific War games. The Pacific War has always fascinated me. Twenty years ago when I was running Victory Games I did my Pacific War design, which examined the war from an Operational point of view. That game was intended to play out famous campaigns with the strategic scenario a necessary, but fundamentally unplayable addition due to its length. Ever since then I wanted to do a game that covered the entire conflict in one, albeit long, sitting. Once I had sorted out the `how do the Japanese' win issue, I then focused on the types of strategies and decisions the players had to master to win. The military portion of the game focuses on major axes of advance. Empire of the Sun is a strategic game. The player is not focused on the battles, but on resourcing and prosecuting the major axes of advance across the Pacific. For the Japanese it is the Southern offensive to secure the resources of the Dutch East Indies and its environs while creating blocking positions in the West versus the British and the East versus the Americans/Australians that dominates their thinking. For the Allies it is the fight across the Central Pacific (Nimitz), Southwest Pacific (Macarthur), and ChinaBurma-India (Mountbatten). In the earlier incarnations of the game I had a fully articulated China front. However, the amount of special rules and decision making took too much of the focus away from the main event, so I abstracted it into the current system where the key resource decisions were preserved, but for much less work.",
+  "text": "ERRATA Errata and printing notes PRINTING NOTE: The corner triangle is hard to see on the following eight Japanese units: 2nd, 28th, 29th, 31st, 32nd, 33rd, 37th and 39th armies. These units start on their reduced side in the Campaign Game. CARD ERRATA: Japanese Card 27 treat a die roll of 5 as no effect.",
   "crossRefs": [],
-  "conditionals": [
-   "However, the amount of special rules and decision making took too much of the focus away from the main event, so I abstracted it into the current system where the key resource decisions were preserved, but for much less work."
-  ],
+  "conditionals": [],
   "part": 0
- },
- {
-  "id": "20.0#1",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "I created the card driven game (CDG) genre to enable me to portray the political nature of the American Revolution in my We The People game and bring historical uncertainty and tension back into gaming. When I did For The People, I expanded my CDG system by increasing the detail associated with the military dimension of the war over my previous effort. At that time I developed the desire to do a more traditional military wargame, where my CDG system could bring the military uncertainty back into more traditional hex based games. This would allow me to integrate the interesting political and military events into the fabric of this design. It was the combination of this desire and my earlier goal of doing a strategic level Pacific War game that has led to what you now hold in your hands. This set of design decision then led to what card events would represent in the game. In some ways this was the knottier issue, since in my earlier CDGs most of the events were political or auxiliary military events. It was clear that the major use of the events in Empire of the Sun would fall into several assymetric categories. For the Japanese, the events would be the ability of the Japanese to manipulate U.S. Political Will to reduce the Allied push for unconditional surrender and the military situation in Europe to delay the Allied buildup in the Pacific. For the Allies the events would primarily be the large Offensives that will take the Allies across the Pacific, while prosecuting the War in Europe, so it does not divert resources from the Pacific. Major Design Challenges",
-  "crossRefs": [],
-  "conditionals": [],
-  "part": 1
- },
- {
-  "id": "20.0#2",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "The key challenge in the game was how to deal with the victory conditions. The historical reality was the Japanese never had any chance of winning the war. The U.S. never devoted more than 20% of its overall resources to the Pacific War, so once Germany was defeated it was only a matter of time until Japan would be defeated. The solution was in how to define Japanese victory. The Japanese intellectually, if not emotionally, understood that they could not defeat the United States in a long war. They felt that if they could make the U.S. pay an prohibitive cost for its inevitable counter offensive they could coerce a negotiated settlement from the Allies that would allow Japan to `legalize' some of its key conquests. As unrealistic as this notion appears in historical hindsight, it was the ultimate solution to this design issue. I was also persuaded by research into the development of the A-bomb that although the U.S. would inevitably solve the design and engineering issues required to create a weapon from nuclear theory it was not a forgone conclusion that it had to occur on the historical timeline. In addition the extremely secret nature of the Manhattan Project kept its existence",
-  "crossRefs": [],
-  "conditionals": [
-   "The historical reality was the Japanese never had any chance of winning the war.",
-   "never devoted more than 20% of its overall resources to the Pacific War, so once Germany was defeated it was only a matter of time until Japan would be defeated.",
-   "The Japanese intellectually, if not emotionally, understood that they could not defeat the United States in a long war.",
-   "They felt that if they could make the U.S."
-  ],
-  "part": 2
- },
- {
-  "id": "20.0#3",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "Once the big pieces of the design were in place I focused on the major dimensions of the military game. The most important feature of the Pacific conflict was the importance of land-based air power. The pace and objectives of the historical axes of advance were focused on the ability to push the air units forward to cover the next advance. Much of what players will concern themselves with are which bases are they going to attack or defend heavily. Due to this need to advance the air umbrella, players will quickly discover why the battles in the Pacific were fought where they were. In fact in one playtest I discovered a graphic error from my original map because I couldn't figure out why I could not get some of my land based air in range of Leyte until I realized that Ulthi had been left off the map. The other big issue was the brittleness of Japanese air units and their military in general. By 1943 the U.S. have deployed a new navy to replace the one that they started the war with, while the Japanese get almost all of their naval forces on the first turn. The Japanese get few if any replacements, so economy of force operations are critical to Japanese success. Continued on page 48 45 Bibliography I have literally read hundreds of books on the Pacific War and a bibliography of my entire collection would take more space here than it is worth. I offer a few works that I feel I used more than others for this game and that you may want to consult if you are interested in reading up on this topic. Allen, Louis, Burma: The Longest War 1941-45 Perhaps this should be called the longest read. Allen's book is a very slow but detailed account of military operations in the ChinaBurma-India Theater of operations during the war.",
-  "crossRefs": [],
-  "conditionals": [
-   "The Japanese get few if any replacements, so economy of force operations are critical to Japanese success.",
-   "I offer a few works that I feel I used more than others for this game and that you may want to consult if you are interested in reading up on this topic."
-  ],
-  "part": 3
- },
- {
-  "id": "20.0#4",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "It is mentioned above other works on this theater, because it consistently appears as the primary source cited by other works on this topic. Bergerud, Eric, Touched With Fire and Fire in the Sky Two very well written and researched books on ground and air combat (respectively) during the Solomons campaign. Gives excellent insight into operational factors that dominated combat in the Pacific. Comptroller of Her Majesty's Stationary Office, The Japanese Air Forces in World War II I have no clue why a British finance office would be in charge of this kind of material. In any event this is a great reference book on Japanese air organization and command structure during the war. Costello, John, The Pacific War 1941-1945 There are numerous one volume general histories that were used at one time or another in researching this game and my earlier Pacific War game. This one is a good start if you haven't read much on this topic before. Dorn, Frank, The Sino-Japanese War 1937-41 Dorn's book is a good background reference on the origins of the Sino-Japanese conflict prior to U.S. entry into the war. Dull, Paul S., A Battle History of the Imperial Japanese Navy (1941-1945) Dull's work is the original English source book that views the naval war in the Pacific from the Japanese perspective. The book is based on original Japanese documents and gives interesting perspective and detail on Japanese naval operations. Grosvenor, Gilbert (editor); Pacific Ocean and the Bay of Bengal map, compiled and drawn in the cartographic section of the National Geographic Society, September 1943. The map projection is drawn from an equal area projection taken from a U.S. Army Engineering section map from 1942. Appar-",
-  "crossRefs": [],
-  "conditionals": [
-   "This one is a good start if you haven't read much on this topic before."
-  ],
-  "part": 4
- },
- {
-  "id": "20.0#5",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "ently there are a lot of ways to spell the place names on the EOTS map when they are translated into English. I have chosen to use this period source for all spellings in the game, most of which are now out of vogue. Madej, W. Victor, The Japanese Armed Forces Order of Battle, 1937-1945 (volumes I and II) and U.S. Army and Marine Corps Order of Battle: Pacific Theater of Operations 1941-1945 (volumes I and II) A series of historical reprints that extensively covers Japanese and Allied ground orders of battle. Morrison, Samuel Eliot, History of the U.S. Naval Operations in World War II A multi-volume set of books that are the official U.S. navy account of its operations during World War II. These books are a great reference source for order of battle information and narratives of the major military operations. Okumiya, Masatake and Horikoshi, Jiro, Zero: The Story of Japan's Air War in the Pacific 1941-1945 An excellent Japanese account on air operations during the war, based on the personal experience of the authors. Although it was not a source for the game per se, a must read is Samurai which is a riveting personal account from Japan's highest surviving ace. Prados, John, Combined Fleet Decoded John and I go back to our SPI days. In my opinion this is John's best work over a long and distinguished career. A must read with cogent analysis, based on impeccable research, on how U.S. intelligence successes and failures impacted Pacific military operations. Pu-Yu, Hu, A Brief History of Sino-Japanese War (1937-1945) A little known book out of Taiwan that is translated from the Chinese. A tough read grammatically with a heavy Chiang Kai-shek bias. Its main value is it details many military operations in China that are close to impossible to find in any Western texts.",
-  "crossRefs": [],
-  "conditionals": [
-   "Although it was not a source for the game per se, a must read is Samurai which is a riveting personal account from Japan's highest surviving ace.",
-   "A must read with cogent analysis, based on impeccable research, on how U.S."
-  ],
-  "part": 5
- },
- {
-  "id": "20.0#6",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "Tuchman, Barbara, Stilwell and the American Experience in China A great read with a heavy anti-Chiang Kai-shek flavor. Details many of the personalities that drove much of the inactivity in this Theater during the war. Williams, Mary H. (compiled for the Center of Military History U.S. Army), U.S. Army In World War II: Chronology 1941-45 The entire Green Book series are useful reference books that cover World War II from a U.S. Army perspective. This volume covers the key events of every day of World War II from 1941 until its conclusion. In addition I used most of the other volumes in this series at one time or another to check information. Willmott, H.P., Empires in the Balance and The Barrier and the Javelin Two excellent books on the development of Pacific War strategies up to Guadalcanal. Unfortunately the author has yet to finish the series, which is a shame because he is perhaps the best living World War II historian out there. 46 Index",
-  "crossRefs": [],
-  "conditionals": [],
-  "part": 6
- },
- {
-  "id": "20.0#7",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "1942 Scenario, 17.2 1942-1943 Scenario, 17.5 1942-1944 Scenario, 17.7 1943 Scenario, 17.3 1943-1944 Scenario, 17.6 1944 Scenario, 17.4 Air and Aircraft Carrier Units In Battle, 8.11 Air Ferry in Gardner Hex, 7.36 Air Movement & Stacking, 7.3 Air Movement, 7.31 Air Naval Combat If Ambush, 8.2E Air Naval Combat Applying Hits, 8.2F Air Naval Combat If Intercept, 8.2C Air Naval Combat If Surprise Attack, 8.2D Air Unit Stacking, 7.34 Aircraft Zone Of Influence, 7.35 Alaska And Hawaii, 16.42 Allied ASPs, 9.31 Allied Campaign Victory, 16.2 Allied Draw Limitations, 11.52 Allied Draw, 11.51 Allied Replacements, 10.31 Allied Replacements. 10.3 Allied Strategy Cards, 11.5 Allied Surrenders, 16.41 Amphibious Assault, 7.45 Amphibious Assault ASP Requirements, 7.45A Amphibious Assault Conclusion, 7.45C Amphibious Assault Restrictions, 7.45B Amphibious Assault Special US Restrictions, 7.45D Amphibious Shipping Points, 9.3 Attrition Phase, 4.4 Attrition, 13.4 Australia, 12.8 Australian Surrenders, 12.82 Australian Territory, 12.81 Automatic Campaign Victory, 16.1 B29 Availability, 11.31 B29 Event Cards, 11.33 B29s and Allied Air Units In China, 12.74 Base Movement Allowance, 7.1 Battle and Concluding the Offensive, 6.28 Battle Resolution. 8.0 Bibliography, 20.0 British Armor Brigade, 7.49 Burma Definition, 12.51 Burma Road, 12.76 Burma Surrender, 12.52 Burma, 12.5 Campaign Game Set Up, 2.2 Campaign Scenario (Dec '41 - Aug '45), 17.1 Campaign Track Marker Starting Locations, 17.14 Causes Of The War, 1.1 Changing Intelligence Condition With A Reaction Card, 5.21 Changing Intelligence Condition With An Intelligence Die Roll, 5.22 China Offensives, 12.72 China Surrenders, 12.73 China, 12.7 Chinese Army Units, 12.75",
-  "crossRefs": [
-   "8.11",
-   "7.36",
-   "7.3",
-   "7.31",
-   "7.34",
-   "7.35",
-   "16.42",
-   "9.31",
-   "16.2",
-   "11.52",
-   "11.51",
-   "10.31",
-   "10.3",
-   "11.5",
-   "16.41",
-   "7.45",
-   "9.3",
-   "4.4",
-   "13.4",
-   "12.8",
-   "12.82",
-   "12.81",
-   "16.1",
-   "11.31",
-   "11.33",
-   "12.74",
-   "7.1",
-   "6.28",
-   "8.0",
-   "7.49",
-   "12.51",
-   "12.76",
-   "12.52",
-   "12.5",
-   "2.2",
-   "17.1",
-   "17.14",
-   "1.1",
-   "5.21",
-   "5.22",
-   "12.72",
-   "12.73",
-   "12.7",
-   "12.75"
-  ],
-  "conditionals": [
-   "1942 Scenario, 17.2 1942-1943 Scenario, 17.5 1942-1944 Scenario, 17.7 1943 Scenario, 17.3 1943-1944 Scenario, 17.6 1944 Scenario, 17.4 Air and Aircraft Carrier Units In Battle, 8.11 Air Ferry in Gardner Hex, 7.36 Air Movement & Stacking, 7.3 Air Movement, 7.31 Air Naval Combat If Ambush, 8.2E Air Naval Combat Applying Hits, 8.2F Air Naval Combat If Intercept, 8.2C Air Naval Combat If Surprise Attack, 8.2D Air Unit Stacking, 7.34 Aircraft Zone Of Influence, 7.35 Alaska And Hawaii, 16.42 Allied ASPs, 9.31 Allied Campaign Victory, 16.2 Allied Draw Limitations, 11.52 Allied Draw, 11.51 Allied Replacements, 10.31 Allied Replacements."
-  ],
-  "part": 7
- },
- {
-  "id": "20.0#8",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "Chinese Replacements, 10.32 Components, 1.2 Counters,1.23 Deal Strategy Cards Segment, 4.14 December 1941 Special Turn, 17.11 Declaring Battle Hexes, 6.24 Delayed Reinforcements, 9.2 Designer's Comprehensive Example Of Play, 18.0 Designer's Notes, 19.0 Determining The Winner Of The Air Naval Combat, 8.3 Die, 1.21 Drawing A Card, 5.35 Dutch East Indies Definition, 12.41 Dutch East Indies Surrender, 12.42 Dutch East Indies, 12.4 Dutch. 10.33 Emergency Air Movement, 7.32 Emergency Naval Movement, 7.22 Emergency Supply Routes, 13.3 End Of Turn Phase, 4.5 Entry Problem Reinforcements, 9.14 Even Shorter Campaign Scenario (1943-1945), 17.9 Events & US Political Will, 16.44 Events, 5.3 Future Offensives, 6.29 General Course Of Play, 3.0 Glossary, 1.3 Ground Combat Applying Hits, 8.4B Ground Combat Concluding, 8.4C Ground Combat Procedure, 8.4 Ground Disengagement, 7.43 Ground Movement, 7.41 Ground Unit Movement & Stacking, 7.4 Ground Unit Stacking, 7.48 Ground Units In Battle, 8.13 Headquarters Units, 7.5 Hex Control, 12.1 HQ Capabilities, 7.51 HQ National Restrictions, 7.53 HQ Return, 7.56 Implications Of India Surrendering, 12.63 Index, 21.0 India Surrender, 12.62 India, 12.6 Initiative Segment, 4.21 Intelligence Values, 5.2 Inter Service Rivalry, 14.0 Introduction, 1.0 Invading Japan, 12.94 Involuntary HQ Repositioning, 7.55 Japan, 12.9 Japanese (only) Organic Naval Unit Transport Capability, 7.46 Japanese Air Unit Replacements, 10.22 Japanese ASPs, 9.32 Japanese Barges and Allied PT Boats, 9.33 Japanese Barges, 7.47 Japanese Campaign Victory, 16.3 Japanese Ground Unit Replacements, 10.23 Japanese Inter Service Rivalry, 14.2 Japanese Intrinsic Strength In China, 12.77 47 Index",
-  "crossRefs": [
-   "10.32",
-   "1.2",
-   "1.23",
-   "4.14",
-   "17.11",
-   "6.24",
-   "9.2",
-   "18.0",
-   "19.0",
-   "8.3",
-   "1.21",
-   "5.35",
-   "12.41",
-   "12.42",
-   "12.4",
-   "10.33",
-   "7.32",
-   "7.22",
-   "4.5",
-   "9.14",
-   "17.9",
-   "16.44",
-   "5.3",
-   "6.29",
-   "3.0",
-   "1.3",
-   "8.4",
-   "7.43",
-   "7.41",
-   "7.4",
-   "7.48",
-   "8.13",
-   "7.5",
-   "12.1",
-   "7.51",
-   "7.53",
-   "7.56",
-   "12.63",
-   "12.62",
-   "12.6",
-   "4.21",
-   "5.2",
-   "14.0",
-   "1.0",
-   "12.94",
-   "7.55",
-   "12.9",
-   "7.46",
-   "10.22",
-   "9.32",
-   "9.33",
-   "7.47",
-   "16.3",
-   "10.23",
-   "14.2",
-   "12.77"
-  ],
-  "conditionals": [
-   "10.33 Emergency Air Movement, 7.32 Emergency Naval Movement, 7.22 Emergency Supply Routes, 13.3 End Of Turn Phase, 4.5 Entry Problem Reinforcements, 9.14 Even Shorter Campaign Scenario (1943-1945), 17.9 Events & US Political Will, 16.44 Events, 5.3 Future Offensives, 6.29 General Course Of Play, 3.0 Glossary, 1.3 Ground Combat Applying Hits, 8.4B Ground Combat Concluding, 8.4C Ground Combat Procedure, 8.4 Ground Disengagement, 7.43 Ground Movement, 7.41 Ground Unit Movement & Stacking, 7.4 Ground Unit Stacking, 7.48 Ground Units In Battle, 8.13 Headquarters Units, 7.5 Hex Control, 12.1 HQ Capabilities, 7.51 HQ National Restrictions, 7.53 HQ Return, 7.56 Implications Of India Surrendering, 12.63 Index, 21.0 India Surrender, 12.62 India, 12.6 Initiative Segment, 4.21 Intelligence Values, 5.2 Inter Service Rivalry, 14.0 Introduction, 1.0 Invading Japan, 12.94 Involuntary HQ Repositioning, 7.55 Japan, 12.9 Japanese (only) Organic Naval Unit Transport Capability, 7.46 Japanese Air Unit Replacements, 10.22 Japanese ASPs, 9.32 Japanese Barges and Allied PT Boats, 9.33 Japanese Barges, 7.47 Japanese Campaign Victory, 16.3 Japanese Ground Unit Replacements, 10.23 Japanese Inter Service Rivalry, 14.2 Japanese Intrinsic Strength In China, 12.77 47 Index"
-  ],
-  "part": 8
- },
- {
-  "id": "20.0#9",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "Japanese Naval Scheduled Replacements, 10.21 Japanese Passing, 11.4 Japanese Reinforcements, 9.13 Japanese Replacements, 10.2 Japanese Strategic Reserves, 11.12 Japanese Strategy Cards, 11.1 Japanese Surrender, 12.93 Kunming, Allied Supply, and Chinese Army units, 12.75 Malaya and Siam, 12.3 Malaya Definition, 12.31 Malaya Surrender, 12.32 Manchuko, 12.91 Mandate Control, 12.84 Map, 1.22 Marshall Islands, 12.92 Military Events, 5.31 Movement & Stacking, 7.0 Movement In India, 12.61 Movement Restrictions, 7.42 Moving In China, 12.71 National Status Segment, 4.31 National Status, 12.0 Naval Movement, 7.21 Naval Unit Movement & Stacking, 7.2 Naval Unit Stacking, 7.24 Naval Units In Battle, 8.12 New Guinea,12.85 No Air Naval Combat Was Conducted, 8.34 No Surviving Air or Naval Units, 8.31 Offensive Intelligence Determination, 6.25 Offensives Player Unit Activation, 6.21 Offensives Player Victory, 8.33 Offensives Post Battle Movement, 8.62 Offensives Phase, 4.2 Offensives Procedure, 6.2 Offensives Segment, 4.22 Offensives, 6.0 Operations Value and Movement, 5.11 Operations Value and Offensives Player Activation, 5.11 Operations Value and Reaction Player Activation, 5.12 Operations Value, 5.1 Overview Of An Offensive, 6.1 Philippine Surrender, 12.22 Philippines Definition, 12.21 Philippines, 12.2 Placement, 9.11 Political Events, 5.34 Post Battle Movement, 8.6 Pre-War Unit Restrictions, 10.1 Procedure Warfare Procedure, 11.21 Progress of the War & US Political Will, 16.47 Reaction Events, 5.32 Reaction Move, 6.26 Reaction Player Victory, 8.32 Reaction Post Battle Movement, 8.61 Receiving Reinforcements, 9.1 Reinforcement Segment, 4.11 Reinforcements, 9.0 Removing A Card, 5.36 Replacement Segment, 4.12,",
-  "crossRefs": [
-   "10.21",
-   "11.4",
-   "9.13",
-   "10.2",
-   "11.12",
-   "11.1",
-   "12.93",
-   "12.75",
-   "12.3",
-   "12.31",
-   "12.32",
-   "12.91",
-   "12.84",
-   "1.22",
-   "12.92",
-   "5.31",
-   "7.0",
-   "12.61",
-   "7.42",
-   "12.71",
-   "4.31",
-   "12.0",
-   "7.21",
-   "7.2",
-   "7.24",
-   "8.12",
-   "12.85",
-   "8.34",
-   "8.31",
-   "6.25",
-   "6.21",
-   "8.33",
-   "8.62",
-   "4.2",
-   "6.2",
-   "4.22",
-   "6.0",
-   "5.11",
-   "5.12",
-   "5.1",
-   "6.1",
-   "12.22",
-   "12.21",
-   "12.2",
-   "5.34",
-   "8.6",
-   "10.1",
-   "11.21",
-   "16.47",
-   "5.32",
-   "6.26",
-   "8.32",
-   "8.61",
-   "9.1",
-   "4.11",
-   "9.0",
-   "5.36",
-   "4.12"
-  ],
-  "conditionals": [],
-  "part": 9
- },
- {
-  "id": "20.0#10",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "Replacements, 10.0 Resource Events, 5.33 Resource Hexes, 11.11 Retreat, 8.5 Scenarios, 17.0 Scenarios, 2.1, Sent To Europe Die Roll, 9.24 Sent To Europe Eligible Units, 9.22 Sequence Of Play, 4.0 Sequencing of Moves During an Offensive, 6.23 Setting Up, 2.0 Shortened Campaign Scenario (1942-1945), 17.8 Siam Definition and Surrender, 12.33 Special Allied Reinforcement Restrictions, 9.12 Special Event Cards, 5.37 Special Reaction Move, 6.27 Stacking, 7.0 Strategic Air Transport, 7.33 Strategic Bombing Procedure, 11.32 Strategic Bombing, 11.3 Strategic Ground Transport, 7.44 Strategic Naval Movement, 7.23 Strategic Naval Situation & US Political Will, 16.46 Strategic Phase, 4.1 Strategic Warfare & US Political Will, 16.43 Strategic Warfare Segment, 4.13 Strategic Warfare, 11.0 Strategy Cards, 1.24 Strategy Cards, 5.0 Submarine Warfare Modifiers, 11.22 Submarine Warfare, 11.2 Supply & Attrition, 13.0 Supply Lines, 13.1 Terms of Australian Surrender, 12.83 The Air Naval Combat Procedure, 8.2 The Hump, 13.31 The Political Phase, 4.3 The War In Europe, 9.21 Tokyo Express, 13.32 Tournament Bidding, 16.49 Tournament Play, 16.49 Tracing HQ Range, 7.52 Ultimate Supply Sources, 13.2 Unit Movement Allowance, 6.22 Unit Types That Cannot Be Delayed, 9.23 US Casualties & US Political Will, 16.45 US Inter Service Rivalry, 14.1 US Political Will Segment, 4.32 US Political Will, 16.4 Voluntary HQ Withdrawal Repositioning, 7.54 War In Europe, 15.0 Who Participates In Battle, 8.1 WIE Level 1, 15.2 WIE Level 2, 15.3 WIE Level 3, 15.4 WIE Level 4, 15.5 WIE Modified Die Rolls, 15.6 WIE No Effect, 15.1 Winning The Campaign Scenarios, 16.0 48 Continued from page 44",
-  "crossRefs": [
-   "10.0",
-   "5.33",
-   "11.11",
-   "8.5",
-   "17.0",
-   "2.1",
-   "9.24",
-   "9.22",
-   "4.0",
-   "6.23",
-   "2.0",
-   "17.8",
-   "12.33",
-   "9.12",
-   "5.37",
-   "6.27",
-   "7.0",
-   "7.33",
-   "11.32",
-   "11.3",
-   "7.44",
-   "7.23",
-   "16.46",
-   "4.1",
-   "16.43",
-   "4.13",
-   "11.0",
-   "1.24",
-   "5.0",
-   "11.22",
-   "11.2",
-   "13.0",
-   "13.1",
-   "12.83",
-   "8.2",
-   "13.31",
-   "4.3",
-   "9.21",
-   "16.49",
-   "7.52",
-   "13.2",
-   "6.22",
-   "9.23",
-   "16.45",
-   "14.1",
-   "4.32",
-   "16.4",
-   "7.54",
-   "15.0",
-   "8.1",
-   "15.2",
-   "15.3",
-   "15.4",
-   "15.5",
-   "15.6",
-   "15.1",
-   "16.0"
-  ],
-  "conditionals": [
-   "Replacements, 10.0 Resource Events, 5.33 Resource Hexes, 11.11 Retreat, 8.5 Scenarios, 17.0 Scenarios, 2.1, Sent To Europe Die Roll, 9.24 Sent To Europe Eligible Units, 9.22 Sequence Of Play, 4.0 Sequencing of Moves During an Offensive, 6.23 Setting Up, 2.0 Shortened Campaign Scenario (1942-1945), 17.8 Siam Definition and Surrender, 12.33 Special Allied Reinforcement Restrictions, 9.12 Special Event Cards, 5.37 Special Reaction Move, 6.27 Stacking, 7.0 Strategic Air Transport, 7.33 Strategic Bombing Procedure, 11.32 Strategic Bombing, 11.3 Strategic Ground Transport, 7.44 Strategic Naval Movement, 7.23 Strategic Naval Situation & US Political Will, 16.46 Strategic Phase, 4.1 Strategic Warfare & US Political Will, 16.43 Strategic Warfare Segment, 4.13 Strategic Warfare, 11.0 Strategy Cards, 1.24 Strategy Cards, 5.0 Submarine Warfare Modifiers, 11.22 Submarine Warfare, 11.2 Supply & Attrition, 13.0 Supply Lines, 13.1 Terms of Australian Surrender, 12.83 The Air Naval Combat Procedure, 8.2 The Hump, 13.31 The Political Phase, 4.3 The War In Europe, 9.21 Tokyo Express, 13.32 Tournament Bidding, 16.49 Tournament Play, 16.49 Tracing HQ Range, 7.52 Ultimate Supply Sources, 13.2 Unit Movement Allowance, 6.22 Unit Types That Cannot Be Delayed, 9.23 US Casualties & US Political Will, 16.45 US Inter Service Rivalry, 14.1 US Political Will Segment, 4.32 US Political Will, 16.4 Voluntary HQ Withdrawal Repositioning, 7.54 War In Europe, 15.0 Who Participates In Battle, 8.1 WIE Level 1, 15.2 WIE Level 2, 15.3 WIE Level 3, 15.4 WIE Level 4, 15.5 WIE Modified Die Rolls, 15.6 WIE No Effect, 15.1 Winning The Campaign Scenarios, 16.0 48 Continued from page 44"
-  ],
-  "part": 10
- },
- {
-  "id": "20.0#11",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "I modeled the two sides air power very differently. The Japanese get new units throughout the game and in the aggregate have more total combat factors than the Allies if you add up the unit strengths, but it is irreplaceable. The Allied air units represent the key air forces that supported the major axes of advance. The Allies get less air units, but they are for all intents and purposes immortal. Allied air strength remains fairly constant over the course of the game; with improvements in aircraft represented through die roll modifiers. The Allies must regularly conduct air offensives to reduce Japanese air units just as they did historically over the Solomons. The Allied units quickly recover full strength, while the Japanese get weaker over time. If the Allies fail to be aggressive and use up their replacements, they will face a stronger than historical Japanese air force at the end of the game. This both captures the nature of the two sides military philosophies and forces the players to fight the historical air war. If the Japanese hold too much air power back to preserve it, they allow the Allies to re-conquer Asia ahead of schedule removing the need to invade Japan in order to win. The outcome of the game turns on how the two sides prosecute their air strategies.",
-  "crossRefs": [],
-  "conditionals": [
-   "The Japanese get new units throughout the game and in the aggregate have more total combat factors than the Allies if you add up the unit strengths, but it is irreplaceable.",
-   "The Allies must regularly conduct air offensives to reduce Japanese air units just as they did historically over the Solomons.",
-   "If the Allies fail to be aggressive and use up their replacements, they will face a stronger than historical Japanese air force at the end of the game.",
-   "If the Japanese hold too much air power back to preserve it, they allow the Allies to re-conquer Asia ahead of schedule removing the need to invade Japan in order to win."
-  ],
-  "part": 11
- },
- {
-  "id": "20.0#12",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "While I am on the subject of combat, it is important to understand what the air, naval, and land battle system is portraying. This is a strategic game and combat is a necessary way to show who has done a better job at resourcing their offensives. Empire of the Sun only handles operational and tactical considerations in the most aggregate of terms. Combat in most cases represents numerous engagements that occurred in a geographical area over the course of months. Consequently it is meant to reward the player who can maintain a combined arms force with more mass than your opponent to be victorious. How I handled the intelligence element of the conflict was adapted from my earlier VG Pacific War design. This intelligence system combined with the two-tiered combat process seems to capture in the aggregate the broad-brush combat outcomes that I was looking for with as little mechanical overhead as possible. This lets the players focus on the critical strategic decisions needed to prosecute their offensive drives, while not being distracted by unnecessary tactical details. The one other minor consideration that I wanted to put in the design was interservice rivalry. This affected both sides in similar ways and hopefully will yield some historical insights on why some less than stellar decisions were made during the war.",
-  "crossRefs": [],
-  "conditionals": [
-   "Empire of the Sun only handles operational and tactical considerations in the most aggregate of terms."
-  ],
-  "part": 12
- },
- {
-  "id": "20.0#13",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "Lastly, I would like to thank Stephen Newberg for agreeing to develop this game with me. Stephen and I go way back to my days in SPI, but we have never had an opportunity to work together. What started out as two old friends joking around on Consimworld has led to a very enjoyable collaboration. As always I want to thank my beautiful wife of 25 years, Carole and my children Lara and Grant, who have supported a lifetime of Dad being down in the Batcave (my downstairs office) doing what I love most, being a game designer. I hope you enjoy my latest effort. Mark Herman Potomac, Maryland, USA August 2004 A Brief Note From The Developer: I want to thank Mark for making this outright fun, which developing sometimes is not, and I most especially want to thank the play testers that stuck with this project, whose team leaders are in the credits just below, for always journeymen like service throughout, and often well above and beyond that. You guys did just great. Stephen Newberg North Oyster, British Columbia, Canada January 2005 Inventory A complete game of Empire of the Sun contains: 1 22 x 34 inch mapsheet 2 Decks of Strategy Cards (82 Japanese and 83 Allied) 2 Sets of counters 2 Player Aid Cards 1 Rules Booklet 1 die Game Credits GAME DESIGNER: Mark Herman GAME DEVELOPER: Stephen Newberg ART DIRECTOR: Rodger MacGowan BOX ART AND PACKAGE DESIGN: Rodger MacGowan GAME MAP: Mark Simonitch COUNTERS: Mark Simonitch and Dave Lawrence PLAY TEST COORDINATOR: Andy Lewis 2nd Edition Rules Editing: Robert Ryer PLAY TEST TEAM LEADERS: Stan Buck, Tom Cannon, Dave Casper, Don Chappell, Andy Daglish, Eric Feifer, Ricky Gray, Mark Herman, Stephen Newberg, James Pei, Peter Rich, Alan Snider, Bill Thoet & Arrigo Velicogna",
-  "crossRefs": [],
-  "conditionals": [
-   "Stephen and I go way back to my days in SPI, but we have never had an opportunity to work together."
-  ],
-  "part": 13
- },
- {
-  "id": "20.0#14",
-  "sectionId": "20.0",
-  "label": "20.0 Designer's Notes",
-  "headingPath": [],
-  "pageStart": 44,
-  "pageEnd": 48,
-  "text": "Special Thanks to all of the members of the Empire of the Sun topic on Consimworld who have contributed to these rules with their thoughtful questions and suggestions. PRODUCTION COORDINATION: Tony Curtis PRODUCERS: Tony Curtis, Rodger MacGowan, Andy Lewis, Gene Billingsley and Mark Simonitch PRINTING NOTE: The corner triangle is hard to see on the following eight Japanese units: 2nd, 28th, 29th, 31st, 32nd, 33rd, 37th and 39th armies. These units start on their reduced side in the Campaign Game. CARD ERRATA: Japanese Card 27 treat a die roll of 5 as no effect.",
-  "crossRefs": [],
-  "conditionals": [],
-  "part": 14
  }
 ]
