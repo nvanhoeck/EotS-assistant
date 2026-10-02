@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import {
-  ActivityIndicator, BackHandler, FlatList, KeyboardAvoidingView, Platform, Pressable, SafeAreaView, StyleSheet, Text, TextInput, View,
+  ActivityIndicator, BackHandler, FlatList, KeyboardAvoidingView, Pressable, StyleSheet, Text, TextInput, View,
 } from 'react-native';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { createApi } from './src/api';
 import { initialState, reduce } from './src/chatState';
 import { AnswerCard } from './src/components/AnswerCard';
@@ -29,6 +30,14 @@ function layerProps(active: boolean) {
 }
 
 export default function App() {
+  return (
+    <SafeAreaProvider>
+      <Main />
+    </SafeAreaProvider>
+  );
+}
+
+function Main() {
   const [state, dispatch] = useReducer(reduce, initialState);
   const [serverUrl, setServerUrl] = useState(''); // text-box draft
   const [committedUrl, setCommittedUrl] = useState(''); // what the api is built from
@@ -169,7 +178,7 @@ export default function App() {
             </>
           }
         />
-        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+        <KeyboardAvoidingView behavior="padding">
           <View style={styles.inputRow}>
             <TextInput
               style={[styles.input, { flex: 1 }]}
@@ -212,7 +221,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: '#fff', paddingTop: Platform.OS === 'android' ? 32 : 0 },
+  root: { flex: 1, backgroundColor: '#fff' },
   stack: { flex: 1, position: 'relative' },
   header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', padding: 12, borderBottomWidth: 1, borderColor: '#e5e7eb' },
   label: { color: '#111827' },

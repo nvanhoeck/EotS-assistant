@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "app",
+    "name": "EotS Assistant",
     "slug": "app",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,10 +16,28 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "be.juvo.eotsassistant"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      "expo-system-ui"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8eb71cf9-1bb2-436b-85be-860ee9034bb7"
+      }
+    },
+    "owner": "niko.vanhoeck"
   }
 }
