@@ -1,11 +1,16 @@
 import { LlmError, LlmFormatError, type JsonRequest, type LlmClient } from './types.js';
 
+// Thinking models (qwen3) otherwise reason for an unbounded time before answering.
+const THINKING_MODEL = /^qwen3/i;
+// Two attempts at this limit must stay under the app's 180 s request timeout.
+const MAX_OUTPUT_TOKENS = 1500;
+
 export class OllamaLlm implements LlmClient {
   constructor(
     private baseUrl: string,
     private model: string,
     private fetchImpl: typeof fetch = fetch,
-    private timeoutMs = 120_000,
+    private timeoutMs = 80_000,
   ) {}
 
   async generateJson<T>({ system, user, schema }: JsonRequest): Promise<T> {
@@ -19,7 +24,8 @@ export class OllamaLlm implements LlmClient {
             model: this.model,
             stream: false,
             format: schema,
-            options: { temperature: 0.1, num_ctx: 8192 },
+            ...(THINKING_MODEL.test(this.model) ? { think: false } : {}),
+            options: { temperature: 0.1, num_ctx: 8192, num_predict: MAX_OUTPUT_TOKENS },
             messages: [
               { role: 'system', content: system },
               { role: 'user', content: user },

@@ -18,6 +18,18 @@ describe('OllamaLlm', () => {
     expect(body.stream).toBe(false);
     expect(body.messages.map((m: any) => m.role)).toEqual(['system', 'user']);
   });
+  it('bounds output and disables thinking for qwen3 only', async () => {
+    const bodies: any[] = [];
+    const fake = (async (_u: string, init: any) => {
+      bodies.push(JSON.parse(init.body));
+      return reply('{}');
+    }) as any;
+    await new OllamaLlm('http://x', 'qwen3:8b', fake).generateJson(opts);
+    await new OllamaLlm('http://x', 'dolphin-mistral', fake).generateJson(opts);
+    expect(bodies[0].think).toBe(false);
+    expect(bodies[1].think).toBeUndefined();
+    expect(bodies.every((b) => b.options.num_predict > 0)).toBe(true);
+  });
   it('retries once on malformed JSON', async () => {
     const replies = [reply('not json'), reply('{"ok":true}')];
     const fake = (async () => replies.shift()) as any;
