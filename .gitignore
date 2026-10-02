@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.expo/
+source/
+server/data/embeddings.json
+*.log
