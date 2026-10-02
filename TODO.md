@@ -4,7 +4,7 @@ State: all 14 plan tasks are built on branch `feat/eots-assistant` (not merged).
 
 ## 1. First run on the machine with Ollama (must do)
 
-- [ ] `ollama pull qwen2.5:7b` and `ollama pull nomic-embed-text` (or set `CHAT_MODEL` to your 7B model).
+- [ ] `ollama pull qwen3:8b` and `ollama pull nomic-embed-text` (or set `CHAT_MODEL` to your 7B model).
 - [ ] `cd server && npm install && npm run embed` (creates `data/embeddings.json`; until then retrieval is keyword-only).
 - [ ] Allow inbound TCP 8787 in the OS firewall, then `npm start`. Check the startup log says `Retrieval: hybrid`.
 - [ ] `npm run eval` and `npm run eval -- --llm`. Look at: retrieval hit rate in hybrid mode, how many questions end as `clarify` vs `answer` vs `not_found`, and verified citations vs total.

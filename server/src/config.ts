@@ -5,7 +5,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 
 export const config = {
   ollamaUrl: process.env.OLLAMA_URL ?? 'http://localhost:11434',
-  chatModel: process.env.CHAT_MODEL ?? 'qwen2.5:7b',
+  chatModel: process.env.CHAT_MODEL ?? 'qwen3:8b',
   embedModel: process.env.EMBED_MODEL ?? 'nomic-embed-text',
   port: Number(process.env.PORT ?? 8787),
   host: process.env.HOST ?? '0.0.0.0',

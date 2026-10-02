@@ -8,7 +8,7 @@ The ingested rulebook text in `server/data/chunks.json` is derived from a copyri
 
 1. Install Ollama, then pull models:
    ```
-   ollama pull qwen2.5:7b
+   ollama pull qwen3:8b
    ollama pull nomic-embed-text
    ```
    (Use another 7B chat model by setting `CHAT_MODEL`.)
