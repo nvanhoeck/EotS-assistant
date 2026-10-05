@@ -2,9 +2,10 @@ import { politicalWillReminders } from './logic/politicalWill';
 import { reinforcementReminders } from './logic/reinforcement';
 import { replacementReminders } from './logic/replacement';
 import { strategicWarfareReminders } from './logic/strategicWarfare';
+import { strategyCardReminders } from './logic/strategyCards';
 import type { GameContext, Reminder, ReminderItem, Status } from './types';
 
-export const ALL_REMINDERS: Reminder[] = [...politicalWillReminders, ...strategicWarfareReminders, ...reinforcementReminders, ...replacementReminders];
+export const ALL_REMINDERS: Reminder[] = [...politicalWillReminders, ...strategicWarfareReminders, ...reinforcementReminders, ...replacementReminders, ...strategyCardReminders];
 
 const RANK: Record<Status, number> = { applies: 0, unknown: 1, notNow: 2 };
 

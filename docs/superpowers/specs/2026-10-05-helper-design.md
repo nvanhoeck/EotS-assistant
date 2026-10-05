@@ -164,6 +164,12 @@ Same shape as Reinforcements: a form, then rules by topic. The form asks side, u
 
 Known gaps: the Replacements Chart (scheduled naval numbers, and the step cost of returning a Japanese naval unit) is not in the extracted rule text, so the helper points at the chart instead of inventing numbers. 10.31 names only US Marine divisions and US or Commonwealth corps-size units as returning from the pile; other eliminated Allied ground units give `depends` with that wording quoted.
 
+### Strategy Cards (added after the pilots)
+
+One page for the Deal Strategy Cards segment (4.14) and the cards themselves (section 5). The home row is now titled **Strategy Cards**. The form asks the player's role (Offensives or Reaction), what they want to do (OC, event, discard, pass), the kind of event the card has (Military, Reaction, Resource, Political, Special) and, for a Reaction event, which of the five kinds. `checkCardPlay` returns allowed / not allowed / depends, what happens (units activated = OC value or Logistics value + HQ efficiency), conditions, what happens to the card (draw cap of 3, removal, Discard pile) and notes. Reminders: `cards-deal` (shows the Allied draw and the Japanese base draw for the current turn, using the Strategic Warfare maths), `cards-turn1`, `cards-draw-cap`, `cards-special`. The page links to Strategic Warfare, Reinforcements, Replacements and US Political Will.
+
+Known gap: the cards themselves are not in the rulebook text, so the helper cannot say which kind a particular card is; the player picks it.
+
 ## Rollout order
 
 1. Helper shell: toggle, trail, registry, home (with "coming soon" rows), context + reminders modules.

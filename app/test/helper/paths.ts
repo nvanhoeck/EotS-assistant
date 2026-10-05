@@ -18,3 +18,12 @@ export function allReplacementPaths(ctx: GameContext, from: ReplacementAnswers =
   if (!q) return [from];
   return q.options.flatMap((o) => allReplacementPaths(ctx, answerReplacement(from, q.key, o.value)));
 }
+
+import { answerCard, nextCardQuestion, type CardAnswers } from '../../src/helper/logic/strategyCards';
+
+/** Every complete set of answers the card-play form can produce. */
+export function allCardPaths(from: CardAnswers = {}): CardAnswers[] {
+  const q = nextCardQuestion(from);
+  if (!q) return [from];
+  return q.options.flatMap((o) => allCardPaths(answerCard(from, q.key, o.value)));
+}
