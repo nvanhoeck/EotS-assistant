@@ -67,7 +67,7 @@ export const POLITICAL_WILL_SECTIONS: Section[] = [
     key: 'europe',
     title: 'War in Europe level 4',
     statements: [
-      { text: 'War in Europe level 4 also affects US Political Will. The details are in 15.5, item E.', cite: ['16.48', '15.5'] },
+      { text: 'While War in Europe is at level 4, move the US Political Will marker one box to the left during the National Status segment.', cite: ['16.48', '15.5'], links: ['war-in-europe'] },
     ],
   },
 ];

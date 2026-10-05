@@ -1,10 +1,12 @@
 import type { Section } from '../types';
 import { ATTRITION_SECTIONS } from './attrition';
 import { END_OF_TURN_SECTIONS } from './endOfTurn';
+import { NATIONAL_STATUS_SECTIONS } from './nationalStatus';
 import { INITIATIVE_SECTIONS } from './initiative';
 import { POLITICAL_WILL_SECTIONS } from './politicalWill';
 import { REINFORCEMENT_SECTIONS } from './reinforcements';
 import { REPLACEMENT_SECTIONS } from './replacements';
+import { WAR_IN_EUROPE_SECTIONS } from './warInEurope';
 import { SUPPLY_SECTIONS } from './supply';
 import { STRATEGIC_WARFARE_SECTIONS } from './strategicWarfare';
 import { STRATEGY_CARD_SECTIONS } from './strategyCards';
@@ -16,6 +18,8 @@ export const PAGE_SECTIONS: Record<string, Section[]> = {
   attrition: ATTRITION_SECTIONS,
   'end-of-turn': END_OF_TURN_SECTIONS,
   supply: SUPPLY_SECTIONS,
+  'national-status': NATIONAL_STATUS_SECTIONS,
+  'war-in-europe': WAR_IN_EUROPE_SECTIONS,
   'strategy-cards': STRATEGY_CARD_SECTIONS,
   'strategic-warfare': STRATEGIC_WARFARE_SECTIONS,
   'us-political-will': POLITICAL_WILL_SECTIONS,
