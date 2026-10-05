@@ -15,7 +15,7 @@ export const SEQUENCE: PageDef[] = [
   { id: 'replacements', title: 'Replacement Segment', ready: true, sectionId: '10.0' },
   { id: 'strategic-warfare', title: 'Strategic Warfare Segment', ready: true, sectionId: '11.0' },
   { id: 'strategy-cards', title: 'Strategy Cards', ready: true, sectionId: '4.14' },
-  { id: 'initiative', title: 'Initiative Segment', ready: false, sectionId: '4.21' },
+  { id: 'initiative', title: 'Initiative Segment', ready: true, sectionId: '4.21' },
   { id: 'offensives', title: 'Offensives Segment', ready: false, sectionId: '6.0' },
   { id: 'national-status', title: 'National Status Segment', ready: false, sectionId: '12.0' },
   { ...USPW, title: 'US Political Will Segment' },

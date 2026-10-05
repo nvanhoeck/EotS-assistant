@@ -1,4 +1,5 @@
 import type { Section } from '../types';
+import { INITIATIVE_SECTIONS } from './initiative';
 import { POLITICAL_WILL_SECTIONS } from './politicalWill';
 import { REINFORCEMENT_SECTIONS } from './reinforcements';
 import { REPLACEMENT_SECTIONS } from './replacements';
@@ -8,6 +9,7 @@ import { STRATEGY_CARD_SECTIONS } from './strategyCards';
 export const PAGE_SECTIONS: Record<string, Section[]> = {
   reinforcements: REINFORCEMENT_SECTIONS,
   replacements: REPLACEMENT_SECTIONS,
+  initiative: INITIATIVE_SECTIONS,
   'strategy-cards': STRATEGY_CARD_SECTIONS,
   'strategic-warfare': STRATEGIC_WARFARE_SECTIONS,
   'us-political-will': POLITICAL_WILL_SECTIONS,

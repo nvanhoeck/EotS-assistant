@@ -1,4 +1,5 @@
 import type React from 'react';
+import { Initiative } from './pages/Initiative';
 import { Reinforcements } from './pages/Reinforcements';
 import { Replacements } from './pages/Replacements';
 import { StrategicWarfare } from './pages/StrategicWarfare';
@@ -9,6 +10,7 @@ import { UsPoliticalWill } from './pages/UsPoliticalWill';
 export const SCREENS: Record<string, React.ComponentType> = {
   reinforcements: Reinforcements,
   replacements: Replacements,
+  initiative: Initiative,
   'strategy-cards': StrategyCards,
   'strategic-warfare': StrategicWarfare,
   'us-political-will': UsPoliticalWill,
