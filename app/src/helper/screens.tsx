@@ -3,6 +3,9 @@ import { Attrition } from './pages/Attrition';
 import { EndOfTurn } from './pages/EndOfTurn';
 import { NationalChina, NationalIndia, NationalUs } from './pages/NationalTopics';
 import { NationalStatus } from './pages/NationalStatus';
+import { Battle } from './pages/Battle';
+import { Movement } from './pages/Movement';
+import { Offensives } from './pages/Offensives';
 import { Initiative } from './pages/Initiative';
 import { Reinforcements } from './pages/Reinforcements';
 import { Replacements } from './pages/Replacements';
@@ -18,6 +21,9 @@ export const SCREENS: Record<string, React.ComponentType> = {
   replacements: Replacements,
   initiative: Initiative,
   attrition: Attrition,
+  offensives: Offensives,
+  movement: Movement,
+  battle: Battle,
   'end-of-turn': EndOfTurn,
   supply: Supply,
   'national-status': NationalStatus,

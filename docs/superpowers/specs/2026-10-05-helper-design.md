@@ -170,6 +170,12 @@ One page for the Deal Strategy Cards segment (4.14) and the cards themselves (se
 
 Known gap: the cards themselves are not in the rulebook text, so the helper cannot say which kind a particular card is; the player picks it.
 
+### Remaining segments and topics (added after the pilots)
+
+Initiative (first-player calculator using the turn-to-year mapping: turn 1 = 1941, 2–4 = 1942, 5–7 = 1943, 8–10 = 1944, 11–12 = 1945), Attrition (outcome form), End of Turn (walkthrough and a button that advances the game status turn), National Status (surrender checker per nation, with a button to mark the nation surrendered in the game status), Offensives (activation form for HQ nationality, activation count, the seven steps) and the topic pages Supply and HQ range, War in Europe (level table, track converter, button to set the game status level), Movement and stacking (allowance and ASP calculators), Battle resolution (both Combat Results Tables, air-naval and ground winner) and National restrictions: China, India, US (Inter-Service Rivalry). All ten Sequence of Play rows are now ready.
+
+Deliberately not modelled: India's Unrest/Unstable cycle (the rulebook's counting of segments is ambiguous, so the rules are shown as written), the Replacements Chart numbers and the Allied HQ National Command Chart's Dutch column (the extracted chart disagrees with the written rule; the helper follows the written rule and says so).
+
 ## Rollout order
 
 1. Helper shell: toggle, trail, registry, home (with "coming soon" rows), context + reminders modules.

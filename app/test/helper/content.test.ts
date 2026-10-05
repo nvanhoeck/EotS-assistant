@@ -8,8 +8,9 @@ import { checkReinforcement } from '../../src/helper/logic/reinforcement';
 import { checkReplacement } from '../../src/helper/logic/replacement';
 import { checkCardPlay } from '../../src/helper/logic/strategyCards';
 import { checkAttrition } from '../../src/helper/logic/attrition';
+import { checkActivation } from '../../src/helper/logic/activation';
 import { checkEndOfTurn } from '../../src/helper/logic/endOfTurn';
-import { allAttritionPaths, allEndPaths, allCardPaths, allPaths, allReplacementPaths } from './paths';
+import { allActivationPaths, allAttritionPaths, allEndPaths, allCardPaths, allPaths, allReplacementPaths } from './paths';
 
 const raw = JSON.parse(readFileSync(new URL('../../../server/data/chunks.json', import.meta.url), 'utf8'));
 const chunks: { sectionId: string }[] = Array.isArray(raw) ? raw : raw.chunks;
@@ -56,6 +57,13 @@ function endCites(): string[] {
   return allEndPaths(ctx()).flatMap((a) => checkEndOfTurn(a).steps.flatMap((s) => s.cite));
 }
 
+function activationCites(): string[] {
+  return allActivationPaths().flatMap((a) => {
+    const r = checkActivation(a);
+    return [...r.steps, ...r.notes].flatMap((s) => s.cite);
+  });
+}
+
 describe('rulebook references', () => {
   it('every content statement cites sections that exist in the ingested rulebook', () => {
     const missing: string[] = [];
@@ -88,6 +96,10 @@ describe('rulebook references', () => {
     const missing = [...new Set(endCites())].filter((id) => !SECTION_IDS.has(id));
     expect(missing).toEqual([]);
   });
+  it('every step the activation form can produce cites sections that exist', () => {
+    const missing = [...new Set(activationCites())].filter((id) => !SECTION_IDS.has(id));
+    expect(missing).toEqual([]);
+  });
   it('every "coming soon" row points at a real section', () => {
     const bad = [...SEQUENCE, ...TOPICS].filter((p) => p.sectionId && !SECTION_IDS.has(p.sectionId)).map((p) => p.id);
     expect(bad).toEqual([]);
@@ -113,6 +125,18 @@ describe('helper links', () => {
       }
     }
     expect(bad).toEqual([]);
+  });
+});
+
+describe('screens', () => {
+  const screens = readFileSync(new URL('../../src/helper/screens.tsx', import.meta.url), 'utf8');
+  it('every ready page in the registry has a screen registered', () => {
+    const missing = Object.values(PAGES).filter((p) => p.ready).filter((p) => !new RegExp(`['"]?${p.id}['"]?\s*:`).test(screens)).map((p) => p.id);
+    expect(missing).toEqual([]);
+  });
+  it('every page with content is marked ready, and every screen has content or a reason to exist', () => {
+    const unready = Object.keys(PAGE_SECTIONS).filter((id) => !PAGES[id]?.ready);
+    expect(unready).toEqual([]);
   });
 });
 

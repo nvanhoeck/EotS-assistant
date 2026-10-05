@@ -1,6 +1,9 @@
 import type { Section } from '../types';
 import { ATTRITION_SECTIONS } from './attrition';
+import { BATTLE_SECTIONS } from './battle';
 import { END_OF_TURN_SECTIONS } from './endOfTurn';
+import { MOVEMENT_SECTIONS } from './movement';
+import { OFFENSIVES_SECTIONS } from './offensives';
 import { NATIONAL_STATUS_SECTIONS } from './nationalStatus';
 import { CHINA_SECTIONS, INDIA_SECTIONS, US_SECTIONS } from './nationalTopics';
 import { INITIATIVE_SECTIONS } from './initiative';
@@ -17,6 +20,9 @@ export const PAGE_SECTIONS: Record<string, Section[]> = {
   replacements: REPLACEMENT_SECTIONS,
   initiative: INITIATIVE_SECTIONS,
   attrition: ATTRITION_SECTIONS,
+  offensives: OFFENSIVES_SECTIONS,
+  movement: MOVEMENT_SECTIONS,
+  battle: BATTLE_SECTIONS,
   'end-of-turn': END_OF_TURN_SECTIONS,
   supply: SUPPLY_SECTIONS,
   'national-status': NATIONAL_STATUS_SECTIONS,

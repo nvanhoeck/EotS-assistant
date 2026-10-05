@@ -45,3 +45,12 @@ export function allEndPaths(ctx: GameContext, from: EndAnswers = {}): EndAnswers
   if (!q) return [from];
   return q.options.flatMap((o) => allEndPaths(ctx, answerEnd(from, q.key, o.value)));
 }
+
+import { answerActivation, nextActivationQuestion, type ActivationAnswers } from '../../src/helper/logic/activation';
+
+/** Every complete set of answers the activation form can produce. */
+export function allActivationPaths(from: ActivationAnswers = {}): ActivationAnswers[] {
+  const q = nextActivationQuestion(from);
+  if (!q) return [from];
+  return q.options.flatMap((o) => allActivationPaths(answerActivation(from, q.key, o.value)));
+}
