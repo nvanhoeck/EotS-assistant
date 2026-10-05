@@ -1,22 +1,27 @@
 {
-  "pages": 48,
-  "blocks": 248,
-  "chunks": 301,
+  "pages": 56,
+  "blocks": 251,
+  "chunks": 320,
   "pagesWithoutRules": [
-    45,
-    46,
-    47
+    52,
+    53,
+    54,
+    55,
+    56
   ],
   "outOfOrderIds": [
-    "6.2",
-    "6.21",
-    "6.22"
+    "2.0",
+    "12.41",
+    "16.41",
+    "17.10"
   ],
-  "duplicateIds": [],
-  "longestChunkChars": 1795,
+  "duplicateIds": [
+    "11.0"
+  ],
+  "longestChunkChars": 1798,
   "removed": {
-    "designNoteLines": 30,
+    "designNoteLines": 32,
     "sidenoteLines": 4,
-    "endMatterLines": 64
+    "endMatterLines": 132
   }
 }
