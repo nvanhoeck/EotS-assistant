@@ -314,7 +314,7 @@ export const replacementReminders: Reminder[] = [
   },
   {
     id: 'repl-chinese',
-    pages: ['replacements#chinese'],
+    pages: ['replacements#chinese', 'national-china#allied-effects'],
     text: 'One Chinese replacement on each odd-numbered turn while China has not surrendered: flip a reduced Chinese army, or bring an eliminated one back at reduced strength in Kunming (2407).',
     condition: 'Odd-numbered game turn, and China has not surrendered.',
     cite: ['10.34'],

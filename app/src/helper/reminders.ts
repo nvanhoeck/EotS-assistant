@@ -2,6 +2,7 @@ import { politicalWillReminders } from './logic/politicalWill';
 import { attritionReminders } from './logic/attrition';
 import { endOfTurnReminders } from './logic/endOfTurn';
 import { initiativeReminders } from './logic/initiative';
+import { nationalTopicReminders } from './logic/nationalTopics';
 import { nationalStatusReminders } from './logic/nationalStatus';
 import { reinforcementReminders } from './logic/reinforcement';
 import { replacementReminders } from './logic/replacement';
@@ -10,7 +11,7 @@ import { strategicWarfareReminders } from './logic/strategicWarfare';
 import { strategyCardReminders } from './logic/strategyCards';
 import type { GameContext, Reminder, ReminderItem, Status } from './types';
 
-export const ALL_REMINDERS: Reminder[] = [...politicalWillReminders, ...strategicWarfareReminders, ...reinforcementReminders, ...replacementReminders, ...strategyCardReminders, ...initiativeReminders, ...attritionReminders, ...endOfTurnReminders, ...nationalStatusReminders, ...warInEuropeReminders];
+export const ALL_REMINDERS: Reminder[] = [...politicalWillReminders, ...strategicWarfareReminders, ...reinforcementReminders, ...replacementReminders, ...strategyCardReminders, ...initiativeReminders, ...attritionReminders, ...endOfTurnReminders, ...nationalStatusReminders, ...warInEuropeReminders, ...nationalTopicReminders];
 
 const RANK: Record<Status, number> = { applies: 0, unknown: 1, notNow: 2 };
 

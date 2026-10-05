@@ -2,6 +2,7 @@ import type { Section } from '../types';
 import { ATTRITION_SECTIONS } from './attrition';
 import { END_OF_TURN_SECTIONS } from './endOfTurn';
 import { NATIONAL_STATUS_SECTIONS } from './nationalStatus';
+import { CHINA_SECTIONS, INDIA_SECTIONS, US_SECTIONS } from './nationalTopics';
 import { INITIATIVE_SECTIONS } from './initiative';
 import { POLITICAL_WILL_SECTIONS } from './politicalWill';
 import { REINFORCEMENT_SECTIONS } from './reinforcements';
@@ -20,6 +21,9 @@ export const PAGE_SECTIONS: Record<string, Section[]> = {
   supply: SUPPLY_SECTIONS,
   'national-status': NATIONAL_STATUS_SECTIONS,
   'war-in-europe': WAR_IN_EUROPE_SECTIONS,
+  'national-china': CHINA_SECTIONS,
+  'national-india': INDIA_SECTIONS,
+  'national-us': US_SECTIONS,
   'strategy-cards': STRATEGY_CARD_SECTIONS,
   'strategic-warfare': STRATEGIC_WARFARE_SECTIONS,
   'us-political-will': POLITICAL_WILL_SECTIONS,

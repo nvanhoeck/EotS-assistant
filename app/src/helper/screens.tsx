@@ -1,6 +1,7 @@
 import type React from 'react';
 import { Attrition } from './pages/Attrition';
 import { EndOfTurn } from './pages/EndOfTurn';
+import { NationalChina, NationalIndia, NationalUs } from './pages/NationalTopics';
 import { NationalStatus } from './pages/NationalStatus';
 import { Initiative } from './pages/Initiative';
 import { Reinforcements } from './pages/Reinforcements';
@@ -21,6 +22,9 @@ export const SCREENS: Record<string, React.ComponentType> = {
   supply: Supply,
   'national-status': NationalStatus,
   'war-in-europe': WarInEurope,
+  'national-china': NationalChina,
+  'national-india': NationalIndia,
+  'national-us': NationalUs,
   'strategy-cards': StrategyCards,
   'strategic-warfare': StrategicWarfare,
   'us-political-will': UsPoliticalWill,

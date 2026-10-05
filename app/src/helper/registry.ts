@@ -28,9 +28,9 @@ export const TOPICS: PageDef[] = [
   USPW,
   { id: 'supply', title: 'Supply and HQ range', ready: true, sectionId: '13.0' },
   { id: 'war-in-europe', title: 'War in Europe', ready: true, sectionId: '15.0' },
-  { id: 'national-china', title: 'National restrictions: China', ready: false, sectionId: '12.7' },
-  { id: 'national-india', title: 'National restrictions: India', ready: false, sectionId: '12.6' },
-  { id: 'national-us', title: 'National restrictions: US (Inter-Service Rivalry)', ready: false, sectionId: '14.1' },
+  { id: 'national-china', title: 'National restrictions: China', ready: true, sectionId: '12.7' },
+  { id: 'national-india', title: 'National restrictions: India', ready: true, sectionId: '12.6' },
+  { id: 'national-us', title: 'National restrictions: US (Inter-Service Rivalry)', ready: true, sectionId: '14.1' },
 ];
 
 export const PAGES: Record<string, PageDef> = Object.fromEntries([...SEQUENCE, ...TOPICS].map((p) => [p.id, p]));
