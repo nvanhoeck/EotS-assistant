@@ -1,8 +1,9 @@
 {
   "pages": 56,
-  "blocks": 251,
-  "chunks": 320,
+  "blocks": 252,
+  "chunks": 321,
   "pagesWithoutRules": [
+    51,
     52,
     53,
     54,
@@ -22,6 +23,6 @@
   "removed": {
     "designNoteLines": 32,
     "sidenoteLines": 4,
-    "endMatterLines": 132
+    "endMatterLines": 122
   }
 }

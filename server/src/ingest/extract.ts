@@ -1,7 +1,15 @@
 import { execFileSync } from 'node:child_process';
 import { columnText, prefersColumns, reflow } from './columns.js';
 
-const NOISE: RegExp[] = [/^Empire of the Sun \(v2\.0\)$/, /GMT Games, LLC/, /^www\.GMTGames\.com/i];
+/** Running header lines. The 2021 edition prints "Empire of the Sun" with the page number on a line of its own. */
+const RUNNING_HEADER: RegExp[] = [/^Empire of the Sun$/, /^\d{1,2}\s+Empire of the Sun$/, /^Empire of the Sun\s+\d{1,2}$/];
+const NOISE: RegExp[] = [
+  /^Empire of the Sun \(v\d\.\d\)$/,
+  /GMT Games, LLC/,
+  /^www\.GMTGames\.com/i,
+  /^V\d\.\d$/, // rules version stamp in the footer
+  ...RUNNING_HEADER,
+];
 
 export function splitPages(raw: string): string[] {
   const pages = raw.split('\f');
@@ -10,11 +18,27 @@ export function splitPages(raw: string): string[] {
 }
 
 export function cleanPage(text: string): string {
-  return text
+  const lines = text
     .split(/\r?\n/)
     .map((l) => l.trim())
-    .filter((l) => l !== '' && !NOISE.some((re) => re.test(l)))
+    .filter((l) => l !== '');
+  const isHeader = (l: string | undefined) => l !== undefined && RUNNING_HEADER.some((re) => re.test(l));
+  return lines
+    .filter((l, i) => {
+      if (NOISE.some((re) => re.test(l))) return false;
+      // A bare page number right next to a running header is part of that header.
+      return !(/^\d{1,2}$/.test(l) && (isHeader(lines[i - 1]) || isHeader(lines[i + 1])));
+    })
     .join('\n');
+}
+
+/** The printed page number equals the PDF page number, so a leftover number line at a page edge is the folio. */
+function dropFolio(text: string, pageIndex: number): string {
+  const lines = text.split('\n');
+  const folio = String(pageIndex + 1);
+  if (lines[0] === folio) lines.shift();
+  else if (lines[lines.length - 1] === folio) lines.pop();
+  return lines.join('\n');
 }
 
 const pdftotext = (pdfPath: string, mode: string[]) =>
@@ -32,8 +56,8 @@ export function extractPages(pdfPath: string): string[] {
   return flow.map((page, i) => {
     const flowText = cleanPage(page);
     const columns = layout[i] === undefined ? null : columnText(layout[i]);
-    if (columns === null) return flowText;
+    if (columns === null) return dropFolio(flowText, i);
     const columnsText = cleanPage(reflow(columns));
-    return prefersColumns(flowText, columnsText) ? columnsText : flowText;
+    return dropFolio(prefersColumns(flowText, columnsText) ? columnsText : flowText, i);
   });
 }

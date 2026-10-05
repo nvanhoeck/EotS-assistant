@@ -39,6 +39,10 @@ describe('initiative', () => {
     expect(initiative({ japanCards: 5, alliedCards: 5, turn: 6 })).toMatchObject({ first: 'allies', tied: true });
     expect(text(initiative({ japanCards: 5, alliedCards: 5, turn: 6 }))).toMatch(/1943/);
   });
+  it('on a tie the opponent may not use a Future Offensives card', () => {
+    expect(text(initiative({ japanCards: 5, alliedCards: 5, turn: 6 }))).toMatch(/may NOT use a Future Offensives card/);
+    expect(initiative({ japanCards: 5, alliedCards: 5, turn: 6 }).overridableBy).toBeUndefined();
+  });
   it('a tie without a known turn gives the rule and no answer', () => {
     const r = initiative({ japanCards: 5, alliedCards: 5 });
     expect(r.first).toBeUndefined();

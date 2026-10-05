@@ -45,7 +45,7 @@ describe('remindersFor', () => {
 describe('remindersForPage / appliesCount', () => {
   it('includes every section of the page, once per reminder', () => {
     const ids = remindersForPage('us-political-will', ctx()).map((i) => i.reminder.id);
-    expect(ids.sort()).toEqual(['pw-alaska', 'pw-bombing', 'pw-casualties', 'pw-hawaii', 'pw-navy', 'pw-progress', 'pw-resource', 'pw-wie4']);
+    expect(ids.sort()).toEqual(['pw-alaska', 'pw-bombing', 'pw-casualties', 'pw-hawaii', 'pw-navy', 'pw-progress', 'pw-resource']);
   });
   it('counts only reminders that apply now', () => {
     expect(appliesCount('us-political-will', ctx())).toBe(0);

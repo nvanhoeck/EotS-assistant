@@ -67,7 +67,7 @@ export function Offensives() {
   const { ctx } = useHelper();
   const section = (keys: string[]) => pickSections(PAGE, keys).map((s) => <RuleSection key={s.key} pageId={PAGE} section={s} />);
   return (
-    <PageShell title="Offensives Segment" subtitle="Rulebook 6.0 and 4.22">
+    <PageShell title="Offensives Segment" subtitle="Rulebook 7.0 and 4.22">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
       <Accordion title="Who can activate this unit?" defaultOpen>
         <WhoCanActivate />
@@ -76,7 +76,7 @@ export function Offensives() {
         <HowMany />
       </Accordion>
       <GroupHeading>The offensive step by step</GroupHeading>
-      {section(['overview', 'activation', 'movement', 'declare', 'intelligence', 'reaction', 'resolve'])}
+      {section(['overview', 'activation', 'movement', 'declare', 'weather', 'special-reaction', 'intelligence', 'reaction', 'resolve'])}
       <View style={{ marginTop: 16, gap: 8 }}>
         <PageLink id="movement" />
         <PageLink id="battle" />

@@ -5,14 +5,11 @@ import type { GameContext } from '../../src/helper/types';
 const ctx = (p: Partial<GameContext> = {}): GameContext => ({ surrendered: [], used: [], ...p });
 const r = (id: string) => nationalTopicReminders.find((x) => x.id === id)!;
 
-describe('China OC offensive (12.72)', () => {
-  it('Japan can only conduct one on an even-numbered turn', () => {
-    expect(r('china-oc').status(ctx({ turn: 4 }))).toBe('applies');
-    expect(r('china-oc').status(ctx({ turn: 5 }))).toBe('notNow');
-    expect(r('china-oc').status(ctx())).toBe('unknown');
-    expect(r('china-oc').detail!(ctx({ turn: 5 }))).toMatch(/even-numbered turns; it is turn 5/);
-    expect(r('china-oc').detail!(ctx({ turn: 4 }))).toMatch(/one China OC Offensive/);
-    expect(r('china-oc').detail!(ctx())).toBeUndefined();
+describe('China OC offensive (13.72)', () => {
+  it('is a board check on any turn (once per two turns, never on consecutive turns)', () => {
+    for (const turn of [3, 4, undefined]) expect(r('china-oc').status(ctx({ turn }))).toBe('unknown');
+    expect(r('china-oc').detail!(ctx({ turn: 4 }))).toBeUndefined();
+    expect(r('china-oc').text).toMatch(/not on consecutive game turns/);
   });
   it('is not now once China has surrendered', () => {
     expect(r('china-oc').status(ctx({ turn: 4, surrendered: ['china'] }))).toBe('notNow');

@@ -50,7 +50,7 @@ export function activationQuestionFor(key: ActivationKey): ActivationQuestion {
         key,
         prompt: 'Which unit do you want to activate?',
         options: [
-          { value: 'us', label: 'US unit (blue or green)' },
+          { value: 'us', label: 'US unit (Army or Navy)' },
           { value: 'commonwealth', label: 'Commonwealth unit' },
           { value: 'chinese', label: 'Chinese unit' },
           { value: 'dutch', label: 'Dutch unit' },
@@ -79,7 +79,7 @@ export function goBackActivation(a: ActivationAnswers): ActivationAnswers {
   return goBackIn(ACTIVATION_ORDER, a);
 }
 
-/** 6.21 and 5.12: the Operations value or the event’s Logistics value, plus the HQ’s Efficiency rating. */
+/** 7.21: the Operations value or the event’s Logistics value, plus the HQ’s Efficiency rating (which 6.25 and 13.79 can modify). */
 export function activatableUnits(value: number, efficiency: number): number {
   return Math.max(0, value + efficiency);
 }
@@ -99,11 +99,10 @@ const HQ_LABEL = { us: 'A US HQ', commonwealth: 'A Commonwealth HQ', joint: 'A J
 const UNIT_LABEL = { us: 'US units', commonwealth: 'Commonwealth units', chinese: 'Chinese units', dutch: 'Dutch units', japanese: 'Japanese units' } as const;
 
 const CONDITIONS: Step[] = [
-  s('The unit must be in supply and within the HQ’s range, with an unblocked activation path from the HQ to the unit (opposing air ZOI can affect the path).', '6.21', '7.52'),
-  s('Event card text can override the HQ nationality limits.', '6.21'),
+  s('The unit must be in supply and have an unblocked activation path from the HQ to the unit, no longer than the HQ’s Command Range (opposing air ZOI and enemy-occupied hexes can block the path).', '7.21', '6.3'),
+  s('Event card text can override the HQ nationality limits.', '7.21'),
 ];
-const DUTCH_NOTE = s('Only Joint HQs can activate Dutch units.', '6.21', '7.53');
-const CHART_NOTE = s('The printed chart seems to show a Yes for a Commonwealth HQ and Dutch units, but the written rule says only Joint HQs can activate Dutch units. Follow the rule and check the chart.', '6.21', '7.53');
+const DUTCH_NOTE = s('Only Joint HQs can activate Dutch units.', '7.21', '6.12');
 
 export function checkActivation(a: ActivationAnswers): ActivationResult {
   if (nextActivationQuestion(a)) throw new Error('incomplete answers');
@@ -114,28 +113,27 @@ export function checkActivation(a: ActivationAnswers): ActivationResult {
   let rule: Step;
   if (hq === 'japanese') {
     allowed = unit === 'japanese';
-    rule = s('Japanese HQs can activate any Japanese unit, and nothing else.', '6.21', '7.53');
+    rule = s('Japanese HQs can activate any Japanese unit, and nothing else.', '7.21', '6.12');
   } else if (unit === 'japanese') {
     allowed = false;
-    rule = s('Allied HQs can only activate Allied units.', '6.21');
+    rule = s('Allied HQs can only activate Allied units.', '7.21');
   } else if (hq === 'joint') {
     allowed = true;
-    rule = s('Joint HQs can activate any Allied unit.', '6.21');
+    rule = s('Joint HQs can activate any Allied unit.', '7.21');
   } else if (hq === 'us') {
     allowed = unit === 'us' || unit === 'chinese';
-    rule = s('US HQs can activate US units (blue or green) and Chinese units.', '6.21');
+    rule = s('US HQs can activate US units (both Army and Navy) and Chinese units.', '7.21');
   } else {
     // Commonwealth HQ
     if (unit === 'us') allowed = a.usAir === 'yes' ? true : a.usAir === 'no' ? false : 'maybe';
     else allowed = unit === 'commonwealth' || unit === 'chinese';
-    rule = s('Commonwealth HQs can activate Commonwealth units, Chinese units, and US air units (blue or green).', '6.21');
+    rule = s('Commonwealth HQs can activate Commonwealth units, Chinese units, and US air units (both Army and Marine air units).', '7.21');
   }
 
   const notes: Step[] = [];
-  if (unit === 'chinese') notes.push(s('Chinese Army units can be activated by any Allied HQ in range.', '12.75'));
+  if (unit === 'chinese') notes.push(s('Chinese Army units can be activated by any Allied HQ in range.', '13.75'));
   if (unit === 'dutch') {
     notes.push(DUTCH_NOTE);
-    if (hq === 'commonwealth') notes.push(CHART_NOTE);
   }
 
   let verdict: ActivationVerdict = allowed === 'maybe' ? 'depends' : allowed ? 'yes' : 'no';
@@ -147,7 +145,7 @@ export function checkActivation(a: ActivationAnswers): ActivationResult {
     } else if (a.isr === 'yes') {
       notes.push(
         hq === 'us'
-          ? s('Inter-Service Rivalry: a US HQ cannot activate both US Army units and US Naval units in the same offensive or in reaction to it: only US Army units OR US Naval units, though other Allied units are not restricted.', '14.1')
+          ? s('Inter-Service Rivalry: a US HQ cannot activate both US Army units and US Navy units in the same offensive or in reaction to it: only US Army units OR US Navy units, though other Allied units are not restricted.', '14.1')
           : s('Inter-Service Rivalry: a Japanese HQ cannot activate both army and naval units in the same offensive or in reaction to it.', '14.2'),
       );
     }
@@ -169,7 +167,7 @@ export const offensiveReminders: Reminder[] = [
     pages: ['offensives#declare'],
     text: 'An OC offensive can declare only one battle hex (a Special Reaction can add more). An EC offensive can declare any number. Any hex with both Offensive and Reaction units, including HQs, must be a battle hex.',
     condition: 'After Offensive movement, when you declare battle hexes.',
-    cite: ['6.24', '6.1'],
+    cite: ['7.24', '7.1'],
     status: () => 'unknown',
   },
   {
@@ -177,15 +175,15 @@ export const offensiveReminders: Reminder[] = [
     pages: ['offensives#movement'],
     text: 'Move air and carrier units first to neutralize opposing air ZOI, so ground units can move with fewer limits. Moving ground units first can block amphibious assaults and strategic movement.',
     condition: 'Before moving amphibious or strategic units into the area of an opposing air ZOI.',
-    cite: ['6.2', '6.23', '7.35'],
+    cite: ['7.23', '6.4'],
     status: () => 'unknown',
   },
   {
     id: 'off-surprise',
     pages: ['offensives#reaction'],
-    text: 'Surprise Attack: there is no Reaction move and the Offensives player resolves the battles at once. Only with Intercept or Ambush can the Reaction player activate units, through one in-supply HQ, with at most one ASP.',
+    text: 'Surprise Attack: there is no Reaction move and the Offensives player resolves the battles (after the Reaction player has had a chance to play Attack cards). Only with Intercept or Ambush can the Reaction player activate units, through one in-supply HQ, with at most one ASP.',
     condition: 'After the intelligence condition is settled.',
-    cite: ['6.26', '6.2'],
+    cite: ['7.26', '7.2'],
     status: () => 'unknown',
   },
 ];

@@ -1,6 +1,6 @@
 # Empire of the Sun Rules Assistant
 
-Free, local rules helper for *Empire of the Sun* (rules v2.0). A Node server next to Ollama does retrieval and prompting; an Expo app is the chat UI. Answers cite section number, heading path and page.
+Free, local rules helper for *Empire of the Sun* (rules 2021 edition, V3.2). A Node server next to Ollama does retrieval and prompting; an Expo app is the chat UI. Answers cite section number, heading path and page.
 
 The ingested rulebook text in `server/data/chunks.json` is derived from a copyrighted PDF. Keep this repository private.
 
@@ -34,7 +34,7 @@ Tap **Search** (next to **AI**) to browse and search the rulebook without the mo
 
 ### Helper mode
 
-Tap **Helper** for a rules helper organised by the Sequence of Play, with topic pages that gather rules spread over several rulebook pages. It works offline (the content is bundled in the app); the rulebook chips (`§9.12 · p. 22`) open the full text in the Reader and need the server.
+Tap **Helper** for a rules helper organised by the Sequence of Play, with topic pages that gather rules spread over several rulebook pages. It works offline (the content is bundled in the app); the rulebook chips (`§9.12 · p. 20`) open the full text in the Reader and need the server.
 
 - **Game status bar** (top of every page): optionally set the turn, War in Europe level, Japanese resource hexes, Allied ASPs and net hexes captured this turn, surrendered nations and once-per-game results. Reminders and forms use it; leave it empty and everything is still shown, with its condition written out. **Next turn** resets the per-turn counters.
 - **Reminders** appear on the page and in the accordion section they belong to: *Applies now* (highlighted), *Check* (needs a human look) or *Not now* (greyed, with the reason).

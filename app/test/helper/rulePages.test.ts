@@ -16,7 +16,7 @@ describe('rulePages', () => {
     expect(RULE_PAGES).toEqual(expected);
   });
   it('labels a section with its page', () => {
-    expect(citeLabel('9.12')).toBe('9.12 · p. 22');
+    expect(citeLabel('9.12')).toBe('9.12 · p. 20');
   });
   it('falls back to the bare id for an unknown section', () => {
     expect(citeLabel('99.9')).toBe('99.9');

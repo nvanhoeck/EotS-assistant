@@ -36,7 +36,7 @@ const MODS: Record<CombatKind, Mod[]> = {
     { key: 'jungle', label: 'Jungle (Offensives player)', value: -1 },
     { key: 'mixed', label: 'Mixed terrain (Offensives player)', value: -2 },
     { key: 'mountains', label: 'Mountains (Offensives player)', value: -3 },
-    { key: 'amphib', label: 'Reaction player had land units there before an amphibious assault', value: 3 },
+    { key: 'amphib', label: 'Reaction player had land or HQ units there before an amphibious assault', value: 3 },
     { key: 'armor', label: 'British 7th Armor Brigade in the battle (Allies)', value: 1 },
   ],
 };
@@ -133,7 +133,7 @@ function GroundWinner() {
 export function Battle() {
   const { ctx } = useHelper();
   return (
-    <PageShell title="Battle resolution" subtitle="Rulebook 8.0">
+    <PageShell title="Battle resolution" subtitle="Rulebook 9.0">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
       <Accordion title="Combat calculator" defaultOpen>
         <CombatCalc />

@@ -35,10 +35,10 @@ describe('effects (15.1-15.5)', () => {
     expect(text(3)).toMatch(/Amphibious Shipping Point reinforcement/);
     expect(text(4)).toMatch(/Amphibious Shipping Point reinforcement/);
   });
-  it('level 4 also costs a card and moves US Political Will', () => {
+  it('level 4 also costs a card (and no longer moves US Political Will)', () => {
     expect(text(3)).not.toMatch(/one card fewer/);
     expect(text(4)).toMatch(/one card fewer/);
-    expect(text(4)).toMatch(/Political Will marker one box to the left/);
+    expect(text(4)).not.toMatch(/Political Will/);
   });
   it('level table lists all five levels in order', () => {
     expect(WIE_LEVELS.map((l) => l.level)).toEqual([0, 1, 2, 3, 4]);

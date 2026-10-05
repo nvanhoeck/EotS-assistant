@@ -84,15 +84,15 @@ const s = (text: string, ...cite: string[]): Step => ({ text, cite });
 
 const HOUSEKEEPING: Step[] = [
   s('Advance the game turn marker and start a new game turn.', '4.5'),
-  s('Flip or remove the markers the rules call for: for example flip a China Offensive marker to its other side, and remove the Tokyo Express marker.', '4.5', '13.31'),
-  s('Reset the Amphibious Shipping Point used markers to the full level.', '9.3'),
-  s('Any HQ on the game turn record track returns in the next Reinforcement segment as a normal reinforcement.', '7.54', '7.56'),
+  s('Flip or remove the markers the rules call for: for example flip a China Offensive marker to its other side, and remove the Tokyo Express marker.', '4.5', '6.23'),
+  s('Reset the Amphibious Shipping Point used markers to the full level.', '10.3'),
+  s('Any HQ on the game turn record track returns in the next Reinforcement segment as a normal reinforcement that cannot be delayed.', '6.13', '6.14'),
 ];
 
 export function checkEndOfTurn(a: EndAnswers): EndResult {
   if (a.japanSurrendered === undefined) throw new Error('incomplete answers');
   if (a.japanSurrendered === 'yes') {
-    return { outcome: 'alliesWin', headline: 'The game ends: the Allies win', steps: [s('If Japan surrenders the game ends immediately and the Allied player wins.', '16.1', '4.5')] };
+    return { outcome: 'alliesWin', headline: 'The game ends: the Allies win', steps: [s('If Japan surrenders (all of Honshu Allied controlled, or the Home Islands blockaded) the game ends immediately and the Allied player wins.', '16.1', '13.93', '4.5')] };
   }
   if (a.pwZero === undefined) throw new Error('incomplete answers');
   if (a.pwZero === 'yes') {
@@ -120,7 +120,7 @@ export function checkEndOfTurn(a: EndAnswers): EndResult {
       headline: 'Last turn: work out the winner',
       steps: [
         s('Full Campaign (turn 12): the Allies win only if Japan has been successfully strategically bombed on four consecutive turns, has 1 or zero resource hexes, and a B-29 is in range of Tokyo, or Japan has surrendered. Otherwise Japan wins.', '16.2', '16.3'),
-        s('Yearly scenarios (1942, 1943, 1944): the Japanese gain victory points listed in the scenario rules. Allied Decisive: 2 or less. Allied Tactical: 3 to 5. Japanese Tactical: 6 to 9. Japanese Decisive: 10 or more.', '17.27', '17.38', '17.48'),
+        s('Yearly scenarios (1942, 1943, 1944): the Japanese gain victory points listed in the scenario rules. Allied Decisive: 2 or less. Allied Tactical: 3 to 5. Japanese Tactical: 6 to 9. Japanese Decisive: 10 or more. In the 1942 scenario the Allies win automatically if Japan controls fewer than 12 of the 14 resource hexes at the end of turn 4.', '17.27', '17.38', '17.48'),
       ],
     };
   }
@@ -155,7 +155,7 @@ export const endOfTurnReminders: Reminder[] = [
     pages: ['end-of-turn#markers'],
     text: 'Flip or remove markers as the rules indicate: a China Offensive marker goes to its other side, and the Tokyo Express marker is removed when the game turn ends.',
     condition: 'Every End of Turn phase.',
-    cite: ['4.5', '13.31'],
+    cite: ['4.5', '6.23'],
     status: () => 'unknown',
   },
 ];

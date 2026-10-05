@@ -72,7 +72,7 @@ export function attritionQuestionFor(key: AttritionKey): AttritionQuestion {
       return {
         key,
         prompt: 'Is it within range of any friendly HQ?',
-        hint: 'The HQ can be supplied or not. The path cannot be blocked by enemy units or an opposing ZOI.',
+        hint: 'The HQ can be supplied or not. Enemy units, opposing ZOI and unplayable hexsides do not block the path.',
         options: [{ value: 'yes', label: 'Yes, in range' }, { value: 'no', label: 'No, out of range' }, UNSURE],
       };
   }
@@ -104,7 +104,7 @@ export interface AttritionResult {
 }
 
 const s = (text: string, ...cite: string[]): Step => ({ text, cite });
-const SIMULTANEOUS = s('Attrition is calculated and applied to all units at the same time, so opposing units can attrit each other.', '13.4');
+const SIMULTANEOUS = s('Attrition is calculated and applied to all units at the same time, so opposing units can attrit each other.', '6.24');
 
 export function checkAttrition(a: AttritionAnswers): AttritionResult {
   if (nextAttritionQuestion(a)) throw new Error('incomplete answers');
@@ -113,46 +113,46 @@ export function checkAttrition(a: AttritionAnswers): AttritionResult {
   });
 
   if (a.unitClass === 'naval') {
-    return r('none', 'No effect: naval units are not affected by attrition', [s('Naval units are not affected by attrition.', '4.4', '13.4')]);
+    return r('none', 'No effect: naval units are not affected by attrition', [s('Naval units are not affected by attrition.', '4.4', '6.24')]);
   }
   if (a.supplied === 'yes') {
-    return r('none', 'No effect: the unit is supplied', [s('Only unsupplied ground and air units suffer attrition.', '4.4', '13.4')]);
+    return r('none', 'No effect: the unit is supplied', [s('Only unsupplied ground and air units suffer attrition.', '4.4', '6.24')]);
   }
   if (a.supplied === 'unsure') {
     return r('depends', 'It depends on whether the unit is supplied', [
       s('If it is supplied: no effect.', '4.4'),
-      s('If it is not supplied and at full strength: flip it to its reduced side.', '13.4'),
-      s('If it is not supplied and already reduced: it stays reduced if within range of any friendly HQ, otherwise it is eliminated.', '13.4'),
-      s('An emergency supply route (China Airlift, Tokyo Express) in its hex prevents attrition.', '13.4'),
+      s('If it is not supplied and at full strength: flip it to its reduced side.', '6.24'),
+      s('If it is not supplied and already reduced: it stays reduced if within range of any friendly HQ, otherwise it is eliminated.', '6.24'),
+      s('An emergency supply route (China Airlift, Tokyo Express) in its hex prevents attrition.', '6.24'),
     ]);
   }
   if (a.emergency === 'yes') {
     return r('none', 'No effect: an emergency supply route covers the hex', [
-      s('An emergency supply route (the China Airlift, or the Tokyo Express) prevents attrition in the affected hex.', '13.4', '13.31'),
+      s('An emergency supply route (the China Airlift, or the Tokyo Express) prevents attrition in the affected hex.', '6.24', '6.23'),
     ]);
   }
   if (a.strength === 'full') {
-    return r('flip', 'Flip it to its reduced side', [s('An unsupplied full-strength air or ground unit is flipped to its reduced strength side.', '4.4', '13.4')]);
+    return r('flip', 'Flip it to its reduced side', [s('An unsupplied full-strength air or ground unit is flipped to its reduced strength side.', '4.4', '6.24')]);
   }
 
   const oneSided = a.strength === 'oneSided';
-  const reducedNote = oneSided ? [s('A unit with only one side is considered to be on its reduced side.', '13.4')] : [];
-  const check = ['Count from any friendly HQ (supplied or not) to the unit. The path cannot be blocked by enemy units or an opposing ZOI.'];
+  const reducedNote = oneSided ? [s('A unit with only one side is considered to be on its reduced side.', '6.24')] : [];
+  const check = ['Count from any friendly HQ (supplied or not) to the unit. Enemy units, opposing ZOI and unplayable hexsides do not block the path.'];
   if (a.hqRange === 'yes') {
     return r('stay', 'It stays on its reduced side', [
-      s('An unsupplied reduced unit within range of any friendly HQ stays reduced, whether or not the HQ is supplied.', '13.4'),
+      s('An unsupplied reduced unit within range of any friendly HQ stays reduced, whether or not the HQ is supplied.', '6.24'),
       ...reducedNote,
     ], check);
   }
   if (a.hqRange === 'no') {
     return r('eliminated', 'It is eliminated', [
-      s('An unsupplied reduced unit that is not within range of any friendly HQ is eliminated.', '4.4', '13.4'),
+      s('An unsupplied reduced unit that is not within range of any friendly HQ is eliminated.', '4.4', '6.24'),
       ...reducedNote,
     ], check);
   }
   return r('depends', 'It depends on the HQ range', [
-    s('Within range of any friendly HQ: it stays reduced.', '13.4'),
-    s('Out of range of every friendly HQ: it is eliminated.', '13.4'),
+    s('Within range of any friendly HQ: it stays reduced.', '6.24'),
+    s('Out of range of every friendly HQ: it is eliminated.', '6.24'),
     ...reducedNote,
   ], check);
 }
@@ -163,16 +163,16 @@ export const attritionReminders: Reminder[] = [
     pages: ['attrition#rules'],
     text: 'Attrition: every ground and air unit checks its supply. Unsupplied full-strength units flip to reduced. Unsupplied reduced units are eliminated unless within range of a friendly HQ. Naval units are unaffected.',
     condition: 'Every Attrition phase.',
-    cite: ['4.4', '13.4'],
+    cite: ['4.4', '6.24'],
     links: ['supply'],
     status: () => 'unknown',
   },
   {
     id: 'attr-tokyo-express',
     pages: ['attrition#rules'],
-    text: 'The Tokyo Express marker stays in its hex until the hex becomes Allied controlled, another Japanese card moves it, or the game turn ends. It gives automatic supply and prevents attrition there.',
+    text: 'The Tokyo Express marker stays in its hex until the hex becomes Allied controlled, another Japanese card moves it, or the game turn ends. Air, ground and naval units (not HQs) in its hex are in supply, and it prevents attrition there.',
     condition: 'A Tokyo Express marker is on the map.',
-    cite: ['13.31', '13.4'],
+    cite: ['6.23', '6.24'],
     status: () => 'unknown',
   },
 ];

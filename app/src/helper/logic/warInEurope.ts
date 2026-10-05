@@ -8,16 +8,11 @@ const CITE: Record<1 | 2 | 3 | 4, string> = { 1: '15.2', 2: '15.3', 3: '15.4', 4
 export function effectsAt(level: WieLevel): Step[] {
   if (level === 0) return [];
   const out: Step[] = [
-    s('Allied reinforcements are delayed.', CITE[level], '9.21'),
-    s(`The US Sent to Europe die roll range is ${RANGE[level]}.`, CITE[level], '9.24'),
+    s('Allied reinforcements are delayed.', CITE[level], '10.21'),
+    s(`The US Sent to Europe die roll range is ${RANGE[level]}.`, CITE[level], '10.24'),
   ];
-  if (level >= 3) out.push(s('The Allies lose their Amphibious Shipping Point reinforcement.', CITE[level], '9.31'));
-  if (level === 4) {
-    out.push(
-      s('The Allies draw one card fewer.', '15.5', '11.52'),
-      s('Move the US Political Will marker one box to the left during the National Status segment.', '15.5', '16.48'),
-    );
-  }
+  if (level >= 3) out.push(s('The Allies lose their Amphibious Shipping Point reinforcement.', CITE[level], '10.31'));
+  if (level === 4) out.push(s('The Allies draw one card fewer.', '15.5', '12.52'));
   return out;
 }
 
@@ -50,7 +45,7 @@ export const warInEuropeReminders: Reminder[] = [
   {
     id: 'wie-level',
     pages: ['war-in-europe#effects'],
-    text: 'War in Europe level 1 or more delays Allied reinforcements and sets the Sent to Europe range. Levels 3 and 4 also cost the Allied ASP reinforcement, and level 4 costs a card and a US Political Will box.',
+    text: 'War in Europe level 1 or more delays Allied reinforcements and sets the Sent to Europe range. Levels 3 and 4 also cost the Allied ASP reinforcement, and level 4 costs a card.',
     condition: 'The War in Europe level is 1 or higher.',
     cite: ['15.2', '15.5'],
     status(ctx) {

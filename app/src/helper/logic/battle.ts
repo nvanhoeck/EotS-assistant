@@ -18,7 +18,7 @@ function quarters(kind: CombatKind, modifiedRoll: number): number {
   return 8; // 2
 }
 
-/** 8.2 B (air-naval) and 8.4 A (ground). */
+/** 9.2 B (air-naval) and 9.4 A (ground). */
 export function effectivenessRating(kind: CombatKind, modifiedRoll: number): number {
   return quarters(kind, modifiedRoll) / 4;
 }
@@ -54,7 +54,7 @@ export function resolveCombat(i: CombatInput): CombatResult {
   };
 }
 
-/** 8.2 A: air units using their extended range in battle count half their attack strength, rounded up. */
+/** 9.2 A: air units using their extended range in battle count half their attack strength, rounded up. */
 export function halveRoundUp(strength: number): number {
   return Math.ceil(strength / 2);
 }
@@ -72,21 +72,21 @@ export type Side = 'offensives' | 'reaction';
 
 export function airNavalWinner(i: AirNavalInput): { winner: Side; reason: Step } {
   if (!i.anySurvivors) {
-    return { winner: 'offensives', reason: s('No air or naval units survive, so the result is an Offensives player victory.', '8.31') };
+    return { winner: 'offensives', reason: s('No air or naval units survive, so the result is an Offensives player victory.', '9.31') };
   }
   if (i.reaHasAirOrCarrier && !i.offHasSurvivingAirOrCarrier) {
     return {
       winner: 'reaction',
-      reason: s('The Reaction player has air or carrier units and the Offensives player has no surviving air or carrier units: the Reaction player wins regardless of the attack strengths.', '8.3'),
+      reason: s('The Reaction player has air or carrier units and the Offensives player has no surviving air or carrier units: the Reaction player wins regardless of the attack strengths.', '9.3'),
     };
   }
   if (i.offStrength > i.reaStrength) {
-    return { winner: 'offensives', reason: s(`The Offensives player has the higher total (${i.offStrength} against ${i.reaStrength}).`, '8.3') };
+    return { winner: 'offensives', reason: s(`The Offensives player has the higher total (${i.offStrength} against ${i.reaStrength}).`, '9.3') };
   }
   if (i.offStrength < i.reaStrength) {
-    return { winner: 'reaction', reason: s(`The Reaction player has the higher total (${i.reaStrength} against ${i.offStrength}).`, '8.3') };
+    return { winner: 'reaction', reason: s(`The Reaction player has the higher total (${i.reaStrength} against ${i.offStrength}).`, '9.3') };
   }
-  return { winner: 'reaction', reason: s(`Tied at ${i.offStrength}: in case of a tie the Reaction player wins.`, '8.3') };
+  return { winner: 'reaction', reason: s(`Tied at ${i.offStrength}: in case of a tie the Reaction player wins.`, '9.3') };
 }
 
 export interface AfterAirNavalFlags {
@@ -98,19 +98,21 @@ export interface AfterAirNavalFlags {
 
 export function afterAirNaval(winner: Side, f: AfterAirNavalFlags): Step[] {
   if (winner === 'reaction') {
-    const out = [s('The battle is concluded. Move on to any remaining battles, or to post battle movement if this was the last.', '8.32')];
-    if (f.landMovedGround) {
-      out.push(s('Exception: if Offensive ground units entered the hex by land movement, immediately conduct a ground battle before other battles are resolved.', '8.32', '8.13'));
+    const out: Step[] = [];
+    if (f.landMovedGround && f.groundRemains) {
+      out.push(s('Offensive ground units entered the hex by land movement and ground units of both sides are present: immediately conduct a ground battle before other battles are resolved.', '9.32', '9.13'));
+    } else {
+      out.push(s('The battle is concluded: there is no ground battle. Move on to any remaining battles, or to post battle movement if this was the last.', '9.32'));
     }
-    out.push(s('Offensive ground units that entered by amphibious assault do not fight the ground battle at all, because the Offensives player lost the air-naval battle.', '8.13'));
+    out.push(s('Offensive ground units that entered by amphibious assault do not fight the ground battle at all, because the Offensives player lost the air-naval battle. They do not capture the hex and must conduct post battle movement out of it.', '9.32', '9.13'));
     return out;
   }
   if (f.groundRemains) {
     return [
-      s('Conduct the ground combat. If the Offensives player loses it, the battle is concluded and its ground units retreat or withdraw. If it wins, the battle is won and it gains control of the hex.', '8.33'),
+      s('Conduct the ground combat. If the Offensives player loses it, the battle is concluded and its ground units retreat or withdraw. If it wins, the battle is won and it gains control of the hex.', '9.33'),
     ];
   }
-  return [s('No opposing ground units remain: the battle is won and the Offensives player gains control of the hex.', '8.33')];
+  return [s('No ground combat: if only Offensive ground units are in the hex, the Offensives player gains control of the hex; if only Reaction ground units are there, or no ground units at all, the Reaction player maintains control. The battle is concluded.', '9.33')];
 }
 
 export interface GroundInput {
@@ -127,28 +129,28 @@ export interface GroundResult {
   steps: Step[];
 }
 
-const RETREAT_OFF = s('A retreating Offensive unit that entered by ground movement retreats into the hex from which it entered. One that entered by amphibious assault conducts post battle movement like a naval unit.', '8.5');
-const RETREAT_REA = s('A retreating Reaction unit is moved by the Offensives player into an adjacent named location friendly to it if possible; otherwise into an adjacent hex with no Offensives unit that is not a hex an Offensives ground unit entered from. If neither is possible, or the battle hex is a one-hex island, it is eliminated.', '8.5');
+const RETREAT_OFF = s('A retreating Offensive unit that entered by ground movement retreats into the hex from which it entered. One that entered by amphibious assault conducts post battle movement like a naval unit.', '9.5');
+const RETREAT_REA = s('A retreating Reaction unit is moved by the Offensives player into an adjacent hex with no Offensives unit, that is not a hex an Offensives ground unit entered from, and where it causes no overstack. It must be a legal named location friendly to it if possible, otherwise any legal hex. If none qualifies, or the battle hex is a one-hex island, it is eliminated.', '9.5');
 
-/** 8.4 C */
+/** 9.4 C */
 export function groundWinner(i: GroundInput): GroundResult {
   if (!i.offSurvives && !i.reaSurvives) {
     return {
       winner: 'reaction',
-      steps: [s('Both sides were eliminated. The Reaction player maintains control of the hex, but all the forces are still eliminated.', '8.4')],
+      steps: [s('Both sides were eliminated. The Reaction player maintains control of the hex, but all the forces are still eliminated.', '9.4')],
     };
   }
   if (i.offSurvives && !i.reaSurvives) {
-    return { winner: 'offensives', steps: [s('Only the Offensives player has ground units left: it wins and now controls the hex. Its air and naval units can use post battle movement to move there.', '8.4')] };
+    return { winner: 'offensives', steps: [s('Only the Offensives player has ground units left: it wins and now controls the hex. Its air and naval units can use post battle movement to move there.', '9.4')] };
   }
   if (!i.offSurvives && i.reaSurvives) {
-    return { winner: 'reaction', steps: [s('Only the Reaction player has ground units left: it wins and keeps control of the hex.', '8.4')] };
+    return { winner: 'reaction', steps: [s('Only the Reaction player has ground units left: it wins and keeps control of the hex.', '9.4')] };
   }
   if (i.reaStepsLost > i.offStepsLost) {
     return {
       winner: 'offensives',
       retreating: 'reaction',
-      steps: [s(`Both sides still have ground units. The Reaction player took more step losses (${i.reaStepsLost} against ${i.offStepsLost}), so its units retreat.`, '8.4'), RETREAT_REA],
+      steps: [s(`Both sides still have ground units. The Reaction player took more step losses (${i.reaStepsLost} against ${i.offStepsLost}), so its units retreat.`, '9.4'), RETREAT_REA],
     };
   }
   const tie = i.reaStepsLost === i.offStepsLost;
@@ -160,7 +162,7 @@ export function groundWinner(i: GroundInput): GroundResult {
         tie
           ? `Both sides still have ground units and lost the same number of steps (${i.offStepsLost}). In a tie the Reaction player wins and the Offensives player retreats.`
           : `Both sides still have ground units. The Offensives player took more step losses (${i.offStepsLost} against ${i.reaStepsLost}), so its units retreat.`,
-        '8.4',
+        '9.4',
       ),
       RETREAT_OFF,
     ],
@@ -173,7 +175,7 @@ export const battleReminders: Reminder[] = [
     pages: ['battle#air-naval'],
     text: 'Air-naval die roll modifier for the Allied player when any US air or carrier unit is present: +1 on 1943 turns and +3 on 1944 and 1945 turns.',
     condition: 'Game turns 5 to 12, with at least one US air or aircraft carrier unit in the battle.',
-    cite: ['8.2'],
+    cite: ['9.2'],
     status(ctx) {
       if (ctx.turn === undefined) return 'unknown';
       return gameYear(ctx.turn) >= 1943 ? 'applies' : 'notNow';
@@ -188,9 +190,9 @@ export const battleReminders: Reminder[] = [
   {
     id: 'bat-order',
     pages: ['battle#sequence'],
-    text: 'Each battle is two steps: air-naval combat first, then ground combat. The Offensives player chooses the order in which battle hexes are resolved.',
+    text: 'Each battle is two steps: air-naval combat first, then ground combat.',
     condition: 'Every declared battle.',
-    cite: ['8.0', '6.28'],
+    cite: ['9.0'],
     status: () => 'unknown',
   },
 ];

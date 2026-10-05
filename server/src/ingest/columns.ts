@@ -10,7 +10,7 @@
 import { MAX_MAJOR, RULE_START } from './parse.js';
 import { countOutOfOrder } from './ruleId.js';
 
-const HEADER_FOOTER = [/Empire of the Sun \(v2\.0\)/, /GMT Games, LLC/, /GMTGames\.com/i, /^\d{1,2}$/];
+const HEADER_FOOTER = [/Empire of the Sun/, /GMT Games, LLC/, /GMTGames\.com/i, /^\d{1,2}$/, /^V\d\.\d$/];
 /** A column gutter must be blank on at least this share of the page's text lines. */
 const GUTTER_SHARE = 0.97;
 const MIN_GUTTER_WIDTH = 3;

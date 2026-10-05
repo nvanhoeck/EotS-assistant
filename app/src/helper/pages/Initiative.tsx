@@ -52,7 +52,7 @@ function Calculator() {
 export function Initiative() {
   const { ctx } = useHelper();
   return (
-    <PageShell title="Initiative Segment" subtitle="Rulebook 4.21 and 6.29">
+    <PageShell title="Initiative Segment" subtitle="Rulebook 4.21 and 7.29">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
       <Accordion title="Who goes first?" defaultOpen>
         <Calculator />

@@ -73,7 +73,7 @@ export function NationalStatus() {
   const { ctx } = useHelper();
   const section = (keys: string[]) => pickSections(PAGE, keys).map((s) => <RuleSection key={s.key} pageId={PAGE} section={s} />);
   return (
-    <PageShell title="National Status Segment" subtitle="Rulebook 12.0 and 4.31">
+    <PageShell title="National Status Segment" subtitle="Rulebook 13.0 and 4.31">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
       <Accordion title="Surrender checker" defaultOpen>
         <Checker />

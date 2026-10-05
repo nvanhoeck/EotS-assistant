@@ -31,7 +31,7 @@ export function Replacements() {
   const section = (keys: string[]) => pickSections(PAGE, keys).map((s) => <RuleSection key={s.key} pageId={PAGE} section={s} />);
 
   return (
-    <PageShell title="Replacement Segment" subtitle="Rulebook 10.0 and 4.12">
+    <PageShell title="Replacement Segment" subtitle="Rulebook 11.0 and 4.12">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
 
       <Accordion title="Replacement helper" defaultOpen>

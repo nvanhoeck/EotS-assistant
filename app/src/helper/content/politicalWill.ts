@@ -23,8 +23,8 @@ export const POLITICAL_WILL_SECTIONS: Section[] = [
     key: 'strategic-warfare',
     title: 'Strategic Warfare',
     statements: [
-      { text: 'Japan controls 3 or fewer resource hexes during any game turn from 5 to 12: +3. This can happen only once per game.', cite: ['16.43', '11.11'], links: ['strategic-warfare'] },
-      { text: 'US Strategic Bombing cuts the Japanese draw by one or more cards: move the marker one box right, even if the draw was already at its minimum. At most once per turn.', cite: ['16.43', '11.32'], links: ['strategic-warfare'] },
+      { text: 'Japan controls 3 or fewer resource hexes during any game turn from 5 to 12: +3. This can happen only once per game.', cite: ['16.43', '12.11'], links: ['strategic-warfare'] },
+      { text: 'US Strategic Bombing cuts the Japanese draw by one or more cards: move the marker one box right, even if the draw was already at its minimum. At most once per turn.', cite: ['16.43', '12.32'], links: ['strategic-warfare'] },
     ],
   },
   {
@@ -56,18 +56,11 @@ export const POLITICAL_WILL_SECTIONS: Section[] = [
     title: 'Progress of the War',
     statements: [
       { text: 'From turn 4 to the end of the game, by the end of the US Political Will segment the Allies must have captured and kept enough Japanese-controlled hexes, or lose 1 point.', cite: ['16.47'] },
-      { text: 'The target is the smaller of 4 and the number of Allied ASPs available at the end of the Reinforcement segment.', cite: ['16.47', '9.3'] },
+      { text: 'The target is the smaller of 4 and the number of Allied ASPs available at the end of the Reinforcement segment.', cite: ['16.47', '10.3', '10.31'] },
       { text: 'Only hexes that began the turn Japanese-controlled and contain a named location, resource, port or airfield count. One-hex islands without a resource, port or airfield do not.', cite: ['16.47'] },
-      { text: 'Count hexes captured minus hexes the Japanese retake. Hexes that change hands through a National Surrender count for the Allies.', cite: ['16.47'] },
+      { text: 'Count hexes captured minus hexes the Japanese retake. Hexes that change hands through a National Surrender count for the Allies, but Mainland India hexes re-occupied after India surrenders do not.', cite: ['16.47', '13.63'] },
       { text: 'Capturing hexes that were already Allied-controlled has no effect, except recapturing hexes that began the turn Japanese-controlled.', cite: ['16.47'] },
-      { text: 'Rulebook example: turn 4 with 3 ASPs means a target of 3. The Allies capture 5 hexes and the Japanese retake 3, leaving 2, which is short, so −1. (The example’s last line says “required 4”, which disagrees with its first lines; the rule itself says the smaller number.)', cite: ['16.47'] },
-    ],
-  },
-  {
-    key: 'europe',
-    title: 'War in Europe level 4',
-    statements: [
-      { text: 'While War in Europe is at level 4, move the US Political Will marker one box to the left during the National Status segment.', cite: ['16.48', '15.5'], links: ['war-in-europe'] },
+      { text: 'Rulebook example: turn 4 with 3 ASPs means a target of 3. The Allies capture 5 hexes and the Japanese retake 3, leaving 2, which is short of 3, so −1.', cite: ['16.47'] },
     ],
   },
 ];

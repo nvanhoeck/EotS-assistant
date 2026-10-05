@@ -38,7 +38,7 @@ describe('question flow', () => {
   });
 });
 
-describe('outcomes (4.4, 13.4)', () => {
+describe('outcomes (4.4, 6.24)', () => {
   const run = (a: AttritionAnswers) => checkAttrition(a);
   it('naval units are unaffected', () => {
     expect(run({ unitClass: 'naval' }).outcome).toBe('none');
@@ -72,9 +72,9 @@ describe('outcomes (4.4, 13.4)', () => {
     expect(text(r)).toMatch(/only one side/);
     expect(run({ unitClass: 'ground', supplied: 'no', emergency: 'no', strength: 'oneSided', hqRange: 'yes' }).outcome).toBe('stay');
   });
-  it('the range check says the path cannot be blocked by enemy units or an opposing ZOI', () => {
+  it('the range check says the path is not blocked by enemy units, an opposing ZOI or unplayable hexsides', () => {
     const r = run({ unitClass: 'ground', supplied: 'no', emergency: 'no', strength: 'reduced', hqRange: 'yes' });
-    expect(r.mapChecks.join(' ')).toMatch(/enemy units or an opposing ZOI/);
+    expect(r.mapChecks.join(' ')).toMatch(/Enemy units, opposing ZOI and unplayable hexsides do not block/);
   });
   it('unsure answers give "depends"', () => {
     expect(run({ unitClass: 'ground', supplied: 'unsure' }).outcome).toBe('depends');

@@ -8,7 +8,7 @@ const ctx = (p: Partial<GameContext> = {}): GameContext => ({ surrendered: [], u
 const all = (id: SurrenderTarget, value: boolean) => ruleFor(id).conditions.map(() => value);
 const text = (r: ReturnType<typeof checkSurrender>) => [r.headline, ...r.consequences.map((s) => s.text), ...r.effects.map((s) => s.text)].join(' | ');
 
-describe('surrender rules (12.2-12.9)', () => {
+describe('surrender rules (13.2-13.9)', () => {
   it('covers the six nations the checker handles', () => {
     expect(SURRENDER_RULES.map((r) => r.id)).toEqual(['philippines', 'malaya', 'dei', 'burma', 'australia', 'japan']);
   });
@@ -66,10 +66,20 @@ describe('checkSurrender', () => {
     expect(text(checkSurrender('burma', all('burma', true), ctx()))).toMatch(/Burma \(B\)/);
     expect(text(checkSurrender('australia', [true], ctx()))).toMatch(/Australian reinforcements/);
   });
-  it('every Allied surrender gives Japan the unoccupied airfields and ports', () => {
-    for (const id of ['philippines', 'malaya', 'dei', 'burma', 'australia'] as const) {
+  it('Allied surrenders give Japan the unoccupied airfields and ports, except Malaya and Burma', () => {
+    for (const id of ['philippines', 'dei', 'australia'] as const) {
       expect(text(checkSurrender(id, all(id, true), ctx()))).toMatch(/airfields and ports/);
     }
+    for (const id of ['malaya', 'burma'] as const) {
+      const t = text(checkSurrender(id, all(id, true), ctx()));
+      expect(t).not.toMatch(/airfields and ports/);
+      expect(t).toMatch(/no hex(es)? (control )?change/i);
+    }
+  });
+  it('Philippines: US air/naval units must leave, non-US ones are eliminated', () => {
+    const t = text(checkSurrender('philippines', [true, true], ctx()));
+    expect(t).toMatch(/must use an Emergency Air or Naval move/);
+    expect(t).toMatch(/Non-US air and naval units there are eliminated/);
   });
   it('shows the US Political Will cost, with the recapture note for asterisked nations', () => {
     expect(text(checkSurrender('australia', [true], ctx()))).toMatch(/US Political Will −2/);
@@ -90,13 +100,6 @@ describe('checkSurrender', () => {
 
 describe('reminders', () => {
   const r = (id: string) => nationalStatusReminders.find((x) => x.id === id)!;
-  it('W.I.E. level 4 moves the US Political Will marker', () => {
-    expect(r('pw-wie4').status(ctx({ wieLevel: 4 }))).toBe('applies');
-    expect(r('pw-wie4').status(ctx({ wieLevel: 3 }))).toBe('notNow');
-    expect(r('pw-wie4').status(ctx())).toBe('unknown');
-    expect(r('pw-wie4').detail!(ctx({ wieLevel: 2 }))).toMatch(/level 2/);
-    expect(r('pw-wie4').detail!(ctx({ wieLevel: 4 }))).toMatch(/one box to the left/);
-  });
   it('the segment reminder is a board check', () => {
     expect(r('ns-segment').status(ctx({ turn: 3 }))).toBe('unknown');
   });

@@ -7,7 +7,7 @@ import type { GameContext } from '../../src/helper/types';
 const ctx = (p: Partial<GameContext> = {}): GameContext => ({ surrendered: [], used: [], ...p });
 const text = (steps: { text: string }[]) => steps.map((s) => s.text).join(' | ');
 
-describe('combat effectiveness rating (8.2 B, 8.4 A)', () => {
+describe('combat effectiveness rating (9.2 B, 9.4 A)', () => {
   it('air-naval: 0-2 = 1/4, 3-5 = 1/2, 6-8 = 1, 9 or more = 1', () => {
     expect([0, 1, 2].map((r) => effectivenessRating('airNaval', r))).toEqual([0.25, 0.25, 0.25]);
     expect([3, 4, 5].map((r) => effectivenessRating('airNaval', r))).toEqual([0.5, 0.5, 0.5]);
@@ -66,7 +66,7 @@ describe('resolveCombat', () => {
   });
 });
 
-describe('who wins the air-naval combat (8.3)', () => {
+describe('who wins the air-naval combat (9.3)', () => {
   const base = { anySurvivors: true, offStrength: 10, reaStrength: 8, reaHasAirOrCarrier: false, offHasSurvivingAirOrCarrier: true };
   it('the higher surviving total wins', () => {
     expect(airNavalWinner(base).winner).toBe('offensives');
@@ -85,11 +85,11 @@ describe('who wins the air-naval combat (8.3)', () => {
   it('no surviving air or naval units is an Offensives player victory', () => {
     const r = airNavalWinner({ ...base, anySurvivors: false, offStrength: 0, reaStrength: 0 });
     expect(r.winner).toBe('offensives');
-    expect(r.reason.cite).toContain('8.31');
+    expect(r.reason.cite).toContain('9.31');
   });
 });
 
-describe('what follows the air-naval combat (8.32-8.34)', () => {
+describe('what follows the air-naval combat (9.32-9.34)', () => {
   it('Reaction victory ends the battle, unless Offensive ground units came in by land movement', () => {
     expect(text(afterAirNaval('reaction', { landMovedGround: false, groundRemains: true }))).toMatch(/battle is concluded/);
     expect(text(afterAirNaval('reaction', { landMovedGround: true, groundRemains: true }))).toMatch(/immediately conduct a ground battle/);
@@ -98,12 +98,20 @@ describe('what follows the air-naval combat (8.32-8.34)', () => {
     expect(text(afterAirNaval('offensives', { landMovedGround: false, groundRemains: true }))).toMatch(/ground combat/);
     expect(text(afterAirNaval('offensives', { landMovedGround: false, groundRemains: false }))).toMatch(/gains control of the hex/);
   });
+  it('Reaction victory with Offensive land-moved ground units but no opposing ground units: no ground battle', () => {
+    const t = text(afterAirNaval('reaction', { landMovedGround: true, groundRemains: false }));
+    expect(t).toMatch(/no ground battle/);
+    expect(t).not.toMatch(/immediately conduct a ground battle/);
+  });
+  it('Offensives victory without ground combat: control depends on who has ground units', () => {
+    expect(text(afterAirNaval('offensives', { landMovedGround: false, groundRemains: false }))).toMatch(/Reaction player maintains control/);
+  });
   it('mentions the amphibious assault rule when the Offensives player lost', () => {
     expect(text(afterAirNaval('reaction', { landMovedGround: false, groundRemains: true }))).toMatch(/amphibious assault/i);
   });
 });
 
-describe('who wins the ground combat (8.4 C)', () => {
+describe('who wins the ground combat (9.4 C)', () => {
   it('the only side left with ground units wins and controls the hex', () => {
     const a = groundWinner({ offSurvives: true, reaSurvives: false, offStepsLost: 3, reaStepsLost: 1 });
     expect(a.winner).toBe('offensives');

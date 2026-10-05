@@ -25,11 +25,11 @@ describe('question flow', () => {
   it('ends after a Japanese unit has answered the dot question', () => {
     expect(nextReplacementQuestion({ side: 'japanese', unitClass: 'naval', state: 'eliminated', dotted: 'no' }, ctx())).toBeUndefined();
   });
-  it('asks Allied units for nationality, and eliminated US or Commonwealth ground units what kind', () => {
+  it('asks Allied units for nationality and nothing more', () => {
     const base: ReplacementAnswers = { side: 'allied', unitClass: 'ground', state: 'eliminated', dotted: 'no' };
     expect(nextReplacementQuestion(base, ctx())!.key).toBe('nationality');
-    expect(nextReplacementQuestion({ ...base, nationality: 'us' }, ctx())!.key).toBe('groundKind');
-    expect(nextReplacementQuestion({ ...base, nationality: 'unsure' }, ctx())!.key).toBe('groundKind');
+    expect(nextReplacementQuestion({ ...base, nationality: 'us' }, ctx())).toBeUndefined();
+    expect(nextReplacementQuestion({ ...base, nationality: 'unsure' }, ctx())).toBeUndefined();
     expect(nextReplacementQuestion({ ...base, nationality: 'chinese' }, ctx())).toBeUndefined();
     expect(nextReplacementQuestion({ ...base, nationality: 'dutch' }, ctx())).toBeUndefined();
     expect(nextReplacementQuestion({ ...base, state: 'reduced', nationality: 'us' }, ctx())).toBeUndefined();
@@ -44,32 +44,32 @@ describe('question flow', () => {
     expect(goBackReplacement({})).toEqual({});
   });
   it('every question except side, unit and place offers "Not sure"', () => {
-    for (const key of ['dotted', 'nationality', 'groundKind'] as const) {
+    for (const key of ['dotted', 'nationality'] as const) {
       expect(replacementQuestionFor(key, {}, ctx()).options.some((o) => o.value === 'unsure')).toBe(true);
     }
   });
 });
 
 describe('units that cannot receive replacements', () => {
-  it('a single dot (10.1) rules everything out', () => {
+  it('a single dot (11.1) rules everything out', () => {
     const r = run({ side: 'allied', unitClass: 'ground', state: 'eliminated', dotted: 'yes' });
     expect(r.verdict).toBe('no');
     expect(r.headline).toMatch(/cannot receive replacements/);
-    expect(r.notes[0].cite).toContain('10.1');
+    expect(r.notes[0].cite).toContain('11.1');
   });
-  it('Dutch units never do (10.35)', () => {
+  it('Dutch units never do (11.35)', () => {
     const r = run({ side: 'allied', unitClass: 'naval', state: 'eliminated', dotted: 'no', nationality: 'dutch' });
     expect(r.verdict).toBe('no');
     expect(all(r)).toMatch(/Dutch/);
   });
-  it('Japan has no scheduled air replacements (10.22)', () => {
+  it('Japan has no scheduled air replacements (11.22)', () => {
     const r = run({ side: 'japanese', unitClass: 'air', state: 'reduced', dotted: 'no' });
     expect(r.verdict).toBe('no');
     expect(r.headline).toMatch(/event cards/);
   });
 });
 
-describe('Allied replacements (10.31-10.33)', () => {
+describe('Allied replacements (11.31-11.33)', () => {
   const us = (extra: Partial<ReplacementAnswers>): ReplacementAnswers => ({ side: 'allied', dotted: 'no', nationality: 'us', ...extra });
   it('a reduced ground unit flips to full for 1 replacement if supplied and out of enemy ZOI', () => {
     const r = run(us({ unitClass: 'ground', state: 'reduced' }));
@@ -82,19 +82,14 @@ describe('Allied replacements (10.31-10.33)', () => {
     expect(run(us({ unitClass: 'ground', state: 'reduced' }), ctx({ turn: 1 })).verdict).toBe('no');
     expect(run(us({ unitClass: 'ground', state: 'reduced' }), ctx({ turn: 2 })).verdict).toBe('yes');
   });
-  it('an eliminated Marine division or corps returns for 1 (reduced) or 2 (full), placed like a reinforcement', () => {
-    const r = run(us({ unitClass: 'ground', state: 'eliminated', groundKind: 'marineOrCorps' }));
+  it('an eliminated ground unit returns for 1 (reduced) or 2 (full), placed like a reinforcement', () => {
+    const r = run(us({ unitClass: 'ground', state: 'eliminated' }));
     expect(r.verdict).toBe('yes');
     expect(text(r.cost)).toMatch(/2 replacements/);
     expect(text(r.where)).toMatch(/like a reinforcement/);
     expect(text(r.where)).toMatch(/port/);
     expect(r.links).toContain('reinforcements');
     expect(r.mapChecks.join(' ')).toMatch(/Activation Range/);
-  });
-  it('an eliminated ground unit of another kind is not covered by the rule text, so it depends', () => {
-    const r = run(us({ unitClass: 'ground', state: 'eliminated', groundKind: 'other' }));
-    expect(r.verdict).toBe('depends');
-    expect(all(r)).toMatch(/Marine/);
   });
   it('air: 5 per turn, 1 to flip or return reduced, 2 for full; returns to an airfield', () => {
     const r = run(us({ unitClass: 'air', state: 'eliminated' }));
@@ -127,7 +122,7 @@ describe('Allied replacements (10.31-10.33)', () => {
   });
 });
 
-describe('Chinese replacements (10.34)', () => {
+describe('Chinese replacements (11.34)', () => {
   const chinese = (extra: Partial<ReplacementAnswers> = {}): ReplacementAnswers => ({
     side: 'allied', unitClass: 'ground', state: 'reduced', dotted: 'no', nationality: 'chinese', ...extra,
   });
@@ -151,7 +146,7 @@ describe('Chinese replacements (10.34)', () => {
   });
 });
 
-describe('Japanese replacements (10.21, 10.23)', () => {
+describe('Japanese replacements (11.21, 11.23)', () => {
   const jp = (extra: Partial<ReplacementAnswers>): ReplacementAnswers => ({ side: 'japanese', dotted: 'no', ...extra });
   it('ground: divisions from China, 1 to flip, 1 to return reduced, 2 to return full, at most 2 in all', () => {
     const reduced = run(jp({ unitClass: 'ground', state: 'reduced' }));
@@ -162,12 +157,12 @@ describe('Japanese replacements (10.21, 10.23)', () => {
     expect(text(eliminated.cost)).toMatch(/At most 2 divisions/);
     expect(text(eliminated.where)).toMatch(/any Japanese HQ/);
   });
-  it('naval: carry over, and does not invent a cost the rule text does not give', () => {
+  it('naval: carry over; 1 step returns an eliminated unit reduced, 2 full (11.0)', () => {
     const reduced = run(jp({ unitClass: 'naval', state: 'reduced' }));
     expect(reduced.verdict).toBe('yes');
     expect(text(reduced.notes)).toMatch(/carried over/);
     const eliminated = run(jp({ unitClass: 'naval', state: 'eliminated' }));
-    expect(text(eliminated.cost)).toMatch(/Replacements Chart/);
+    expect(text(eliminated.cost)).toMatch(/1 step returns it at reduced strength, 2 steps at full/);
   });
 });
 

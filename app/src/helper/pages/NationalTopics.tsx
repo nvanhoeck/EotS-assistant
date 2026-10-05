@@ -28,13 +28,13 @@ function makeTopicPage(pageId: string, title: string, subtitle: string, groups: 
   };
 }
 
-export const NationalChina = makeTopicPage('national-china', 'China', 'Everything about China, from rulebook 12.7 and the rules that refer to it', [
+export const NationalChina = makeTopicPage('national-china', 'China', 'Everything about China, from rulebook 13.7 and the rules that refer to it', [
   { heading: 'Surrender and offensives', keys: ['surrender', 'offensives'] },
   { heading: 'On the map', keys: ['movement', 'air-box', 'supply', 'japan-strength'] },
   { heading: 'Elsewhere in the rules', keys: ['allied-effects'] },
 ]);
 
-export const NationalIndia = makeTopicPage('national-india', 'India', 'Everything about India, from rulebook 12.6 and the rules that refer to it', [
+export const NationalIndia = makeTopicPage('national-india', 'India', 'Everything about India, from rulebook 13.6 and the rules that refer to it', [
   { heading: 'Territory and stability', keys: ['territory', 'stability'] },
   { heading: 'Consequences', keys: ['surrender-effects', 'units'] },
 ]);

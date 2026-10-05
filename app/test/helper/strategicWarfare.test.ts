@@ -6,17 +6,21 @@ import type { GameContext } from '../../src/helper/types';
 
 const ctx = (p: Partial<GameContext> = {}): GameContext => ({ surrendered: [], used: [], ...p });
 
-describe('japaneseBaseDraw (11.11, 11.12)', () => {
+describe('japaneseBaseDraw (12.11, 12.12)', () => {
   it('is 7 on turns 2-4 whatever the resource hexes', () => {
     expect(japaneseBaseDraw(2, undefined)).toBe(7);
     expect(japaneseBaseDraw(4, 1)).toBe(7);
   });
   it('is one card per two resource hexes, rounded up, from turn 5', () => {
-    expect(japaneseBaseDraw(5, 5)).toBe(3);
+    expect(japaneseBaseDraw(5, 9)).toBe(5);
     expect(japaneseBaseDraw(5, 13)).toBe(7);
     expect(japaneseBaseDraw(5, 14)).toBe(7);
-    expect(japaneseBaseDraw(5, 0)).toBe(0);
-    expect(japaneseBaseDraw(1, 6)).toBe(3);
+    expect(japaneseBaseDraw(1, 12)).toBe(6);
+  });
+  it('is never fewer than 4, whatever the resource hexes (12.11)', () => {
+    expect(japaneseBaseDraw(5, 5)).toBe(4);
+    expect(japaneseBaseDraw(5, 0)).toBe(4);
+    expect(japaneseBaseDraw(1, 6)).toBe(4);
   });
   it('cannot be worked out without the hexes outside turns 2-4', () => {
     expect(japaneseBaseDraw(5, undefined)).toBeUndefined();
@@ -28,7 +32,7 @@ describe('japaneseBaseDraw (11.11, 11.12)', () => {
 });
 
 describe('japaneseDraw', () => {
-  it('never goes below 4 (11.12, 11.4)', () => {
+  it('never goes below 4 (12.11, 12.21, 12.4)', () => {
     expect(japaneseDraw(3, false, 0)).toBe(4);
     expect(japaneseDraw(7, true, 2)).toBe(4);
   });
@@ -40,13 +44,13 @@ describe('japaneseDraw', () => {
   });
 });
 
-describe('japanesePasses (11.4)', () => {
+describe('japanesePasses (12.4)', () => {
   it('gives 2 passes for 5 or fewer cards, 1 for 6, none for 7', () => {
     expect([7, 6, 5, 4].map(japanesePasses)).toEqual([0, 1, 2, 2]);
   });
 });
 
-describe('alliedDraw (11.51, 11.52)', () => {
+describe('alliedDraw (12.51, 12.52)', () => {
   it('cannot be worked out without the turn', () => {
     expect(alliedDraw(ctx())).toBeUndefined();
   });

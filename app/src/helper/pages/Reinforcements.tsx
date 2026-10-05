@@ -32,7 +32,7 @@ export function Reinforcements() {
   const endReminders = remindersFor(`${PAGE}#end`, ctx);
 
   return (
-    <PageShell title="Reinforcement Segment" subtitle="Rulebook 9.0 and 4.11">
+    <PageShell title="Reinforcement Segment" subtitle="Rulebook 10.0 and 4.11">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
 
       <Accordion title="Reinforcement helper" defaultOpen>

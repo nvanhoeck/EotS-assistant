@@ -164,9 +164,9 @@ describe.skipIf(!fs.existsSync(file))('Retriever on the real rulebook (BM25)', (
     ['What happens in the reinforcement segment?', ['4.11']],
     ['How many strategy cards does each player get dealt?', ['4.14']],
     ['Who goes first in the offensives phase?', ['4.21']],
-    ['What happens if no air or naval units survive the battle?', ['8.31']],
-    ['What does a zero die roll mean?', ['1.21']],
-    ['What is an OC and an EC?', ['1.24']],
+    ['What happens if no air or naval units survive the battle?', ['9.31']],
+    ['What does a zero die roll mean?', ['1.22']],
+    ['What is an OC and an EC?', ['1.25']],
   ];
   it.each(cases)('%s', async (q, expected) => {
     const out = await r.retrieve(q);

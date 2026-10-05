@@ -51,11 +51,12 @@ describe('Offensives player', () => {
     expect(text(r.afterwards)).toMatch(/lost at the end of the Offensives phase/);
   });
 
-  it('an OC lists the five actions and activates OC value + HQ efficiency, with no draw and no removal', () => {
+  it('an OC lists the five actions (no air unit withdrawal any more) and activates OC value + HQ efficiency, with no draw and no removal', () => {
     const r = checkCardPlay(off({ use: 'oc', cardClass: 'military' }));
     expect(r.verdict).toBe('yes');
     const e = text(r.effect);
-    for (const word of ['OC Offensive', 'China OC Offensive', 'Withdraw an air unit', 'Withdraw an HQ', 'Bring an HQ into play']) expect(e).toContain(word);
+    for (const word of ['OC Offensive', 'China OC Offensive', 'Withdraw an HQ', 'Bring an HQ into play', 'Construct a strategic transport route']) expect(e).toContain(word);
+    expect(e).not.toContain('Withdraw an air unit');
     expect(e).toMatch(/Operations value .*\+ .*Efficiency/);
     expect(text(r.afterwards)).toMatch(/never removed from the game/);
     expect(text(r.afterwards)).toMatch(/never draw a card/);
@@ -113,8 +114,10 @@ describe('Offensives player', () => {
     expect(r.verdict).toBe('yes');
     expect(text(r.afterwards)).toMatch(/even if/);
   });
-  it('a discarded Special Event happens the instant it is discarded', () => {
-    expect(text(checkCardPlay(off({ use: 'discard', cardClass: 'special' })).notes)).toMatch(/instant/);
+  it('a Special Event cannot be voluntarily discarded; one discarded by another event happens the instant it is discarded', () => {
+    const r = checkCardPlay(off({ use: 'discard', cardClass: 'special' }));
+    expect(r.verdict).toBe('no');
+    expect(text(r.notes)).toMatch(/instant/);
   });
 });
 
@@ -137,10 +140,11 @@ describe('Reaction player', () => {
     expect(text(r.conditions)).toMatch(/after the Offensives player has finished moving/);
     expect(text(r.conditions)).toMatch(/three Reaction events/);
   });
-  it('intelligence: intercept or ambush, and a failed roll shuts the door', () => {
+  it('intelligence: intercept or ambush, and any die roll shuts the door', () => {
     const t = all(checkCardPlay(rea({ cardClass: 'reaction', reactionKind: 'intelligence' })));
     expect(t).toMatch(/intercept or ambush/);
     expect(t).toMatch(/ambush/);
+    expect(t).toMatch(/made an intelligence die roll/);
   });
   it('counteroffensive: its own Logistics value, but the Offensives card’s OC value for movement', () => {
     const t = all(checkCardPlay(rea({ cardClass: 'reaction', reactionKind: 'counteroffensive' })));

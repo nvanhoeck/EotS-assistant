@@ -7,7 +7,7 @@ import { allActivationPaths } from './paths';
 
 const text = (r: ReturnType<typeof checkActivation>) => [r.headline, ...r.steps.map((s) => s.text), ...r.notes.map((s) => s.text)].join(' | ');
 
-describe('activatableUnits (6.21)', () => {
+describe('activatableUnits (7.21)', () => {
   it('is the OC or Logistics value plus the HQ efficiency', () => {
     expect(activatableUnits(3, 1)).toBe(4);
     expect(activatableUnits(2, 0)).toBe(2);
@@ -41,7 +41,7 @@ describe('question flow', () => {
   });
 });
 
-describe('who can activate what (6.21 A-D, 7.53)', () => {
+describe('who can activate what (7.21 A-D, 6.12)', () => {
   const run = (a: ActivationAnswers) => checkActivation(a);
   it('Japanese HQs activate any Japanese unit and nothing else', () => {
     expect(run({ hq: 'japanese', unit: 'japanese', isr: 'no' }).verdict).toBe('yes');
@@ -68,11 +68,13 @@ describe('who can activate what (6.21 A-D, 7.53)', () => {
     for (const unit of ['us', 'commonwealth', 'chinese', 'dutch'] as const) expect(run({ hq: 'joint', unit }).verdict).toBe('yes');
     expect(text(run({ hq: 'joint', unit: 'dutch' }))).toMatch(/Only Joint HQs can activate Dutch units/);
   });
-  it('mentions the chart discrepancy for Dutch units', () => {
-    expect(text(run({ hq: 'commonwealth', unit: 'dutch' }))).toMatch(/printed.*chart/);
+  it('a Commonwealth HQ cannot activate Dutch units (the chart now agrees with the rule)', () => {
+    const r = run({ hq: 'commonwealth', unit: 'dutch' });
+    expect(r.verdict).toBe('no');
+    expect(text(r)).not.toMatch(/printed.*chart/);
   });
   it('Inter-Service Rivalry: a US HQ activates Army OR Naval units, a Japanese HQ army OR naval', () => {
-    expect(text(run({ hq: 'us', unit: 'us', isr: 'yes' }))).toMatch(/Army units OR US Naval units/);
+    expect(text(run({ hq: 'us', unit: 'us', isr: 'yes' }))).toMatch(/Army units OR US Navy units/);
     expect(text(run({ hq: 'japanese', unit: 'japanese', isr: 'yes' }))).toMatch(/army and naval/);
     expect(text(run({ hq: 'us', unit: 'us', isr: 'no' }))).not.toMatch(/Inter-Service/);
     expect(run({ hq: 'us', unit: 'us', isr: 'unsure' }).verdict).toBe('depends');
@@ -80,7 +82,7 @@ describe('who can activate what (6.21 A-D, 7.53)', () => {
   it('always states the supply and range conditions and the event exception', () => {
     const r = run({ hq: 'joint', unit: 'us' });
     expect(text(r)).toMatch(/in supply/);
-    expect(text(r)).toMatch(/range/);
+    expect(text(r)).toMatch(/range/i);
     expect(text(r)).toMatch(/event card/i);
   });
   it('rejects incomplete answers', () => {

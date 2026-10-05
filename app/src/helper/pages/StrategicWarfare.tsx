@@ -41,7 +41,7 @@ function Calculator() {
         <Text style={text}>Set the turn and/or the Japanese resource hexes in the game status bar to see the draw.</Text>
       ) : (
         <>
-          <Text style={text}>Base draw {base}{base < 4 ? ' (never fewer than 4 after reductions)' : ''}.</Text>
+          <Text style={text}>Base draw {base} (never fewer than 4).</Text>
           <Text style={[styles.big, { color: pal.ink, fontFamily: serif }]}>
             Japan draws {draw} cards · {japanesePasses(draw)} {japanesePasses(draw) === 1 ? 'pass' : 'passes'}
           </Text>
@@ -67,7 +67,7 @@ function Calculator() {
 export function StrategicWarfare() {
   const { ctx } = useHelper();
   return (
-    <PageShell title="Strategic Warfare Segment" subtitle="Rulebook 11.0 and 4.13">
+    <PageShell title="Strategic Warfare Segment" subtitle="Rulebook 12.0 and 4.13">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
       <Accordion title="Draw calculator" defaultOpen>
         <Calculator />

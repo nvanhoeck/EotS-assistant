@@ -3,7 +3,7 @@ import { aspCost, movementAllowance, movementReminders } from '../../src/helper/
 
 const text = (r: ReturnType<typeof movementAllowance>) => r.steps.map((s) => s.text).join(' | ');
 
-describe('movementAllowance (5.11, 7.1, 7.2, 7.3, 7.4)', () => {
+describe('movementAllowance (7.22, 8.1, 8.2, 8.3, 8.4)', () => {
   it('ground: 1 movement point per OC value', () => {
     expect([1, 2, 3].map((oc) => movementAllowance({ kind: 'ground', ocValue: oc }).points)).toEqual([1, 2, 3]);
   });
@@ -51,7 +51,7 @@ describe('movementAllowance (5.11, 7.1, 7.2, 7.3, 7.4)', () => {
   });
 });
 
-describe('aspCost (7.45 A)', () => {
+describe('aspCost (8.45 A)', () => {
   it('one ASP per ground unit of division size or smaller', () => {
     expect(aspCost({ size: 'division', full: true })).toBe(1);
     expect(aspCost({ size: 'division', full: false })).toBe(1);

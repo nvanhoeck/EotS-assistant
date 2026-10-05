@@ -6,20 +6,20 @@ export const ALLIED_MIN_DRAW = 4;
 
 const inReserves = (turn: number | undefined) => turn !== undefined && turn >= 2 && turn <= 4;
 
-/** Base Japanese draw before submarine warfare and bombing (11.11, 11.12). */
+/** Base Japanese draw before submarine warfare and bombing (12.11, 12.12). */
 export function japaneseBaseDraw(turn: number | undefined, resourceHexes: number | undefined): number | undefined {
   if (inReserves(turn)) return JAPAN_MAX_DRAW;
   if (resourceHexes === undefined) return undefined;
-  return Math.min(JAPAN_MAX_DRAW, Math.ceil(resourceHexes / 2));
+  return Math.max(JAPAN_MIN_DRAW, Math.min(JAPAN_MAX_DRAW, Math.ceil(resourceHexes / 2)));
 }
 
-/** 11.21 (one card for a successful submarine attack), 11.32 and 11.33 (one per bombing success, at most two). */
+/** 12.21 (one card for a successful submarine attack), 12.32 and 12.33 (one per bombing success, at most two). */
 export function japaneseDraw(base: number, submarineHit: boolean, bombingHits: number): number {
   const cut = (submarineHit ? 1 : 0) + Math.min(2, Math.max(0, bombingHits));
   return Math.max(JAPAN_MIN_DRAW, base - cut);
 }
 
-/** 11.4 */
+/** 12.4 (a possible Future Offensive card is not counted). */
 export function japanesePasses(cards: number): number {
   if (cards >= 7) return 0;
   return cards === 6 ? 1 : 2;
@@ -35,7 +35,7 @@ export interface AlliedDraw {
   wieAssumed: boolean;
 }
 
-/** 11.51 and 11.52 */
+/** 12.51 and 12.52 */
 export function alliedDraw(ctx: GameContext): AlliedDraw | undefined {
   const t = ctx.turn;
   if (t === undefined) return undefined;
@@ -59,9 +59,9 @@ export const strategicWarfareReminders: Reminder[] = [
   {
     id: 'sw-japan-draw',
     pages: ['strategic-warfare#japan-cards'],
-    text: 'Japanese base draw: one card per 2 resource hexes under Japanese control, rounded up. Turns 2–4 are always 7. After submarine warfare and bombing it is never fewer than 4.',
+    text: 'Japanese base draw: one card per 2 resource hexes under Japanese control, rounded up. Turns 2–4 are always 7. It is never fewer than 4, before or after submarine warfare and bombing.',
     condition: 'Every Strategic Warfare segment.',
-    cite: ['11.11', '11.12', '11.4'],
+    cite: ['12.11', '12.12', '12.4'],
     status: (ctx) => (japaneseBaseDraw(ctx.turn, ctx.japanResourceHexes) === undefined ? 'unknown' : 'applies'),
     detail(ctx) {
       const base = japaneseBaseDraw(ctx.turn, ctx.japanResourceHexes);

@@ -82,7 +82,7 @@ function Asp() {
 export function Movement() {
   const { ctx } = useHelper();
   return (
-    <PageShell title="Movement and stacking" subtitle="Rulebook 7.0, with 5.11">
+    <PageShell title="Movement and stacking" subtitle="Rulebook 8.0, with 7.22">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
       <Accordion title="Movement allowance" defaultOpen>
         <Allowance />

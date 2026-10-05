@@ -1,14 +1,14 @@
 [
   { "q": "What happens in the reinforcement segment?", "expected": ["4.11"] },
-  { "q": "When do I flip reduced units back to full strength?", "expected": ["4.12", "10.0"] },
-  { "q": "What does the Allied player do in the strategic warfare segment?", "expected": ["4.13", "11.0"] },
+  { "q": "When do I flip reduced units back to full strength?", "expected": ["4.12", "11.0"] },
+  { "q": "What does the Allied player do in the strategic warfare segment?", "expected": ["4.13", "12.0"] },
   { "q": "How many strategy cards does each player get dealt?", "expected": ["4.14"] },
   { "q": "Who goes first in the offensives phase and who wins ties?", "expected": ["4.21"] },
   { "q": "What do the players do during the offensives segment?", "expected": ["4.22"] },
-  { "q": "What happens if no air or naval units survive the battle?", "expected": ["8.31"] },
-  { "q": "What does a zero on the die mean?", "expected": ["1.21"] },
-  { "q": "What is the difference between an OC and an EC?", "expected": ["1.24"] },
-  { "q": "Who participates in a battle?", "expected": ["8.1", "8.11", "8.12", "8.13"] },
-  { "q": "What happens after a battle is won, can units move?", "expected": ["8.6", "8.61", "8.62"] },
-  { "q": "How does the Reaction player change the intelligence condition?", "expected": ["6.0", "6.2"] }
+  { "q": "What happens if no air or naval units survive the battle?", "expected": ["9.31"] },
+  { "q": "What does a zero on the die mean?", "expected": ["1.22"] },
+  { "q": "What is the difference between an OC and an EC?", "expected": ["1.25"] },
+  { "q": "Who participates in a battle?", "expected": ["9.1", "9.11", "9.12"] },
+  { "q": "What happens after a battle is won, can units move?", "expected": ["9.5", "9.6"] },
+  { "q": "How does the Reaction player change the intelligence condition?", "expected": ["5.2", "7.2"] }
 ]

@@ -60,7 +60,7 @@ export function UsPoliticalWill() {
     <PageShell title="US Political Will" subtitle="Rulebook 16.4 · adjusted in the US Political Will segment (4.32)">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
       <Text style={[styles.intro, { color: pal.muted }]}>Everything that moves the marker, in one place.</Text>
-      {pickSections(PAGE, ['surrenders', 'occupation', 'strategic-warfare', 'events', 'casualties', 'naval', 'progress', 'europe']).map((s) => (
+      {pickSections(PAGE, ['surrenders', 'occupation', 'strategic-warfare', 'events', 'casualties', 'naval', 'progress']).map((s) => (
         <RuleSection key={s.key} pageId={PAGE} section={s} extra={extras[s.key]} />
       ))}
       <View style={{ marginTop: 16 }}>

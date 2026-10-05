@@ -28,7 +28,7 @@ export function Attrition() {
   const result = question ? undefined : checkAttrition(answers);
 
   return (
-    <PageShell title="Attrition Phase" subtitle="Rulebook 4.4 and 13.4">
+    <PageShell title="Attrition Phase" subtitle="Rulebook 4.4 and 6.24">
       <ReminderBanner items={remindersForPage(PAGE, ctx)} />
       <Accordion title="What happens to this unit?" defaultOpen>
         <ChoiceForm

@@ -11,7 +11,7 @@ export function gameYear(turn: number): number {
   return 1945;
 }
 
-/** 4.21: on a tie Japan goes first in 1941-1942, the Allies in 1943-1945. */
+/** 4.21: on a tie Japan must go first in 1941-1942, the Allies in all other turns (1943-1945). */
 export function tieBreaker(turn: number | undefined): Player | undefined {
   if (turn === undefined) return undefined;
   return gameYear(turn) <= 1942 ? 'japan' : 'allies';
@@ -40,7 +40,7 @@ export interface InitiativeResult {
 }
 
 export function initiative(i: InitiativeInput): InitiativeResult {
-  const steps: Step[] = [step('Count the cards in each hand. A card designated as a Future Offensives card does not count.', '4.21', '6.29')];
+  const steps: Step[] = [step('Count the cards in each hand. A card designated as a Future Offensives card does not count.', '4.21', '7.29')];
 
   if (i.japanCards !== i.alliedCards) {
     const first: Player = i.japanCards > i.alliedCards ? 'japan' : 'allies';
@@ -48,19 +48,21 @@ export function initiative(i: InitiativeInput): InitiativeResult {
     steps.push(step(`The ${name(first)} player has more cards (${first === 'japan' ? i.japanCards : i.alliedCards} against ${first === 'japan' ? i.alliedCards : i.japanCards}) and goes first.`, '4.21'));
     const futureOffensive = step(
       i.fewerHasFutureOffensive
-        ? `The ${name(fewer)} player can still go first by playing their Future Offensives card as an EC for their first card. You said they hold one; if they do this, ${name(fewer)} goes first instead.`
-        : `The ${name(fewer)} player can go first anyway by playing a designated Future Offensives card as an EC for their first card. It can only be played as an EC to win the initiative this way.`,
-      '4.21', '6.29',
+        ? `The ${name(fewer)} player can still go first by playing their Future Offensives card as an EC Offensive for their first card. You said they hold one; if they do this, ${name(fewer)} goes first instead.`
+        : `The ${name(fewer)} player can go first anyway by playing a designated Future Offensives card as an EC Offensive for their first card. It can only be played as an EC Offensive to win the initiative this way.`,
+      '4.21', '7.29',
     );
     return { first, tied: false, overridableBy: fewer, steps, futureOffensive };
   }
 
   const tb = tieBreaker(i.turn);
   if (tb === undefined) {
-    steps.push(step(`Tied at ${i.japanCards}. On a tie the Japanese player goes first in 1941 and 1942 (turns 1–4) and the Allied player in 1943 to 1945 (turns 5–12). Set the turn in the game status to see which applies.`, '4.21'));
+    steps.push(step(`Tied at ${i.japanCards}. On a tie the Japanese player must go first in 1941 and 1942 (turns 1–4) and the Allied player in all other turns (1943 to 1945, turns 5–12). Set the turn in the game status to see which applies.`, '4.21'));
+    steps.push(step('On a tie the opponent may NOT use a Future Offensives card to go first.', '4.21', '7.29'));
     return { tied: true, steps };
   }
-  steps.push(step(`Tied at ${i.japanCards}. In ${gameYear(i.turn!)} the ${name(tb)} player goes first.`, '4.21'));
+  steps.push(step(`Tied at ${i.japanCards}. In ${gameYear(i.turn!)} the ${name(tb)} player must go first.`, '4.21'));
+  steps.push(step('On a tie the opponent may NOT use a Future Offensives card to go first.', '4.21', '7.29'));
   return { first: tb, tied: true, steps };
 }
 
@@ -68,7 +70,7 @@ export const initiativeReminders: Reminder[] = [
   {
     id: 'init-tiebreak',
     pages: ['initiative#initiative'],
-    text: 'On a tie in cards, the Japanese player goes first in 1941 and 1942 (turns 1–4) and the Allied player in 1943 to 1945 (turns 5–12).',
+    text: 'On a tie in cards, the Japanese player must go first in 1941 and 1942 (turns 1–4) and the Allied player in all other turns (1943 to 1945, turns 5–12). The opponent may not use a Future Offensives card to go first on a tie.',
     condition: 'Both players hold the same number of Strategy cards.',
     cite: ['4.21'],
     status: (ctx) => (ctx.turn === undefined ? 'unknown' : 'applies'),
@@ -83,7 +85,7 @@ export const initiativeReminders: Reminder[] = [
     pages: ['initiative#future'],
     text: 'A Future Offensives card does not count toward hand size or initiative. It cannot be played in the turn it was designated, nor as your last card of the Offensives phase.',
     condition: 'You or your opponent has a designated Future Offensives card.',
-    cite: ['6.29'],
+    cite: ['7.29'],
     status: () => 'unknown',
   },
 ];

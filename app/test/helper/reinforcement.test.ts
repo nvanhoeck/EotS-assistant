@@ -66,14 +66,14 @@ describe('question flow', () => {
   });
 });
 
-describe('where a unit can be placed (9.1, 9.12, 9.13)', () => {
+describe('where a unit can be placed (10.1, 6.12)', () => {
   it('Commonwealth ground: Commonwealth or Joint HQ, in a port', () => {
     const r = run({ side: 'allied', unitClass: 'ground', nationality: 'commonwealth', delayed: 'no' });
     expect(r.verdict).toBe('place');
     expect(r.where).toHaveLength(1);
     expect(r.where[0].text).toMatch(/port/);
     expect(r.where[0].text).toMatch(/Commonwealth or Joint HQ/);
-    expect(r.where[0].cite).toContain('9.12');
+    expect(r.where[0].cite).toContain('6.12');
     expect(r.sentToEurope).toBeUndefined();
   });
   it('US ground and naval: US or Joint HQ', () => {
@@ -136,7 +136,7 @@ describe('where a unit can be placed (9.1, 9.12, 9.13)', () => {
   });
 });
 
-describe('delay and Sent to Europe (9.14, 9.21-9.24)', () => {
+describe('delay and Sent to Europe (10.12, 10.21-10.24)', () => {
   const base = { side: 'allied', unitClass: 'ground', nationality: 'us', delayed: 'yes' } as const;
   it('a delayed US Army unit rolls on the W.I.E. range', () => {
     const r = run({ ...base, service: 'army' }, ctx({ wieLevel: 2 }));
@@ -191,6 +191,11 @@ describe('delay and Sent to Europe (9.14, 9.21-9.24)', () => {
     const r = run({ side: 'allied', unitClass: 'ground', nationality: 'commonwealth', delayed: 'yes' });
     expect(text(r.doFirst)).not.toMatch(/Sent to Europe/);
   });
+  it('mentions the Inter-Service Rivalry exception and roll modifier', () => {
+    const r = run({ side: 'allied', unitClass: 'ground', nationality: 'us', service: 'army', delayed: 'yes' }, ctx({ wieLevel: 2 }));
+    expect(text(r.notes)).toMatch(/only US Army units go into the box/);
+    expect(r.sentToEurope!.text).toMatch(/subtract 1 while US Inter-Service Rivalry/);
+  });
   it('rejects incomplete answers', () => {
     expect(() => run({})).toThrow('incomplete answers');
   });
@@ -225,7 +230,7 @@ describe('every path through the form', () => {
   });
 });
 
-describe('reinf-delay reminder (9.21)', () => {
+describe('reinf-delay reminder (10.21)', () => {
   const r = reinforcementReminders.find((x) => x.id === 'reinf-delay')!;
   it('applies when W.I.E. is 1 or more, is not now at 0, unknown when unset', () => {
     expect(r.status(ctx({ wieLevel: 1 }))).toBe('applies');
