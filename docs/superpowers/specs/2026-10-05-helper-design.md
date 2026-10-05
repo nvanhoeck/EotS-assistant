@@ -18,7 +18,7 @@ Source of truth: `eotsrulesv2.0.pdf` (rules v2.0), as ingested in `server/data/c
 
 - Header toggle becomes **AI | Search | Helper**. Chat and Search state are kept when switching, as today.
 - Helper has its own trail (same reducer style as `src/trail.ts`). Entries are `{ kind: 'page', id }` or `{ kind: 'section', sectionId }`. Back pops one entry (including the Android hardware back button), so five taps in means five Backs out.
-- A rulebook reference chip pushes a `section` entry and shows it in the existing Reader. A `PageLink` pushes a `page` entry. Rulebook cross-references in the Reader may link to a helper page where one exists (registry lookup by section id); this is optional and can follow later.
+- A rulebook reference chip (for example `§9.12 · p. 22`; the page numbers come from a generated `rulePages.ts`) pushes a `section` entry and shows it in the existing Reader. A `PageLink` pushes a `page` entry. Rulebook cross-references in the Reader may link to a helper page where one exists (registry lookup by section id); this is optional and can follow later.
 - **Home**: the 10 segments of the Sequence of Play in order, then a **Topics** group (US Political Will; National restrictions: China, India, US). Segments not written yet show "coming soon" and are not hidden. A row shows a badge ("2 reminders") when something applies now.
 - Accordion structure: home → page → accordion sections. Opening a section shows the rule statements.
 
@@ -106,7 +106,7 @@ More reminders are added as further segments are written.
 
 #### Form
 
-One question at a time, only the ones relevant after earlier answers, each with a **Not sure** answer and a back step.
+One question at a time, only the ones relevant after earlier answers, with a back step. Every question except Side and Unit class (the player always knows what is in their hand) has a **Not sure** answer; the result then lists the outcomes that depend on it.
 
 1. Side: Allied / Japanese.
 2. Unit class: Ground / Naval / Air / HQ.
