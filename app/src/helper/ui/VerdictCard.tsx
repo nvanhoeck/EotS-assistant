@@ -5,7 +5,7 @@ import type { ReinforcementResult } from '../logic/reinforcement';
 import type { Step } from '../types';
 import { RuleRef } from './RuleRef';
 
-function StepList({ title, steps, numbered }: { title: string; steps: Step[]; numbered?: boolean }) {
+export function StepList({ title, steps, numbered }: { title: string; steps: Step[]; numbered?: boolean }) {
   const pal = usePalette();
   if (steps.length === 0) return null;
   return (

@@ -12,7 +12,7 @@ const USPW: PageDef = { id: 'us-political-will', title: 'US Political Will', rea
 /** The Sequence of Play, in order. */
 export const SEQUENCE: PageDef[] = [
   { id: 'reinforcements', title: 'Reinforcement Segment', ready: true, sectionId: '9.0' },
-  { id: 'replacements', title: 'Replacement Segment', ready: false, sectionId: '10.0' },
+  { id: 'replacements', title: 'Replacement Segment', ready: true, sectionId: '10.0' },
   { id: 'strategic-warfare', title: 'Strategic Warfare Segment', ready: true, sectionId: '11.0' },
   { id: 'strategy-cards', title: 'Deal Strategy Cards Segment', ready: false, sectionId: '4.14' },
   { id: 'initiative', title: 'Initiative Segment', ready: false, sectionId: '4.21' },

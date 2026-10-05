@@ -7,3 +7,14 @@ export function allPaths(ctx: GameContext, from: ReinforcementAnswers = {}): Rei
   if (!q) return [from];
   return q.options.flatMap((o) => allPaths(ctx, answerQuestion(from, q.key, o.value)));
 }
+
+import {
+  answerReplacement, nextReplacementQuestion, type ReplacementAnswers,
+} from '../../src/helper/logic/replacement';
+
+/** Every complete set of answers the Replacement form can produce. */
+export function allReplacementPaths(ctx: GameContext, from: ReplacementAnswers = {}): ReplacementAnswers[] {
+  const q = nextReplacementQuestion(from, ctx);
+  if (!q) return [from];
+  return q.options.flatMap((o) => allReplacementPaths(ctx, answerReplacement(from, q.key, o.value)));
+}

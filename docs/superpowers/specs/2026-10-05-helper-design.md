@@ -158,6 +158,12 @@ One page that gathers every effect on US Political Will, grouped, each with its 
 
 The segment this belongs to (National Status Segment 4.31 and US Political Will Segment 4.32) is shown at the top with a link to the Sequence of Play entry.
 
+### Replacements (added after the pilots)
+
+Same shape as Reinforcements: a form, then rules by topic. The form asks side, unit class, where the unit is (reduced on the map, or in the eliminated pile), the single-dot question (10.1) and, for Allied units, nationality and (for eliminated US or Commonwealth ground units) whether it is a Marine division or corps-size unit. `checkReplacement` returns a verdict (`yes` / `no` / `depends`), how many replacements the side gets, what the unit costs, the supply or placement conditions (an eliminated unit returns like a reinforcement), the map checks, and notes. The game context decides availability: no Allied ground or US naval replacements on turn 1, Chinese replacements only on odd turns while China has not surrendered, Commonwealth naval only on turns 6, 9 and 12. Reminders: `repl-lost`, `repl-allotment`, `repl-chinese`, `repl-cw-naval`, `repl-oahu`, `repl-japan-china`.
+
+Known gaps: the Replacements Chart (scheduled naval numbers, and the step cost of returning a Japanese naval unit) is not in the extracted rule text, so the helper points at the chart instead of inventing numbers. 10.31 names only US Marine divisions and US or Commonwealth corps-size units as returning from the pile; other eliminated Allied ground units give `depends` with that wording quoted.
+
 ## Rollout order
 
 1. Helper shell: toggle, trail, registry, home (with "coming soon" rows), context + reminders modules.

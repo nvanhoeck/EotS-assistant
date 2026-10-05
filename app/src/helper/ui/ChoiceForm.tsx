@@ -1,18 +1,23 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import { serif, usePalette } from '../../theme';
-import type { Question, QuestionKey } from '../logic/reinforcement';
+interface Question<K extends string> {
+  key: K;
+  prompt: string;
+  hint?: string;
+  options: { value: string; label: string }[];
+}
 
-interface Props {
+interface Props<K extends string> {
   answered: { key: string; prompt: string; label: string }[];
-  question?: Question;
-  onAnswer(key: QuestionKey, value: string): void;
+  question?: Question<K>;
+  onAnswer(key: K, value: string): void;
   onBack(): void;
   onRestart(): void;
 }
 
 /** One question at a time. Answered questions stay listed above as a trail. */
-export function ChoiceForm({ answered, question, onAnswer, onBack, onRestart }: Props) {
+export function ChoiceForm<K extends string>({ answered, question, onAnswer, onBack, onRestart }: Props<K>) {
   const pal = usePalette();
   return (
     <View style={styles.wrap}>

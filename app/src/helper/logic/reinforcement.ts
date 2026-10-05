@@ -1,4 +1,5 @@
 import type { GameContext, Reminder, Step } from '../types';
+import { answerIn, goBackIn } from './flow';
 
 export type Side = 'allied' | 'japanese';
 export type UnitClass = 'ground' | 'naval' | 'air' | 'hq';
@@ -118,26 +119,11 @@ export function nextQuestion(a: ReinforcementAnswers, ctx: GameContext): Questio
 
 /** Sets one answer and forgets every answer after it, which may no longer apply. */
 export function answerQuestion(a: ReinforcementAnswers, key: QuestionKey, value: string): ReinforcementAnswers {
-  const out: ReinforcementAnswers = {};
-  for (const k of QUESTION_ORDER) {
-    if (k === key) {
-      (out as Record<string, string>)[k] = value;
-      break;
-    }
-    if (a[k] !== undefined) (out as Record<string, string>)[k] = a[k] as string;
-  }
-  return out;
+  return answerIn(QUESTION_ORDER, a, key, value);
 }
 
 export function goBack(a: ReinforcementAnswers): ReinforcementAnswers {
-  const out: ReinforcementAnswers = { ...a };
-  for (const k of [...QUESTION_ORDER].reverse()) {
-    if (out[k] !== undefined) {
-      delete out[k];
-      break;
-    }
-  }
-  return out;
+  return goBackIn(QUESTION_ORDER, a);
 }
 
 export type Verdict = 'place' | 'delay' | 'depends';

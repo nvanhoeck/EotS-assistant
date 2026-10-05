@@ -5,7 +5,8 @@ import { PAGES, SEQUENCE, TOPICS, pageTitle } from '../../src/helper/registry';
 import { ALL_REMINDERS } from '../../src/helper/reminders';
 import type { GameContext } from '../../src/helper/types';
 import { checkReinforcement } from '../../src/helper/logic/reinforcement';
-import { allPaths } from './paths';
+import { checkReplacement } from '../../src/helper/logic/replacement';
+import { allPaths, allReplacementPaths } from './paths';
 
 const raw = JSON.parse(readFileSync(new URL('../../../server/data/chunks.json', import.meta.url), 'utf8'));
 const chunks: { sectionId: string }[] = Array.isArray(raw) ? raw : raw.chunks;
@@ -18,6 +19,17 @@ function reinforcementCites(): string[] {
     for (const a of allPaths(c)) {
       const r = checkReinforcement(a, c);
       for (const s of [...r.doFirst, ...r.where, ...r.restrictions, ...r.notes]) out.push(...s.cite);
+    }
+  }
+  return out;
+}
+
+function replacementCites(): string[] {
+  const out: string[] = [];
+  for (const c of [ctx(), ctx({ turn: 6 }), ctx({ turn: 3, surrendered: ['china'] })]) {
+    for (const a of allReplacementPaths(c)) {
+      const r = checkReplacement(a, c);
+      for (const s of [...r.availability, ...r.cost, ...r.where, ...r.notes]) out.push(...s.cite);
     }
   }
   return out;
@@ -37,6 +49,10 @@ describe('rulebook references', () => {
   });
   it('every step the reinforcement form can produce cites sections that exist', () => {
     const missing = [...new Set(reinforcementCites())].filter((id) => !SECTION_IDS.has(id));
+    expect(missing).toEqual([]);
+  });
+  it('every step the replacement form can produce cites sections that exist', () => {
+    const missing = [...new Set(replacementCites())].filter((id) => !SECTION_IDS.has(id));
     expect(missing).toEqual([]);
   });
   it('every "coming soon" row points at a real section', () => {
