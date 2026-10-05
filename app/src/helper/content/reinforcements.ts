@@ -5,7 +5,7 @@ export const REINFORCEMENT_SECTIONS: Section[] = [
     key: 'ground',
     title: 'Ground units',
     statements: [
-      { text: 'Place a ground unit in a friendly, supply-eligible port.', cite: ['9.1', '13.1'] },
+      { text: 'Place a ground unit in a friendly, supply-eligible port.', cite: ['9.1', '13.1'], links: ['supply'] },
       { text: 'The port must be within Activation Range of an HQ that can activate the unit.', cite: ['9.1', '7.52'] },
       { text: 'US ground units may use only US or Joint HQs. Commonwealth ground units may use only Commonwealth or Joint HQs.', cite: ['9.12'] },
       { text: 'Japanese ground units may use any Japanese HQ.', cite: ['9.13'] },
@@ -15,7 +15,7 @@ export const REINFORCEMENT_SECTIONS: Section[] = [
     key: 'naval',
     title: 'Naval units',
     statements: [
-      { text: 'Place a naval unit in a friendly, supply-eligible port within Activation Range of an HQ that can activate it.', cite: ['9.1', '7.52'] },
+      { text: 'Place a naval unit in a friendly, supply-eligible port within Activation Range of an HQ that can activate it.', cite: ['9.1', '7.52'], links: ['supply'] },
       { text: 'US naval units may use only US or Joint HQs. Commonwealth naval units may use only Commonwealth or Joint HQs.', cite: ['9.12'] },
       { text: 'Japanese naval units may use any Japanese HQ.', cite: ['9.13'] },
       { text: 'If a US CVE (escort carrier) reinforcement is delayed it can be sent to Europe. Other US ships cannot.', cite: ['9.22'] },
@@ -25,7 +25,7 @@ export const REINFORCEMENT_SECTIONS: Section[] = [
     key: 'air',
     title: 'Air units',
     statements: [
-      { text: 'Place an air unit in a friendly, supply-eligible airfield within Activation Range of an HQ that can activate it.', cite: ['9.1', '7.52'] },
+      { text: 'Place an air unit in a friendly, supply-eligible airfield within Activation Range of an HQ that can activate it.', cite: ['9.1', '7.52'], links: ['supply'] },
       { text: 'US air units may use any friendly HQ, whatever its nationality.', cite: ['9.12'] },
       { text: 'Commonwealth air units may use only Commonwealth or Joint HQs.', cite: ['9.12'] },
       { text: 'Japanese air units may use any Japanese HQ.', cite: ['9.13'] },

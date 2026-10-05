@@ -27,3 +27,12 @@ export function allCardPaths(from: CardAnswers = {}): CardAnswers[] {
   if (!q) return [from];
   return q.options.flatMap((o) => allCardPaths(answerCard(from, q.key, o.value)));
 }
+
+import { answerAttrition, nextAttritionQuestion, type AttritionAnswers } from '../../src/helper/logic/attrition';
+
+/** Every complete set of answers the attrition form can produce. */
+export function allAttritionPaths(from: AttritionAnswers = {}): AttritionAnswers[] {
+  const q = nextAttritionQuestion(from);
+  if (!q) return [from];
+  return q.options.flatMap((o) => allAttritionPaths(answerAttrition(from, q.key, o.value)));
+}

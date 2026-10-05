@@ -19,13 +19,14 @@ export const SEQUENCE: PageDef[] = [
   { id: 'offensives', title: 'Offensives Segment', ready: false, sectionId: '6.0' },
   { id: 'national-status', title: 'National Status Segment', ready: false, sectionId: '12.0' },
   { ...USPW, title: 'US Political Will Segment' },
-  { id: 'attrition', title: 'Attrition Phase', ready: false, sectionId: '4.4' },
+  { id: 'attrition', title: 'Attrition Phase', ready: true, sectionId: '4.4' },
   { id: 'end-of-turn', title: 'End of Turn Phase', ready: false, sectionId: '4.5' },
 ];
 
 /** Topics that bundle rules from across the rulebook. */
 export const TOPICS: PageDef[] = [
   USPW,
+  { id: 'supply', title: 'Supply and HQ range', ready: true, sectionId: '13.0' },
   { id: 'national-china', title: 'National restrictions: China', ready: false, sectionId: '12.7' },
   { id: 'national-india', title: 'National restrictions: India', ready: false, sectionId: '12.6' },
   { id: 'national-us', title: 'National restrictions: US (Inter-Service Rivalry)', ready: false, sectionId: '14.1' },

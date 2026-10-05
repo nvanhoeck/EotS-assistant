@@ -6,7 +6,7 @@ export const REPLACEMENT_SECTIONS: Section[] = [
     title: 'General rules',
     statements: [
       { text: 'Both players may receive replacements in the Replacement segment. A replacement flips a reduced unit that is in supply to its full-strength side, or brings a unit back from the eliminated pile.', cite: ['4.12', '10.0'] },
-      { text: 'A reduced unit on the map can receive a replacement only if it is in supply and not in an un-neutralized enemy ZOI.', cite: ['10.0', '13.1'] },
+      { text: 'A reduced unit on the map can receive a replacement only if it is in supply and not in an un-neutralized enemy ZOI.', cite: ['10.0', '13.1'], links: ['supply'] },
       { text: 'A unit returning from the eliminated pile is treated exactly like a reinforcement: it is placed under the reinforcement rules.', cite: ['10.0', '9.1'], links: ['reinforcements'] },
       { text: 'The Allied player places all replacements first, then the Japanese player.', cite: ['10.0'] },
       { text: 'Replacements that are not used in the turn they arrive are lost, unless a rule or an Event card says otherwise. Japanese naval replacement steps are the main exception.', cite: ['10.0', '10.21'] },

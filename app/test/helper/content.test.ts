@@ -7,7 +7,8 @@ import type { GameContext } from '../../src/helper/types';
 import { checkReinforcement } from '../../src/helper/logic/reinforcement';
 import { checkReplacement } from '../../src/helper/logic/replacement';
 import { checkCardPlay } from '../../src/helper/logic/strategyCards';
-import { allCardPaths, allPaths, allReplacementPaths } from './paths';
+import { checkAttrition } from '../../src/helper/logic/attrition';
+import { allAttritionPaths, allCardPaths, allPaths, allReplacementPaths } from './paths';
 
 const raw = JSON.parse(readFileSync(new URL('../../../server/data/chunks.json', import.meta.url), 'utf8'));
 const chunks: { sectionId: string }[] = Array.isArray(raw) ? raw : raw.chunks;
@@ -43,6 +44,13 @@ function cardCites(): string[] {
   });
 }
 
+function attritionCites(): string[] {
+  return allAttritionPaths().flatMap((a) => {
+    const r = checkAttrition(a);
+    return [...r.steps, ...r.notes].flatMap((s) => s.cite);
+  });
+}
+
 describe('rulebook references', () => {
   it('every content statement cites sections that exist in the ingested rulebook', () => {
     const missing: string[] = [];
@@ -65,6 +73,10 @@ describe('rulebook references', () => {
   });
   it('every step the card-play form can produce cites sections that exist', () => {
     const missing = [...new Set(cardCites())].filter((id) => !SECTION_IDS.has(id));
+    expect(missing).toEqual([]);
+  });
+  it('every step the attrition form can produce cites sections that exist', () => {
+    const missing = [...new Set(attritionCites())].filter((id) => !SECTION_IDS.has(id));
     expect(missing).toEqual([]);
   });
   it('every "coming soon" row points at a real section', () => {
