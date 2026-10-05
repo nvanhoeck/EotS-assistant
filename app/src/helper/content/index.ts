@@ -1,5 +1,6 @@
 import type { Section } from '../types';
 import { ATTRITION_SECTIONS } from './attrition';
+import { END_OF_TURN_SECTIONS } from './endOfTurn';
 import { INITIATIVE_SECTIONS } from './initiative';
 import { POLITICAL_WILL_SECTIONS } from './politicalWill';
 import { REINFORCEMENT_SECTIONS } from './reinforcements';
@@ -13,6 +14,7 @@ export const PAGE_SECTIONS: Record<string, Section[]> = {
   replacements: REPLACEMENT_SECTIONS,
   initiative: INITIATIVE_SECTIONS,
   attrition: ATTRITION_SECTIONS,
+  'end-of-turn': END_OF_TURN_SECTIONS,
   supply: SUPPLY_SECTIONS,
   'strategy-cards': STRATEGY_CARD_SECTIONS,
   'strategic-warfare': STRATEGIC_WARFARE_SECTIONS,

@@ -36,3 +36,12 @@ export function allAttritionPaths(from: AttritionAnswers = {}): AttritionAnswers
   if (!q) return [from];
   return q.options.flatMap((o) => allAttritionPaths(answerAttrition(from, q.key, o.value)));
 }
+
+import { answerEnd, nextEndQuestion, type EndAnswers } from '../../src/helper/logic/endOfTurn';
+
+/** Every complete set of answers the End of Turn form can produce. */
+export function allEndPaths(ctx: GameContext, from: EndAnswers = {}): EndAnswers[] {
+  const q = nextEndQuestion(from, ctx);
+  if (!q) return [from];
+  return q.options.flatMap((o) => allEndPaths(ctx, answerEnd(from, q.key, o.value)));
+}

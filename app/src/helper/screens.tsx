@@ -1,5 +1,6 @@
 import type React from 'react';
 import { Attrition } from './pages/Attrition';
+import { EndOfTurn } from './pages/EndOfTurn';
 import { Initiative } from './pages/Initiative';
 import { Reinforcements } from './pages/Reinforcements';
 import { Replacements } from './pages/Replacements';
@@ -14,6 +15,7 @@ export const SCREENS: Record<string, React.ComponentType> = {
   replacements: Replacements,
   initiative: Initiative,
   attrition: Attrition,
+  'end-of-turn': EndOfTurn,
   supply: Supply,
   'strategy-cards': StrategyCards,
   'strategic-warfare': StrategicWarfare,

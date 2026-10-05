@@ -20,7 +20,7 @@ export const SEQUENCE: PageDef[] = [
   { id: 'national-status', title: 'National Status Segment', ready: false, sectionId: '12.0' },
   { ...USPW, title: 'US Political Will Segment' },
   { id: 'attrition', title: 'Attrition Phase', ready: true, sectionId: '4.4' },
-  { id: 'end-of-turn', title: 'End of Turn Phase', ready: false, sectionId: '4.5' },
+  { id: 'end-of-turn', title: 'End of Turn Phase', ready: true, sectionId: '4.5' },
 ];
 
 /** Topics that bundle rules from across the rulebook. */
