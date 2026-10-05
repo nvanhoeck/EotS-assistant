@@ -1,0 +1,28 @@
+import { politicalWillReminders } from './logic/politicalWill';
+import { reinforcementReminders } from './logic/reinforcement';
+import { strategicWarfareReminders } from './logic/strategicWarfare';
+import type { GameContext, Reminder, ReminderItem, Status } from './types';
+
+export const ALL_REMINDERS: Reminder[] = [...politicalWillReminders, ...strategicWarfareReminders, ...reinforcementReminders];
+
+const RANK: Record<Status, number> = { applies: 0, unknown: 1, notNow: 2 };
+
+function collect(match: (pageKey: string) => boolean, ctx: GameContext): ReminderItem[] {
+  return ALL_REMINDERS.filter((r) => r.pages.some(match))
+    .map((reminder) => ({ reminder, status: reminder.status(ctx), detail: reminder.detail?.(ctx) }))
+    .sort((a, b) => RANK[a.status] - RANK[b.status]);
+}
+
+/** Reminders attached to exactly "pageId" or "pageId#sectionKey". */
+export function remindersFor(pageKey: string, ctx: GameContext): ReminderItem[] {
+  return collect((k) => k === pageKey, ctx);
+}
+
+/** Every reminder on a page, whichever of its sections it belongs to. */
+export function remindersForPage(pageId: string, ctx: GameContext): ReminderItem[] {
+  return collect((k) => k === pageId || k.startsWith(`${pageId}#`), ctx);
+}
+
+export function appliesCount(pageId: string, ctx: GameContext): number {
+  return remindersForPage(pageId, ctx).filter((i) => i.status === 'applies').length;
+}

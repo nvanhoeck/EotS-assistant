@@ -32,6 +32,17 @@ Open in Expo Go on a phone on the same Wi-Fi. Tap **Server** and enter `http://<
 
 Tap **Search** (next to **AI**) to browse and search the rulebook without the model. Type a query (it searches 1 s after you stop typing, or on the keyboard's search key); results are ranked with the best match first. Open a section to read it; use the subsection list, Previous/Next and the underlined cross-references; **Back** returns to where you came from. A−/A+ change the text size. Search needs the server running but not Ollama.
 
+### Helper mode
+
+Tap **Helper** for a rules helper organised by the Sequence of Play, with topic pages that gather rules spread over several rulebook pages. It works offline (the content is bundled in the app); the rulebook chips (`§9.12 · p. 22`) open the full text in the Reader and need the server.
+
+- **Game status bar** (top of every page): optionally set the turn, War in Europe level, Japanese resource hexes, Allied ASPs and net hexes captured this turn, surrendered nations and once-per-game results. Reminders and forms use it; leave it empty and everything is still shown, with its condition written out. **Next turn** resets the per-turn counters.
+- **Reminders** appear on the page and in the accordion section they belong to: *Applies now* (highlighted), *Check* (needs a human look) or *Not now* (greyed, with the reason).
+- **Pilot pages:** Reinforcement Segment (eligibility form: who can be placed where, delays, Sent to Europe), Strategic Warfare Segment (draw calculator) and US Political Will (everything that moves it, plus the Progress of the War countdown). Other segments show "coming soon" and link to the rulebook.
+- **Back** returns through everything you opened, one step at a time.
+
+The helper text is in `app/src/helper/content/*.ts` and the logic in `app/src/helper/logic/*.ts`. After re-ingesting the PDF run `npm run gen:pages` in `app/`; `npm test` fails if a cited section id no longer exists.
+
 ## Evaluate
 
 ```

@@ -14,6 +14,11 @@ import { loadServerUrl, loadSessionId, loadTextSize, saveServerUrl, saveTextSize
 import { DEFAULT_SIZE_INDEX, stepSize } from './src/textSize';
 import { usePalette } from './src/theme';
 import { backFrom, backLabel, openSection, stepSection, type Trail } from './src/trail';
+import { HelperScreen } from './src/helper/HelperScreen';
+import { pageTitle } from './src/helper/registry';
+import {
+  backTextFor, currentPageId, popEntry, pushEntry, readingSection, replaceTop, type HelperTrail,
+} from './src/helper/trail';
 
 // Hidden panes stay mounted and laid out (never display:none: iOS Fabric unmounts that subtree and
 // the search list would lose its scroll position).
@@ -46,6 +51,7 @@ function Main() {
   const [input, setInput] = useState('');
   const [mode, setMode] = useState<Mode>('ai');
   const [trail, setTrail] = useState<Trail>([]);
+  const [helperTrail, setHelperTrail] = useState<HelperTrail>([]);
   const [sizeIndex, setSizeIndex] = useState(DEFAULT_SIZE_INDEX);
   const list = useRef<FlatList>(null);
   const pal = usePalette();
@@ -60,15 +66,24 @@ function Main() {
   }, []);
 
   const reading = mode === 'search' && trail.length > 0;
+  const helperReading = mode === 'helper' ? readingSection(helperTrail) : undefined;
+  const anyReading = reading || !!helperReading;
+  const helperCanGoBack = mode === 'helper' && helperTrail.length > 0;
 
   useEffect(() => {
     const sub = BackHandler.addEventListener('hardwareBackPress', () => {
-      if (!reading) return false;
-      setTrail(backFrom);
-      return true;
+      if (reading) {
+        setTrail(backFrom);
+        return true;
+      }
+      if (helperCanGoBack) {
+        setHelperTrail(popEntry);
+        return true;
+      }
+      return false;
     });
     return () => sub.remove();
-  }, [reading]);
+  }, [reading, helperCanGoBack]);
 
   const api = useMemo(() => createApi(committedUrl), [committedUrl]);
 
@@ -111,8 +126,8 @@ function Main() {
   }
 
   return (
-    <SafeAreaView style={[styles.root, reading && { backgroundColor: pal.page }]}>
-      {!reading && (
+    <SafeAreaView style={[styles.root, anyReading && { backgroundColor: pal.page }]}>
+      {!anyReading && (
         <>
           <View style={styles.header}>
             <Text style={styles.title}>Empire of the Sun Rules</Text>
@@ -201,6 +216,17 @@ function Main() {
         <SearchScreen api={api} onOpen={(ref) => setTrail((t) => openSection(t, ref))} />
       </View>
 
+      <View style={layerStyle(mode === 'helper' && !helperReading)} {...layerProps(mode === 'helper' && !helperReading)}>
+        <HelperScreen
+          pageId={currentPageId(helperTrail)}
+          canGoBack={helperTrail.length > 0}
+          backText={backTextFor(helperTrail, pageTitle)}
+          onBack={() => setHelperTrail(popEntry)}
+          onOpenPage={(id) => setHelperTrail((t) => pushEntry(t, { kind: 'page', id }))}
+          onOpenSection={(sectionId) => setHelperTrail((t) => pushEntry(t, { kind: 'section', sectionId, label: `§${sectionId}` }))}
+        />
+      </View>
+
       {reading && (
         <View style={[StyleSheet.absoluteFill, { backgroundColor: pal.page }]} pointerEvents="auto">
         <ReaderScreen
@@ -213,6 +239,21 @@ function Main() {
           onStep={(ref) => setTrail((t) => stepSection(t, ref))}
           onSize={changeSize}
         />
+        </View>
+      )}
+
+      {helperReading && (
+        <View style={[StyleSheet.absoluteFill, { backgroundColor: pal.page }]} pointerEvents="auto">
+          <ReaderScreen
+            api={api}
+            entry={{ sectionId: helperReading.sectionId, label: helperReading.label }}
+            backText={backTextFor(helperTrail, pageTitle)}
+            sizeIndex={sizeIndex}
+            onBack={() => setHelperTrail(popEntry)}
+            onOpen={(ref) => setHelperTrail((t) => pushEntry(t, { kind: 'section', sectionId: ref.sectionId, label: ref.label }))}
+            onStep={(ref) => setHelperTrail((t) => replaceTop(t, { kind: 'section', sectionId: ref.sectionId, label: ref.label }))}
+            onSize={changeSize}
+          />
         </View>
       )}
       </View>
